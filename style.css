@@ -21,19 +21,25 @@ body {
 }
 
 header>h1 {
+  padding-top: 1rem;
   text-align: center;
 }
 
 main {
+padding: 4rem;
 display: flex;
 justify-content: center;
 }
 
-main>div {
+main>div>* {
   display: flex;
   flex-direction: column;
 }
 
-main>h1 {
+h2 {
   color: darkslategray;
+}
+
+hr:last-of-type {
+  display: none;
 }
