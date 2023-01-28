@@ -40,6 +40,16 @@ h2 {
   color: darkslategray;
 }
 
+hr {
+  position: relative;
+  border: 1px dotted rgb(231, 58, 87);
+  border-radius: 0.4rem;
+}
+
 hr:last-of-type {
   display: none;
+}
+
+footer {
+  text-align: center;
 }
