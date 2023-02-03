@@ -388,7 +388,7 @@ a:hover {
   flex-wrap: wrap;
 }
 .menu-entete-container .menu-item {
-  padding-left: 1rem;
+  padding-right: 1.2rem;
   list-style-type: none;
   transition: transform 400ms ease-in-out;
 }
