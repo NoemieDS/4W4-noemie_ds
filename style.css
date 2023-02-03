@@ -382,6 +382,27 @@ a:hover {
 }
 
 /* --------------------------------------------- composant */
+.menu-entete-container .menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.menu-entete-container .menu-item {
+  padding-left: 1rem;
+  list-style-type: none;
+  transition: transform 400ms ease-in-out;
+}
+.menu-entete-container .menu-item a {
+  text-transform: uppercase;
+  color: #555;
+}
+.menu-entete-container .menu-item a:hover {
+  color: palevioletred;
+}
+.menu-entete-container .menu-item:hover {
+  transform: scale(1.1);
+}
+
 .site__footer {
   display: flex;
   justify-content: space-between;
