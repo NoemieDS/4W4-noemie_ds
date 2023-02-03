@@ -370,4 +370,24 @@ p {
   color: blue;
 }
 
-/* --------------------------------------------- composant *//*# sourceMappingURL=style.css.map */
+a {
+  color: #888;
+  text-decoration: none;
+}
+a:visited {
+  color: palevioletred;
+}
+a:hover {
+  color: #555;
+}
+
+/* --------------------------------------------- composant */
+.site__footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.site__footer section {
+  flex: 1 1 200px;
+  border: 1px dotted palevioletred;
+}/*# sourceMappingURL=style.css.map */

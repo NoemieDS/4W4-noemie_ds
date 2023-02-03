@@ -16,7 +16,9 @@ Text Domain: 2023-4w4-NoemieDS
 /* --------------------------------------------- base */
 @import "base/heading";
 // @import "base/espacement";
-// @import "base/link";
+@import "base/link";
 // @import "base/list";
 /* --------------------------------------------- composant */
-// @import "composant/entete";
+// @import "composants/entete";
+ @import "composants/_pied_page";
+
