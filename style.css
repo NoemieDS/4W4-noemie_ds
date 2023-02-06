@@ -2,7 +2,7 @@
 /*
 Theme Name: 2023 4w4 Noémie da Silva
 Theme URI: https://referenced.ca
-Author: Eddy Martin
+Author: Noémie da Silva
 Author URI: https://github.com/NoemieDS
 Description: Un thème de base qui nous permettra d'apprendre les rudiments de la création de thème
 Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
@@ -382,17 +382,19 @@ a:hover {
 }
 
 /* --------------------------------------------- composant */
+/******************************************Version lab2*/
 .menu-entete-container .menu {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 .menu-entete-container .menu-item {
   padding-right: 1.2rem;
-  list-style-type: none;
   transition: transform 400ms ease-in-out;
 }
 .menu-entete-container .menu-item a {
+  display: block;
   text-transform: uppercase;
   color: #555;
 }
@@ -403,6 +405,30 @@ a:hover {
   transform: scale(1.1);
 }
 
+/************************************** Version cours Semaine 3 cours1
+
+.menu-entete-container {
+  //nav
+
+  .menu {
+    //ul
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+
+    .menu-item {
+      //li
+      color: palevioletred;
+
+      a {
+        display: block;
+        text-transform: uppercase;
+        color: #555;
+      }
+    }
+  }
+}
+*/
 .site__footer {
   display: flex;
   justify-content: space-between;
