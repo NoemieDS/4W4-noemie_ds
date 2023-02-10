@@ -1,4 +1,4 @@
-# Exercice 1
+# Exercice 1 (S3C1)
 ## 4W4 - Conception d'interface et développement web
 ### Auteur : Noémie da Silva
 
