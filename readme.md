@@ -8,6 +8,7 @@
 - Creation d'un dépôt github
 
 #### Référence
+- SASS
 - https://developer.wordpress.org/themes/
 - https://ndasilva.ca/
 
