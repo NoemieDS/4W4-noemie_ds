@@ -1,6 +1,14 @@
 .site__header {
-background-color: var(--bandeau);
+background-color: var(--fonce-1);
 padding: 0.4rem 1rem;
+color: var(--fonce);
+a,
+a:visited {
+  color: var(--fonce);
+}
+a:hover {
+  color: var(--fonce-2);
+}
 }
 
 .site__header__logo-menu {
@@ -27,7 +35,7 @@ align-items: center;
       color: var(--texte);
     }
     a:hover {
-      color: var(--fond);
+      color: var(--fonce);
     }
   }
   .menu-item:hover {

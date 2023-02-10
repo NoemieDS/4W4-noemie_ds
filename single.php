@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header(); ?>
-<main>
+<main class="site__single">
 <h3>single.php</h3>
 <?php 
 if(have_posts()): 
