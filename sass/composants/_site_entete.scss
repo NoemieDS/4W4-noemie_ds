@@ -1,0 +1,36 @@
+.site__header {
+background-color: var(--bandeau);
+padding: 0.4rem 1rem;
+}
+
+.site__header__logo-menu {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/*-----------------------------------------------------------------menu-entête */
+.menu-entete-container {
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+  .menu-item {
+    transition: transform 400ms ease-in-out;
+    a {
+      display : block;
+      padding-right: 1.4rem;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: var(--texte);
+    }
+    a:hover {
+      color: var(--fond);
+    }
+  }
+  .menu-item:hover {
+    transform: scale(1.1);
+  }
+}

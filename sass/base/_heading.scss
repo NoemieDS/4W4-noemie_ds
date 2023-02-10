@@ -1,3 +1,7 @@
+/*
+CSS Clam font-size generator : https://clamp.font-size.app/
+*/
+
 h1 {
   font-size: clamp(0.875rem, -0.0385rem + 2.9231vw, 3.25rem);
 }
@@ -35,5 +39,6 @@ h6 {
 p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-    color: blue;
+    color: var(--texte);
 }
+

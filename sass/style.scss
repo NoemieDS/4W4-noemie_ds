@@ -12,13 +12,15 @@ Text Domain: 2023-4w4-NoemieDS
 */
 @import "variables/dimension";
 @import "normalize/normalize";
+@import "variables/couleurs";
 // @import "normalize/box-sizing";
 /* --------------------------------------------- base */
 @import "base/heading";
 // @import "base/espacement";
+@import "base/body";
 @import "base/link";
 // @import "base/list";
 /* --------------------------------------------- composant */
-@import "composants/_menu_entete";
+@import "composants/_site_entete";
 @import "composants/_pied_page";
 

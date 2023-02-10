@@ -320,7 +320,20 @@ template {
   display: none;
 }
 
+:root {
+  --bandeau: #5b667a;
+  --fond: #2B2D42;
+  --texte: #EDF2F4;
+  --texte2: #8D99AE;
+  --couleur1: #EF233C;
+  --couleur2: #D80032;
+  --logo: #0C7C59;
+}
+
 /* --------------------------------------------- base */
+/*
+CSS Clam font-size generator : https://clamp.font-size.app/
+*/
 h1 {
   font-size: clamp(0.875rem, -0.0385rem + 2.9231vw, 3.25rem);
 }
@@ -367,22 +380,42 @@ h6 {
 
 p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: blue;
+  color: var(--texte);
+}
+
+body {
+  background-color: var(--fond);
+  color: var(--texte);
+}
+
+main {
+  padding: 2rem;
 }
 
 a {
-  color: #888;
+  color: var(--logo);
   text-decoration: none;
 }
 a:visited {
-  color: palevioletred;
+  color: var(--couleur1);
 }
 a:hover {
-  color: #555;
+  color: var(--texte2);
 }
 
 /* --------------------------------------------- composant */
-/******************************************Version lab2*/
+.site__header {
+  background-color: var(--bandeau);
+  padding: 0.4rem 1rem;
+}
+
+.site__header__logo-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*-----------------------------------------------------------------menu-entête */
 .menu-entete-container .menu {
   display: flex;
   justify-content: flex-end;
@@ -390,51 +423,31 @@ a:hover {
   list-style-type: none;
 }
 .menu-entete-container .menu-item {
-  padding-right: 1.2rem;
   transition: transform 400ms ease-in-out;
 }
 .menu-entete-container .menu-item a {
   display: block;
+  padding-right: 1.4rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
-  color: #555;
+  color: var(--texte);
 }
 .menu-entete-container .menu-item a:hover {
-  color: palevioletred;
+  color: var(--fond);
 }
 .menu-entete-container .menu-item:hover {
   transform: scale(1.1);
 }
 
-/************************************** Version cours Semaine 3 cours1
-
-.menu-entete-container {
-  //nav
-
-  .menu {
-    //ul
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-
-    .menu-item {
-      //li
-      color: palevioletred;
-
-      a {
-        display: block;
-        text-transform: uppercase;
-        color: #555;
-      }
-    }
-  }
-}
-*/
 .site__footer {
+  width: 100%;
+  height: 20vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-content: center;
   flex-wrap: wrap;
+  background-color: var(--bandeau);
 }
 .site__footer section {
-  flex: 1 1 200px;
-  border: 1px dotted palevioletred;
+  border: 1px dotted var(--fond);
 }/*# sourceMappingURL=style.css.map */
