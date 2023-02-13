@@ -321,15 +321,26 @@ template {
 }
 
 :root {
-  --fonce: #2B2D42;
-  --fonce-1: #5b667a;
-  --fonce-2: #8D99AE;
-  --texte: #EDF2F4;
-  --couleur1: #368fcb;
-  --couleur2: #0C7C59;
-  --couleur-accent: #D80032;
+  --fonce: hsl(235, 21%, 21%); /* #2B2D42 */
+  --fonce-1:hsl(219, 15%, 42%); /* #5b667a */
+  --fonce-2:hsl(218, 17%, 62%); /* #8D99AE */
+  --texte:hsl(197, 24%, 94%); /* #EDF2F4 */
+  --couleur1:hsl(204, 59%, 50%); /* #368fcb */
+  --couleur2:hsl(161, 82%, 27%); /* #0C7C59 */
+  --couleur-accent:hsl(346, 100%, 42%); /* #D80032 */
 }
 
+/*
+principal
+secondaire
+tertiaire
+positif
+negatif
+highlight
+attention
+info
+system
+*/
 /* --------------------------------------------- base */
 /*
 CSS Clam font-size generator : https://clamp.font-size.app/
@@ -391,6 +402,7 @@ body {
 main {
   width: 80vw;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 a {
@@ -404,7 +416,22 @@ a:hover {
   color: var(--fonce-1);
 }
 
-/* --------------------------------------------- composant */
+/* Les balises qu'on utilise dans la conversion des fichiers markdown */
+/*   Les listes */
+/* ---------------------------------------------------- pre */ /* --------------------------------------------- composant */
+.blocflex {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.blocflex article {
+  flex: 1 1 200px;
+  border: 1px solid aquamarine;
+  border-radius: 12%;
+  padding: 0.6rem;
+}
+
 .site__header {
   background-color: var(--fonce-1);
   padding: 0.4rem 1rem;
@@ -459,19 +486,4 @@ a:hover {
 }
 .site__footer section {
   border: 1px dotted var(--fonce);
-}
-
-.site__front-page {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.site__front-page .front-page-elt hr {
-  padding-bottom: 0.4rem;
-  margin-bottom: 2rem;
-}
-.site__front-page .front-page-elt hr:last-of-type {
-  margin-bottom: 4rem;
 }/*# sourceMappingURL=style.css.map */
