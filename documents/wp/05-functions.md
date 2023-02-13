@@ -180,7 +180,18 @@ wp_enqueue_style(
 
 ### Comment enregistrer les menus
 
--
+- register_nav_menus() // dans functions.php
+- https://developer.wordpress.org/reference/functions/register_nav_menus/
+- La fonction register_nav_menus() est utilisée pour enregistrer les menus de navigation dans un thème WordPress. Elle permet aux développeurs de définir les différents endroits où les menus peuvent être placés dans leur thème, tels que le menu principal, le menu secondaire, etc.
+
+---
+
+### comment intégrer un menu
+
+- wp_nav_menu()
+- Après avoir enregistré les emplacements de menu, vous pouvez les utiliser dans votre thème en utilisant la fonction wp_nav_menu() pour afficher le menu dans le code HTML. La fonction wp_nav_menu() prend en charge le nom de l'emplacement de menu enregistré pour l'afficher.
+
+---
 
 ### Comment ajouter des options spécifiques au theme
 
@@ -234,3 +245,19 @@ wp_enqueue_style(
 - 'widgets-block-editor'
 
 ---
+
+### html5
+
+- La fonction add_theme_support('html5') est utilisée pour ajouter le support HTML5 pour les éléments de mise en forme dans un thème WordPress.
+- En ajoutant ce support, le thème indique à WordPress qu'il souhaite utiliser les nouvelles balises HTML5 pour les éléments de mise en forme, telles que header, nav, article, section, etc.
+- Lorsque vous ajoutez le support HTML5 pour les formulaires de recherche à l'aide de add_theme_support('html5', array('search-form')), cela peut améliorer la structure et l'accessibilité du code HTML généré pour le formulaire de recherche.
+- Voici un exemple d'utilisation: add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+
+---
+
+### custom-logo
+
+- Si vous voulez personnaliser le logo de votre site WordPress, vous pouvez utiliser la fonction add_theme_support('custom-logo').
+- Cette fonction ajoutera le support pour les logos personnalisés pour les thèmes qui le prennent en charge.
+- Vous pouvez ensuite utiliser le Customizer de WordPress pour ajouter et gérer le logo de votre site.
+- the_custom_logo(); sera utilisé dans le thème pour intégrer le logo
