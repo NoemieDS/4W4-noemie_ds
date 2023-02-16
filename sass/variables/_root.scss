@@ -1,11 +1,14 @@
 :root {
 --h: 219deg;
 --s: 15%;
+--hFonce: 235deg;
+--sFonce: 21%;
 
-  --fonce: hsl(235deg, 21%, 21%); /* #2B2D42 */
+  --fonce: hsl(var(--hFonce), var(--sFonce), 20%); /* #2B2D42 */
   --fonce-1:hsl(var(--h), var(--s), 52%); /* #5b667a */
   --fonce-2:hsl(218deg, 17%, 62%); /* #8D99AE */
   --texte:hsl(197deg, 24%, 94%); /* #EDF2F4 */
+  --texte-:hsl(198, 18%, 89%);
   --couleur1:hsl(204deg, 59%, 50%); /* #368fcb */
   --couleur2:hsl(161deg, 82%, 27%); /* #0C7C59 */
   --couleur3:hsl(346deg, 100%, 42%); /* #D80032 */

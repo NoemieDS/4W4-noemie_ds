@@ -20,7 +20,7 @@
           ?>
           <?php //the_excerpt(); //Affiche un résumé de l'article 
           ?>
-          <p> <?= wp_trim_words(get_the_excerpt(), 30, " &#10148;") ?> </p>
+          <p> <?= wp_trim_words(get_the_excerpt(), 20, " &#10148;") ?> </p>
         </article>
     <?php
       endwhile;
