@@ -23,22 +23,24 @@ h6 {
 P {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
 }
-h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
-h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  /* font-family: "Slackey", cursive; */
-}
+h1,
+h2, 
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: var(--police-serif);
 }
 p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: var(--police-sans);
     color: var(--texte);
+    line-height: 150%;
+}
+
+code, pre {
+  font-family: var(--police-mono);
+}
+caption {
+  line-height: 160%;
 }
 

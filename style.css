@@ -321,13 +321,18 @@ template {
 }
 
 :root {
-  --fonce: hsl(235, 21%, 21%); /* #2B2D42 */
-  --fonce-1:hsl(219, 15%, 42%); /* #5b667a */
-  --fonce-2:hsl(218, 17%, 62%); /* #8D99AE */
-  --texte:hsl(197, 24%, 94%); /* #EDF2F4 */
-  --couleur1:hsl(204, 59%, 50%); /* #368fcb */
-  --couleur2:hsl(161, 82%, 27%); /* #0C7C59 */
-  --couleur-accent:hsl(346, 100%, 42%); /* #D80032 */
+  --h: 219deg;
+  --s: 15%;
+  --fonce: hsl(235deg, 21%, 21%); /* #2B2D42 */
+  --fonce-1:hsl(var(--h), var(--s), 52%); /* #5b667a */
+  --fonce-2:hsl(218deg, 17%, 62%); /* #8D99AE */
+  --texte:hsl(197deg, 24%, 94%); /* #EDF2F4 */
+  --couleur1:hsl(204deg, 59%, 50%); /* #368fcb */
+  --couleur2:hsl(161deg, 82%, 27%); /* #0C7C59 */
+  --couleur3:hsl(346deg, 100%, 42%); /* #D80032 */
+  --police-sans:"Source Sans 3", sans-serif;
+  --police-serif:"Source Serif Pro", serif;
+  --police-mono: "Source Code Pro", monospace;
 }
 
 /*
@@ -373,25 +378,27 @@ P {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
-h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
-
-h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  /* font-family: "Slackey", cursive; */
-}
-
+h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: var(--police-serif);
 }
 
 p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: var(--police-sans);
   color: var(--texte);
+  line-height: 150%;
+}
+
+code, pre {
+  font-family: var(--police-mono);
+}
+
+caption {
+  line-height: 160%;
 }
 
 body {
@@ -430,6 +437,12 @@ a:hover {
   border: 1px solid aquamarine;
   border-radius: 12%;
   padding: 0.6rem;
+}
+
+.front_article {
+  box-shadow: 0.2rem 0.2rem 0.4rem var(--couleur2);
+  background-color: hsl(var(--h), var(--s), 28%);
+  padding-inline-start: 2rem;
 }
 
 .site__header {
