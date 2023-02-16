@@ -482,12 +482,6 @@ article {
   padding: 0.4rem 2rem;
   color: var(--texte);
 }
-.site__header a {
-  color: var(--couleur2);
-}
-.site__header a:hover {
-  color: var(--couleur2);
-}
 
 .site__header__logo-h1 {
   display: flex;
@@ -522,7 +516,7 @@ article {
   display: block;
   font-size: 1.6rem;
   text-transform: uppercase;
-  color: var(--texte);
+  color: hsl(var(--h), var(--s), 92%);
   padding-right: 1.2rem;
 }
 .menu-entete-container .menu-item a:hover {

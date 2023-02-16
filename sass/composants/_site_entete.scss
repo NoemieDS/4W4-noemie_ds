@@ -5,13 +5,7 @@ justify-content: space-between;
 background-color: hsl(var(--hFonce), var(--sFonce), 20%);
 padding: 0.4rem 2rem;
 color: var(--texte);
-a
- {
-  color: var(--couleur2); 
-}
-a:hover {
-  color: var(--couleur2);
-}
+
 }
 
 .site__header__logo-h1 {
@@ -48,7 +42,7 @@ justify-content: space-between;
       display : block;
       font-size: 1.6rem;
       text-transform: uppercase;
-      color: var(--texte);
+      color: hsl(var(--h), var(--s), 92%);
       padding-right: 1.2rem;
     }
     a:hover {
