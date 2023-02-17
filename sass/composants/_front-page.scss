@@ -1,5 +1,5 @@
 
-.front_article {
+/* .front_article {
   background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
   padding: 2rem;
   flex : 1 1 25rem;
@@ -12,13 +12,25 @@
     p {
       color: var(--fonce);
     }
-
 }
-
-.blocflex {
+ */
+/* .blocflex {
   display : flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 1rem;
-  
+  } */
+
+/*   .blocflex {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  // Cette déclaration sera meilleur quand min() sera mieux supporté
+  // grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  gap: 2rem;
+  margin: 2rem;
+
+  article {
+    border: 1px solid #aaa;
+    padding: 1rem;
   }
+} */

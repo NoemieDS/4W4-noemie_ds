@@ -437,18 +437,28 @@ a:hover {
 /*   Les listes */
 /* ---------------------------------------------------- pre */ /* --------------------------------------------- composant */
 /* .blocflex {
-display : flex;
-justify-content: space-evenly;
-flex-wrap: wrap;
-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-article {
-  flex : 1 1 200px;
-  border: 1px solid aquamarine;
-  border-radius: 12%;
-  padding: 0.6rem;
-}
+  article {
+    flex: 1 0 300px;
+    border: 1px solid #aaa;
+    padding: 5px;
+    margin: 10px;
+  }
 } */
+.blocflex {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+}
+.blocflex article {
+  border: 1px solid #aaa;
+  padding: 1rem;
+}
+
 .front_article {
   background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
   padding: 2rem;
@@ -464,13 +474,40 @@ article {
   color: var(--fonce);
 }
 
-.blocflex {
-  display: flex;
+/* .front_article {
+  background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
+  padding: 2rem;
+  flex : 1 1 25rem;
+  -webkit-border-top-left-radius: 10px;
+	-khtml-border-radius-topleft: 10px;	
+	-moz-border-radius-topleft: 10px;
+	border-top-left-radius: 10px;
+  border: 1px solid var(--couleur2);
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--couleur2);
+    p {
+      color: var(--fonce);
+    }
+}
+ */
+/* .blocflex {
+  display : flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 1rem;
-}
+  } */
+/*   .blocflex {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  // Cette déclaration sera meilleur quand min() sera mieux supporté
+  // grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  gap: 2rem;
+  margin: 2rem;
 
+  article {
+    border: 1px solid #aaa;
+    padding: 1rem;
+  }
+} */
 .site__header {
   display: flex;
   /* flex-wrap: wrap; */
@@ -479,8 +516,16 @@ article {
   padding: 0.4rem 2rem;
   color: var(--texte);
 }
-
-.site__header__logo-h1 {
+.site__header h2 {
+  font-size: 1rem;
+  text-align: right;
+  color: var(--couleur2);
+}
+.site__header h2,
+.site__header .menu-item a {
+  padding-right: 1.2rem;
+}
+.site__header .site__header__logo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -492,11 +537,6 @@ article {
   flex-direction: column;
   align-items: flex-end;
   padding: 0;
-}
-.site__header__titre__nav h2 {
-  font-size: 1rem;
-  text-align: right;
-  color: var(--couleur2);
 }
 
 /*-----------------------------------------------------------------menu-entête */
@@ -511,10 +551,9 @@ article {
 }
 .menu-entete-container .menu-item a {
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   color: hsl(var(--h), var(--s), 92%);
-  padding-right: 1.2rem;
 }
 .menu-entete-container .menu-item a:hover {
   color: var(--couleur2);
