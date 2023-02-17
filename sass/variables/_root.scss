@@ -1,11 +1,11 @@
 :root {
---h: 219deg;
---s: 15%;
---hFonce: 235deg;
---sFonce: 21%;
+  --hFonce: 235deg;
+  --sFonce: 21%;
+  --hFonce-1: 219deg;
+  --sFonce-1: 15%;
 
   --fonce: hsl(var(--hFonce), var(--sFonce), 20%); /* #2B2D42 */
-  --fonce-1:hsl(var(--h), var(--s), 52%); /* #5b667a */
+  --fonce-1:hsl(var(--hFonce-1), var(--sFonce-1), 52%); /* #5b667a */
   --fonce-2:hsl(218deg, 17%, 62%); /* #8D99AE */
   --texte:hsl(197deg, 24%, 94%); /* #EDF2F4 */
   --texte-:hsl(198, 18%, 89%);

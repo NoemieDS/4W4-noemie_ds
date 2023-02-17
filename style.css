@@ -321,12 +321,12 @@ template {
 }
 
 :root {
-  --h: 219deg;
-  --s: 15%;
   --hFonce: 235deg;
   --sFonce: 21%;
+  --hFonce-1: 219deg;
+  --sFonce-1: 15%;
   --fonce: hsl(var(--hFonce), var(--sFonce), 20%); /* #2B2D42 */
-  --fonce-1:hsl(var(--h), var(--s), 52%); /* #5b667a */
+  --fonce-1:hsl(var(--hFonce-1), var(--sFonce-1), 52%); /* #5b667a */
   --fonce-2:hsl(218deg, 17%, 62%); /* #8D99AE */
   --texte:hsl(197deg, 24%, 94%); /* #EDF2F4 */
   --texte-:hsl(198, 18%, 89%);
@@ -446,7 +446,7 @@ article {
 }
 } */
 .front_article {
-  background-color: hsl(var(--h), var(--s), 88%);
+  background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
   padding: 2rem;
   flex: 1 1 25rem;
   -webkit-border-top-left-radius: 10px;
@@ -455,13 +455,6 @@ article {
   border-top-left-radius: 10px;
   border: 1px solid var(--couleur2);
   box-shadow: 0.1rem 0.1rem 0.3rem var(--couleur2);
-  /*  border-radius: 12%; */
-  /*   article {
-      flex : 1 1 200px;
-      border: 1px solid var(--couleur2);
-      border-radius: 12%;
-      padding: 0.6rem;
-    } */
 }
 .front_article p {
   color: var(--fonce);
@@ -499,7 +492,7 @@ article {
 .site__header__titre__nav h2 {
   font-size: 1rem;
   text-align: right;
-  color: var(--couleur1);
+  color: var(--couleur2);
 }
 
 /*-----------------------------------------------------------------menu-entête */
