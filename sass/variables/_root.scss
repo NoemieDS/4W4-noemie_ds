@@ -1,4 +1,5 @@
 :root {
+  /* ************************************************************ Couleurs *** */
   --hFonce: 235deg;
   --sFonce: 21%;
   --hFonce-1: 219deg;
@@ -12,12 +13,13 @@
   --couleur1:hsl(204deg, 59%, 50%); /* #368fcb */
   --couleur2:hsl(161deg, 82%, 27%); /* #0C7C59 */
   --couleur3:hsl(346deg, 100%, 42%); /* #D80032 */
-
+/* **************************************************************** Polices *** */
   --police-sans:'Source Sans 3', sans-serif;
   --police-serif:'Source Serif Pro', serif;
   --police-mono: 'Source Code Pro', monospace;
 }
-/*
+/*  Notes pour la nomenclature des var couleurs */
+/* 
 principal
 secondaire
 tertiaire
