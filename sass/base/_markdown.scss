@@ -5,6 +5,10 @@ ul, ol {
 
 }
 
+ul {
+  list-style-type: none;
+}
+
 ul>li,
 ol>li {
 
@@ -20,6 +24,14 @@ ol>li{
 
 ol>li>ol{
 
+}
+
+li::before {
+  content: "::before";
+  background: lightgray;
+  border-radius: 1ch;
+  padding-inline: 1ch;
+  margin-inline-end: 1ch;
 }
 
 /* ---------------------------------------------------- pre */

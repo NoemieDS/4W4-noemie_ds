@@ -435,7 +435,20 @@ a:hover {
 
 /* Les balises qu'on utilise dans la conversion des fichiers markdown */
 /*   Les listes */
-/* ---------------------------------------------------- pre */ /* --------------------------------------------- composant */
+ul {
+  list-style-type: none;
+}
+
+li::before {
+  content: "::before";
+  background: lightgray;
+  border-radius: 1ch;
+  padding-inline: 1ch;
+  margin-inline-end: 1ch;
+}
+
+/* ---------------------------------------------------- pre */
+/* --------------------------------------------- composant */
 /* .blocflex {
   display: flex;
   justify-content: space-between;
