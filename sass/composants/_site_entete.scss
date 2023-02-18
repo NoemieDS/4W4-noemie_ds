@@ -1,58 +1,61 @@
 .site__header {
   display: flex;
-/* flex-wrap: wrap; */
-justify-content: space-between;
-background-color: hsl(var(--hFonce), var(--sFonce), 20%);
-padding: 0.4rem 2rem;
-color: var(--texte);
+  justify-content: flex-start;
+  background-color: hsl(var(--hFonce), var(--sFonce), 20%);
+  padding: 0.4rem 2rem;
 
-h2 {
-  font-size: 1rem;
-  text-align: right;
-  color: var(--couleur2);
-} 
-h2,
-  .menu-item a {
-    padding-right: 1.2rem;
-  }
-  .site__header__logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* align-items: flex-start;  */
-  } 
-}
-
-
-.site__header__titre__nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 0;
+  .site__header__titre {
+    align-self: center;
   }
 
-/*-----------------------------------------------------------------menu-entête */
-.menu-entete-container {
-  .menu {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    list-style-type: none;
-  }
-  .menu-item {
-    transition: transform 400ms ease-in-out;
+  .site__header__titre 
+    h1,
     a {
-      display : block;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      color: hsl(var(--h), var(--s), 92%);
+      font-size: clamp(0.5625rem, 0.5rem + 2.6vw, 2.1875rem);
+
     }
-    a:hover {
+
+  .site__header__titre {
+    h2 {
+      font-size: clamp(0.5rem, -0.1875rem + 1.6vw, 1.875rem);
       color: var(--couleur2);
+      margin-top: -1em;
+      font-family: var(--police-mono);
+      letter-spacing: -0.04rem;
     }
-    
   }
-  .menu-item:hover {
-    transform: scale(1.1);
+
+  /*-----------------------------------------------------------------menu-entête */
+  .site__header__nav {
+    width: 50%;
+    justify-content: flex-end;
+    align-self: flex-end;
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      list-style-type: none;
+      gap: 2rem;
+    }
+
+    .menu-item {
+      transition: transform 400ms ease-in-out;
+      a {
+        font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+        text-transform: uppercase;
+        letter-spacing: -0.02rem;
+        color: hsl(var(--h), var(--s), 92%);
+        padding-left: 1.4rem;
+        font-family: var(--police-mono);
+      }
+      a:hover {
+        color: var(--couleur2);
+      }
+    }
+    .menu-item:hover {
+      transform: scale(1.1);
+    }
   }
 }

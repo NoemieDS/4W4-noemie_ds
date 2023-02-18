@@ -361,7 +361,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  font-size: clamp(0.625rem, -0.3125rem + 2.9231vw, 2.5rem);
 }
 
 h3 {
@@ -417,7 +417,8 @@ main {
   margin: 0 auto;
   padding-bottom: 2rem;
 }
-main h3 {
+
+h3 {
   color: var(--fonce-2);
   padding-top: 0.8rem;
 }
@@ -439,7 +440,7 @@ ul {
   list-style-type: none;
 }
 
-li::before {
+main li::before {
   content: "::before";
   background: lightgray;
   border-radius: 1ch;
@@ -465,113 +466,76 @@ li::before {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 2rem;
-}
-.blocflex article {
-  border: 1px solid #aaa;
-  padding: 1rem;
+  /* margin: 2rem; */
 }
 
 .front_article {
   background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
   padding: 2rem;
-  flex: 1 1 25rem;
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
   border: 1px solid var(--couleur2);
-  box-shadow: 0.1rem 0.1rem 0.3rem var(--couleur2);
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
 }
 .front_article p {
   color: var(--fonce);
 }
-
-/* .front_article {
-  background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
-  padding: 2rem;
-  flex : 1 1 25rem;
-  -webkit-border-top-left-radius: 10px;
-	-khtml-border-radius-topleft: 10px;	
-	-moz-border-radius-topleft: 10px;
-	border-top-left-radius: 10px;
-  border: 1px solid var(--couleur2);
-  box-shadow: 0.1rem 0.1rem 0.3rem var(--couleur2);
-    p {
-      color: var(--fonce);
-    }
-}
- */
-/* .blocflex {
-  display : flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 1rem;
-  } */
-/*   .blocflex {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  // Cette déclaration sera meilleur quand min() sera mieux supporté
-  // grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-  gap: 2rem;
-  margin: 2rem;
-
-  article {
-    border: 1px solid #aaa;
-    padding: 1rem;
-  }
-} */
-.site__header {
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
-  background-color: hsl(var(--hFonce), var(--sFonce), 20%);
-  padding: 0.4rem 2rem;
-  color: var(--texte);
-}
-.site__header h2 {
-  font-size: 1rem;
-  text-align: right;
-  color: var(--couleur2);
-}
-.site__header h2,
-.site__header .menu-item a {
-  padding-right: 1.2rem;
-}
-.site__header .site__header__logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* align-items: flex-start;  */
-}
-
-.site__header__titre__nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.front_article h3 {
+  margin: 0;
   padding: 0;
 }
 
-/*-----------------------------------------------------------------menu-entête */
-.menu-entete-container .menu {
+.site__header {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  list-style-type: none;
+  justify-content: flex-start;
+  background-color: hsl(var(--hFonce), var(--sFonce), 20%);
+  padding: 0.4rem 2rem;
+  /*-----------------------------------------------------------------menu-entête */
 }
-.menu-entete-container .menu-item {
+.site__header .site__header__titre {
+  align-self: center;
+}
+.site__header .site__header__titre h1,
+.site__header a {
+  font-size: clamp(0.5625rem, 0.5rem + 2.6vw, 2.1875rem);
+}
+.site__header .site__header__titre h2 {
+  font-size: clamp(0.5rem, -0.1875rem + 1.6vw, 1.875rem);
+  color: var(--couleur2);
+  margin-top: -1em;
+  font-family: var(--police-mono);
+  letter-spacing: -0.04rem;
+}
+.site__header .site__header__nav {
+  width: 50%;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+.site__header .site__header__nav .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  gap: 2rem;
+}
+.site__header .site__header__nav .menu-item {
   transition: transform 400ms ease-in-out;
 }
-.menu-entete-container .menu-item a {
-  display: block;
-  font-size: 1.2rem;
+.site__header .site__header__nav .menu-item a {
+  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
   text-transform: uppercase;
+  letter-spacing: -0.02rem;
   color: hsl(var(--h), var(--s), 92%);
+  padding-left: 1.4rem;
+  font-family: var(--police-mono);
 }
-.menu-entete-container .menu-item a:hover {
+.site__header .site__header__nav .menu-item a:hover {
   color: var(--couleur2);
 }
-.menu-entete-container .menu-item:hover {
+.site__header .site__header__nav .menu-item:hover {
   transform: scale(1.1);
 }
 

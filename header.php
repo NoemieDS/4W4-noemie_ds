@@ -14,13 +14,16 @@
  </head>
 <body>
   <header class="site__header">
-  <section class="site__header__logo"> 
+  <section 
+  class="site__header__logo"> 
     <?php the_custom_logo() ?>
-    
-  </section>
-  <section><h1><a href="<?= bloginfo('url')?>"><?= bloginfo('name') ?></a></h1></section>
-  <section class="site__header__titre__nav">
-    <h2><?= bloginfo('description')?></h2>
+   </section>
+  <section class="site__header__titre">
+    <h1><a href="<?= bloginfo('url')?>"><?= bloginfo('name') ?></a></h1>
+  <h2><?= bloginfo('description')?></h2>
+</section>
+  <section 
+  class="site__header__nav">
     <?php wp_nav_menu(array(
       "menu" => "entete", 
       "container" => "nav"
