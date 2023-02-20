@@ -7,10 +7,12 @@ h1 {
 }
 h2 {
   font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  color: var(--fonce-1);
 }
 h3 {
   font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
 }
+
 h4 {
   font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
 }

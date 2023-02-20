@@ -371,6 +371,7 @@ h1 {
 
 h2 {
   font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  color: var(--fonce-1);
 }
 
 h3 {
@@ -473,11 +474,12 @@ main li::before {
   /* margin: 2rem; */
 }
 
-.front_titre {
+.front__titre {
   color: var(--texte);
 }
 
-.front_article {
+.front__article {
+  position: relative;
   background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
   padding: 2rem;
   -webkit-border-top-left-radius: 10px;
@@ -487,26 +489,30 @@ main li::before {
   border: 1px solid var(--couleur2);
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
 }
-.front_article p {
-  color: var(--fonce);
+.front__article h3 {
+  text-shadow: var(--fonce-2) 0.1em -0.1em 0.2em;
 }
-.front_article span {
+.front__article p {
+  color: var(--fonce);
+  text-shadow: var(--fonce-2) 0.1em 0.1em 0.2em;
+}
+.front__article span {
   color: var(--fonce-1);
   position: relative;
   font-size: 1.2em;
   left: 1.2em;
   white-space: nowrap;
 }
-.front_article span::before {
+.front__article span::before {
   position: absolute;
   content: "...";
   left: -1em;
-  color: var(--couleur2);
 }
 
 .site__header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: flex-end;
   background-color: hsl(var(--hFonce), var(--sFonce), 20%);
   padding: 0.4rem 4rem 0.4rem 2rem;
   /*-----------------------------------------------------------------menu-entête */
@@ -524,8 +530,17 @@ main li::before {
   margin-top: -1em;
   font-family: var(--police-sans);
 }
+.site__header .site__header_nav_recherche {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.site__header .site__header_nav_recherche .site__header__recherche {
+  align-self: flex-end;
+}
 .site__header .site__header__nav {
-  width: 60%;
+  display: flex;
   justify-content: flex-end;
   align-self: flex-end;
 }
@@ -540,11 +555,12 @@ main li::before {
   transition: transform 400ms ease-in-out;
 }
 .site__header .site__header__nav .menu-item a {
+  display: block;
   font-size: clamp(0.5rem, 0.125rem + 1.8vw, 1.25rem);
   text-transform: uppercase;
-  letter-spacing: -0.02rem;
+  word-spacing: -0.4rem;
   color: hsl(var(--h), var(--s), 92%);
-  padding-left: 1rem;
+  padding-left: 1.4rem;
   font-family: var(--police-mono);
   color: var(--texte);
 }

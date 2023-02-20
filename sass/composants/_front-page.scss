@@ -1,8 +1,9 @@
-.front_titre {
+.front__titre {
   color: var(--texte);
 }
 
-.front_article {
+.front__article {
+  position: relative;
   background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
   padding: 2rem;
   -webkit-border-top-left-radius: 10px;
@@ -11,8 +12,14 @@
   border-top-left-radius: 10px;
   border: 1px solid var(--couleur2);
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
+
+  h3  {
+    text-shadow: var(--fonce-2) 0.1em -0.1em 0.2em;
+  }
+
   p {
     color: var(--fonce);
+    text-shadow: var(--fonce-2) 0.1em 0.1em 0.2em;
   }
 
   span {
@@ -27,6 +34,5 @@
     position: absolute;
     content: "...";
     left: -1em;
-    color: var(--couleur2)
   }
 }
