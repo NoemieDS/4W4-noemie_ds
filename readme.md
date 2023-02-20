@@ -1,4 +1,4 @@
-# Lab 3 (S4C1 & S4C2)
+# Lab 3 (S5)
 ## 4W4 - Conception d'interface et développement web
 ### Auteur : Noémie da Silva
 
