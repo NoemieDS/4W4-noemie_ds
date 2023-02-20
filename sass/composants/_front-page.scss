@@ -1,19 +1,32 @@
+.front_titre {
+  color: var(--texte);
+}
 
 .front_article {
   background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
   padding: 2rem;
   -webkit-border-top-left-radius: 10px;
-	-khtml-border-radius-topleft: 10px;	
-	-moz-border-radius-topleft: 10px;
-	border-top-left-radius: 10px;
+  -khtml-border-radius-topleft: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
   border: 1px solid var(--couleur2);
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
-    p {
-      color: var(--fonce);
-    }
+  p {
+    color: var(--fonce);
+  }
 
-    h3 {
-      margin: 0;
-      padding: 0;
-    }
+  span {
+    color: var(--fonce-1);
+    position: relative;
+    font-size: 1.2em;
+    left: 1.2em;
+    white-space: nowrap;
+  }
+
+  span::before {
+    position: absolute;
+    content: "...";
+    left: -1em;
+    color: var(--couleur2)
+  }
 }

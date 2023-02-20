@@ -352,6 +352,15 @@ attention
 info
 system
 */
+_::before,
+\*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 /* --------------------------------------------- base */
 /*
 CSS Clam font-size generator : https://clamp.font-size.app/
@@ -361,7 +370,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(0.625rem, -0.3125rem + 2.9231vw, 2.5rem);
+  font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
 }
 
 h3 {
@@ -381,6 +390,7 @@ h6 {
 }
 
 P {
+  /* font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem); */
   font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.8rem);
 }
 
@@ -409,18 +419,12 @@ caption {
 
 body {
   background-color: var(--fonce);
-  color: var(--texte);
 }
 
 main {
   width: 80vw;
   margin: 0 auto;
   padding-bottom: 2rem;
-}
-
-h3 {
-  color: var(--fonce-2);
-  padding-top: 0.8rem;
 }
 
 a {
@@ -430,7 +434,7 @@ a {
 a:visited {
   color: var(--couleur1);
 }
-a:hover {
+a:hover, a:focus, a:active {
   color: var(--fonce-1);
 }
 
@@ -469,6 +473,10 @@ main li::before {
   /* margin: 2rem; */
 }
 
+.front_titre {
+  color: var(--texte);
+}
+
 .front_article {
   background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
   padding: 2rem;
@@ -482,16 +490,25 @@ main li::before {
 .front_article p {
   color: var(--fonce);
 }
-.front_article h3 {
-  margin: 0;
-  padding: 0;
+.front_article span {
+  color: var(--fonce-1);
+  position: relative;
+  font-size: 1.2em;
+  left: 1.2em;
+  white-space: nowrap;
+}
+.front_article span::before {
+  position: absolute;
+  content: "...";
+  left: -1em;
+  color: var(--couleur2);
 }
 
 .site__header {
   display: flex;
   justify-content: flex-start;
   background-color: hsl(var(--hFonce), var(--sFonce), 20%);
-  padding: 0.4rem 2rem;
+  padding: 0.4rem 4rem 0.4rem 2rem;
   /*-----------------------------------------------------------------menu-entête */
 }
 .site__header .site__header__titre {
@@ -499,17 +516,16 @@ main li::before {
 }
 .site__header .site__header__titre h1,
 .site__header a {
-  font-size: clamp(0.5625rem, 0.5rem + 2.6vw, 2.1875rem);
+  font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
 }
 .site__header .site__header__titre h2 {
-  font-size: clamp(0.5rem, -0.1875rem + 1.6vw, 1.875rem);
+  font-size: clamp(0.6rem, -0.1875rem + 1.6vw, 1.2rem);
   color: var(--couleur2);
   margin-top: -1em;
-  font-family: var(--police-mono);
-  letter-spacing: -0.04rem;
+  font-family: var(--police-sans);
 }
 .site__header .site__header__nav {
-  width: 50%;
+  width: 60%;
   justify-content: flex-end;
   align-self: flex-end;
 }
@@ -519,24 +535,24 @@ main li::before {
   justify-content: flex-end;
   align-items: center;
   list-style-type: none;
-  gap: 2rem;
 }
 .site__header .site__header__nav .menu-item {
   transition: transform 400ms ease-in-out;
 }
 .site__header .site__header__nav .menu-item a {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+  font-size: clamp(0.5rem, 0.125rem + 1.8vw, 1.25rem);
   text-transform: uppercase;
   letter-spacing: -0.02rem;
   color: hsl(var(--h), var(--s), 92%);
-  padding-left: 1.4rem;
+  padding-left: 1rem;
   font-family: var(--police-mono);
+  color: var(--texte);
 }
 .site__header .site__header__nav .menu-item a:hover {
   color: var(--couleur2);
 }
 .site__header .site__header__nav .menu-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .site__footer {

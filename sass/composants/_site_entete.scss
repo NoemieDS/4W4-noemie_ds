@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   background-color: hsl(var(--hFonce), var(--sFonce), 20%);
-  padding: 0.4rem 2rem;
+  padding: 0.4rem 4rem 0.4rem 2rem;
 
   .site__header__titre {
     align-self: center;
@@ -11,23 +11,21 @@
   .site__header__titre 
     h1,
     a {
-      font-size: clamp(0.5625rem, 0.5rem + 2.6vw, 2.1875rem);
-
+      font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
     }
 
   .site__header__titre {
     h2 {
-      font-size: clamp(0.5rem, -0.1875rem + 1.6vw, 1.875rem);
+      font-size: clamp(0.6rem, -0.1875rem + 1.6vw, 1.2rem);
       color: var(--couleur2);
       margin-top: -1em;
-      font-family: var(--police-mono);
-      letter-spacing: -0.04rem;
+      font-family: var(--police-sans);
     }
   }
 
   /*-----------------------------------------------------------------menu-entête */
   .site__header__nav {
-    width: 50%;
+    width: 60%;
     justify-content: flex-end;
     align-self: flex-end;
 
@@ -37,25 +35,25 @@
       justify-content: flex-end;
       align-items: center;
       list-style-type: none;
-      gap: 2rem;
     }
 
     .menu-item {
       transition: transform 400ms ease-in-out;
       a {
-        font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+        font-size: clamp(0.5rem, 0.125rem + 1.8vw, 1.25rem);
         text-transform: uppercase;
         letter-spacing: -0.02rem;
         color: hsl(var(--h), var(--s), 92%);
-        padding-left: 1.4rem;
+        padding-left: 1rem;
         font-family: var(--police-mono);
+        color: var(--texte);
       }
       a:hover {
         color: var(--couleur2);
       }
     }
     .menu-item:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 }
