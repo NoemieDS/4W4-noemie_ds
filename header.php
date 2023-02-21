@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;1,400&family=Source+Sans+3:ital,wght@0,400;1,400&family=Source+Serif+Pro:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <?php wp_head(); ?>
 </head>
 
@@ -30,11 +31,9 @@
         get_search_form();
         ?>
       </section>
-      <section class="site__header__nav">
         <?php wp_nav_menu(array(
           "menu" => "entete",
           "container" => "nav"
         )) ?>
-      </section>
     </div>
   </header>

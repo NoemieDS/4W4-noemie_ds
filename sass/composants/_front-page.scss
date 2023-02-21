@@ -14,12 +14,12 @@
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
 
   h3  {
-    text-shadow: var(--fonce-2) 0.1em -0.1em 0.2em;
+    text-shadow: var(--titre-ombre);
   }
 
   p {
     color: var(--fonce);
-    text-shadow: var(--fonce-2) 0.1em 0.1em 0.2em;
+    text-shadow: var(--texte-ombre);
   }
 
   span {

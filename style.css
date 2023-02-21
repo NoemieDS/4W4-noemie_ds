@@ -338,6 +338,8 @@ template {
   --police-sans:"Source Sans 3", sans-serif;
   --police-serif:"Source Serif Pro", serif;
   --police-mono: "Source Code Pro", monospace;
+  --texte-ombre: var(--fonce-2) 0.1em 0.1em 0.2em;
+  --titre-ombre: var(--fonce-2) 0.1em -0.1em 0.2em;
 }
 
 /*  Notes pour la nomenclature des var couleurs */
@@ -366,16 +368,16 @@ html {
 CSS Clam font-size generator : https://clamp.font-size.app/
 */
 h1 {
-  font-size: clamp(0.875rem, -0.0385rem + 2.9231vw, 3.25rem);
+  font-size: clamp(0.875rem, -0.0385rem + 2.9231vw, 3rem);
 }
 
 h2 {
-  font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  font-size: clamp(0.625rem, -0.3125rem + 2.8vw, 2.2rem);
   color: var(--fonce-1);
 }
 
 h3 {
-  font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
+  font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2rem);
 }
 
 h4 {
@@ -392,7 +394,7 @@ h6 {
 
 P {
   /* font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem); */
-  font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.8rem);
+  font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.2rem);
 }
 
 h1,
@@ -420,6 +422,7 @@ caption {
 
 body {
   background-color: var(--fonce);
+  font-family: var(--police-sans);
 }
 
 main {
@@ -490,11 +493,11 @@ main li::before {
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
 }
 .front__article h3 {
-  text-shadow: var(--fonce-2) 0.1em -0.1em 0.2em;
+  text-shadow: var(--titre-ombre);
 }
 .front__article p {
   color: var(--fonce);
-  text-shadow: var(--fonce-2) 0.1em 0.1em 0.2em;
+  text-shadow: var(--texte-ombre);
 }
 .front__article span {
   color: var(--fonce-1);
@@ -512,14 +515,15 @@ main li::before {
 .site__header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-content: center;
   background-color: hsl(var(--hFonce), var(--sFonce), 20%);
   padding: 0.4rem 4rem 0.4rem 2rem;
   /*-----------------------------------------------------------------menu-entête */
+  /* ********************** Balise nav *******************/
 }
 .site__header .site__header__titre {
   align-self: center;
-  flex: 1 0 50%;
+  flex: 1 0 30%;
 }
 .site__header .site__header__titre h1,
 .site__header a {
@@ -532,31 +536,27 @@ main li::before {
   font-family: var(--police-sans);
 }
 .site__header .site__header_nav_recherche {
-  justify-content: flex-end;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 0.6rem;
 }
 .site__header .site__header_nav_recherche .site__header__recherche {
   align-self: flex-end;
 }
-.site__header .site__header__nav {
-  display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
+.site__header ul#menu-entete.menu {
+  margin: 0;
 }
-.site__header .site__header__nav .menu {
+.site__header .menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  align-items: center;
   list-style-type: none;
 }
-.site__header .site__header__nav .menu-item {
+.site__header .menu .menu-item {
   transition: transform 400ms ease-in-out;
 }
-.site__header .site__header__nav .menu-item a {
-  display: block;
+.site__header .menu .menu-item a {
   font-size: clamp(0.5rem, 0.125rem + 1.8vw, 1.25rem);
   text-transform: uppercase;
   word-spacing: -0.4rem;
@@ -565,11 +565,35 @@ main li::before {
   font-family: var(--police-mono);
   color: var(--texte);
 }
-.site__header .site__header__nav .menu-item a:hover {
+.site__header .menu .menu-item a:hover {
   color: var(--couleur2);
 }
-.site__header .site__header__nav .menu-item:hover {
+.site__header .menu .menu-item:hover {
   transform: scale(1.2);
+}
+
+.recherche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recherche .recherche__input {
+  background-color: var(--texte);
+  border: none;
+  box-shadow: 0.05rem 0.05rem 0.2rem var(--fonce-2);
+  padding: 0.2rem;
+}
+.recherche .recherche__bouton {
+  /* Google material symbol search */
+  border: none;
+  background-color: hsl(var(--hFonce), var(--sFonce), 20%);
+  padding-left: 0.4em;
+}
+.recherche .recherche__bouton .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
+  color: var(--couleur2);
+  cursor: pointer;
+  transform: translateY(0.1em);
 }
 
 .site__footer {

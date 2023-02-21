@@ -1,0 +1,25 @@
+.recherche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .recherche__input {
+    background-color: var(--texte);
+    border: none;
+    box-shadow: 0.05rem 0.05rem 0.2rem var(--fonce-2);
+    padding: 0.2rem;
+  }
+
+.recherche__bouton {
+  /* Google material symbol search */
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
+    color: var(--couleur2);
+    cursor: pointer;
+    transform: translateY(0.1em);
+  }
+  border: none;
+  background-color: hsl(var(--hFonce), var(--sFonce), 20%);
+  padding-left: 0.4em;
+}
+}

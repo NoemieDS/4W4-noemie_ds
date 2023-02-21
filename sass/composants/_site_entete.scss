@@ -1,20 +1,19 @@
 .site__header {
   display: flex;
   justify-content: space-between;
-align-items: flex-end;
+  align-content: center;
   background-color: hsl(var(--hFonce), var(--sFonce), 20%);
   padding: 0.4rem 4rem 0.4rem 2rem;
 
   .site__header__titre {
     align-self: center;
-    flex: 1 0 50%;
+    flex: 1 0 30%;
   }
 
-  .site__header__titre 
-    h1,
-    a {
-      font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
-    }
+  .site__header__titre h1,
+  a {
+    font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
+  }
 
   .site__header__titre {
     h2 {
@@ -23,39 +22,35 @@ align-items: flex-end;
       margin-top: -1em;
       font-family: var(--police-sans);
     }
-    
   }
-  
-  .site__header_nav_recherche  {
-    justify-content: flex-end;
+
+  .site__header_nav_recherche {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
+    gap: 0.6rem;
+ 
     .site__header__recherche {
       align-self: flex-end;
-   }
+    }
   }
 
-
   /*-----------------------------------------------------------------menu-entête */
-  .site__header__nav {
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
+  /* ********************** Balise nav *******************/
+  ul#menu-entete.menu {
+    margin: 0;
+  }
 
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      align-items: center;
-      list-style-type: none;
-    }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style-type: none;
 
     .menu-item {
       transition: transform 400ms ease-in-out;
+
       a {
-        display: block;
         font-size: clamp(0.5rem, 0.125rem + 1.8vw, 1.25rem);
         text-transform: uppercase;
         word-spacing: -0.4rem;
