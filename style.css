@@ -519,6 +519,7 @@ main li::before {
 }
 .site__header .site__header__titre {
   align-self: center;
+  flex: 1 0 50%;
 }
 .site__header .site__header__titre h1,
 .site__header a {
