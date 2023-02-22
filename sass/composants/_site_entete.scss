@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-  background-color: hsl(var(--hFonce), var(--sFonce), 20%);
+  background-color: var(--fond);
   padding: 0.4rem 4rem 0.4rem 2rem;
 
   .site__header__titre {
     align-self: center;
-    flex: 1 0 30%;
+    flex: 1 1 30%;
   }
 
   .site__header__titre h1,
@@ -20,6 +20,7 @@
       font-size: clamp(0.6rem, -0.1875rem + 1.6vw, 1.2rem);
       color: var(--couleur2);
       margin-top: -1em;
+      padding: 0;
       font-family: var(--police-sans);
     }
   }
@@ -29,7 +30,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     gap: 0.6rem;
- 
+
     .site__header__recherche {
       align-self: flex-end;
     }
@@ -37,35 +38,50 @@
 
   /*-----------------------------------------------------------------menu-entête */
   /* ********************** Balise nav *******************/
-  ul#menu-entete.menu {
+  ul#menu-entete.menu,
+  li#menu-entete.menu {
     margin: 0;
   }
 
   .menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    list-style-type: none;
+  /*    flex-wrap: wrap; */
+    justify-content: space-evenly;
+ 
 
     .menu-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+     list-style-type: none;
       transition: transform 400ms ease-in-out;
+      padding-left: 1.6rem;
 
       a {
-        font-size: clamp(0.5rem, 0.125rem + 1.8vw, 1.25rem);
-        text-transform: uppercase;
-        word-spacing: -0.4rem;
-        color: hsl(var(--h), var(--s), 92%);
-        padding-left: 1.4rem;
+        font-size: clamp(0.5rem, 0.125rem + 2vw, 1.3rem);
+        line-height: 120%;
+        align-self: flex-end;
+        text-align: center;
+      /*   color: var(--texte-clair); */
+      color: var(--fonce-2);
         font-family: var(--police-mono);
-        color: var(--texte);
+        text-transform: uppercase;
+        letter-spacing: -0.02rem;
+        word-spacing: -0.4rem;
+        text-shadow: var(--accent-ombre);
+        transition: text-shadow 400ms;
+        
       }
 
-      a:hover {
-        color: var(--couleur2);
+      a:hover,
+      a:active {
+        text-shadow: none;
+        color: var(--texte-clair);
+       /*  color: var(--fonce-2); */
       }
     }
     .menu-item:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 }

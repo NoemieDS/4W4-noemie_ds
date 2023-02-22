@@ -3,14 +3,16 @@ CSS Clam font-size generator : https://clamp.font-size.app/
 */
 
 h1 {
-  font-size: clamp(0.875rem, -0.0385rem + 2.9231vw, 3rem);
+  font-size: clamp(1rem, -0.0385rem + 2.9231vw, 3rem);
 }
 h2 {
-  font-size: clamp(0.625rem, -0.3125rem + 2.8vw, 2.2rem);
-  color: var(--fonce-1);
+  font-size: clamp(1rem, -0.3125rem + 2.8vw, 2.2rem);
+  color: var(--texte-clair);
+  padding: 2rem 0 1rem 0;
 }
+
 h3 {
-  font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2rem);
+  font-size: clamp(1rem, -0.25rem + 2.6vw, 2rem);
 }
 
 h4 {
@@ -19,11 +21,17 @@ h4 {
 h5 {
   font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
 }
+
+h5.modele_php {
+  color:var(--fonce-1);
+}
+
 h6 {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
-P {
+p
+ {
   /* font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem); */
   font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.2rem);
 }
@@ -38,7 +46,8 @@ h6 {
 }
 p {
   font-family: var(--police-sans);
-    color: var(--texte);
+    color: var(--texte-fonce);
+    text-shadow: var(--texte-ombre);
     line-height: 150%;
 }
 
@@ -49,3 +58,8 @@ caption {
   line-height: 160%;
 }
 
+
+input {
+  font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem);
+
+}

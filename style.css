@@ -328,18 +328,22 @@ template {
   --sFonce-1: 15%;
   --fonce: hsl(var(--hFonce), var(--sFonce), 20%); /* #2B2D42 */
   --fonce-1:hsl(var(--hFonce-1), var(--sFonce-1), 52%); /* #5b667a */
-  --fonce-2:hsl(218deg, 17%, 62%); /* #8D99AE */
-  --texte:hsl(197deg, 24%, 94%); /* #EDF2F4 */
-  --texte-:hsl(198, 18%, 89%);
+  --fonce-2:hsl(218deg, 17%, 72%); /* #8D99AE */
+  --blanc:hsl(30, 23%, 95%); /* #EDF2F4 */
   --couleur1:hsl(204deg, 59%, 50%); /* #368fcb */
   --couleur2:hsl(161deg, 82%, 27%); /* #0C7C59 */
-  --couleur3:hsl(346deg, 100%, 42%); /* #D80032 */
+  --couleur3:hsl(346deg, 100%, 32%); /* #D80032 */
+  --fond: var(--fonce);
+  --texte-fonce: hsl(var(--hFonce), var(--sFonce), 14%);
+  --texte-clair: var(--blanc);
   /* **************************************************************** Polices *** */
   --police-sans:"Source Sans 3", sans-serif;
   --police-serif:"Source Serif Pro", serif;
   --police-mono: "Source Code Pro", monospace;
+  /* **************************************************************** Ombres*** */
   --texte-ombre: var(--fonce-2) 0.1em 0.1em 0.2em;
-  --titre-ombre: var(--fonce-2) 0.1em -0.1em 0.2em;
+  --titre-ombre: var(--fonce-2) 0.01em -0.04em 0.2em;
+  --accent-ombre: var(--couleur1) 0.02em -0.02em 0.4em;
 }
 
 /*  Notes pour la nomenclature des var couleurs */
@@ -368,16 +372,17 @@ html {
 CSS Clam font-size generator : https://clamp.font-size.app/
 */
 h1 {
-  font-size: clamp(0.875rem, -0.0385rem + 2.9231vw, 3rem);
+  font-size: clamp(1rem, -0.0385rem + 2.9231vw, 3rem);
 }
 
 h2 {
-  font-size: clamp(0.625rem, -0.3125rem + 2.8vw, 2.2rem);
-  color: var(--fonce-1);
+  font-size: clamp(1rem, -0.3125rem + 2.8vw, 2.2rem);
+  color: var(--texte-clair);
+  padding: 2rem 0 1rem 0;
 }
 
 h3 {
-  font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2rem);
+  font-size: clamp(1rem, -0.25rem + 2.6vw, 2rem);
 }
 
 h4 {
@@ -388,11 +393,15 @@ h5 {
   font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
 }
 
+h5.modele_php {
+  color: var(--fonce-1);
+}
+
 h6 {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
-P {
+p {
   /* font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem); */
   font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.2rem);
 }
@@ -408,7 +417,8 @@ h6 {
 
 p {
   font-family: var(--police-sans);
-  color: var(--texte);
+  color: var(--texte-fonce);
+  text-shadow: var(--texte-ombre);
   line-height: 150%;
 }
 
@@ -420,15 +430,21 @@ caption {
   line-height: 160%;
 }
 
+input {
+  font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem);
+}
+
 body {
-  background-color: var(--fonce);
+  margin: 0 auto;
+  background-color: var(--fond);
   font-family: var(--police-sans);
 }
 
 main {
   width: 80vw;
+  min-height: 60vh;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  margin-bottom: 6rem;
 }
 
 a {
@@ -458,6 +474,80 @@ main li::before {
 
 /* ---------------------------------------------------- pre */
 /* --------------------------------------------- composant */
+.site__header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: var(--fond);
+  padding: 0.4rem 4rem 0.4rem 2rem;
+  /*-----------------------------------------------------------------menu-entête */
+  /* ********************** Balise nav *******************/
+}
+.site__header .site__header__titre {
+  align-self: center;
+  flex: 1 1 30%;
+}
+.site__header .site__header__titre h1,
+.site__header a {
+  font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
+}
+.site__header .site__header__titre h2 {
+  font-size: clamp(0.6rem, -0.1875rem + 1.6vw, 1.2rem);
+  color: var(--couleur2);
+  margin-top: -1em;
+  padding: 0;
+  font-family: var(--police-sans);
+}
+.site__header .site__header_nav_recherche {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.6rem;
+}
+.site__header .site__header_nav_recherche .site__header__recherche {
+  align-self: flex-end;
+}
+.site__header ul#menu-entete.menu,
+.site__header li#menu-entete.menu {
+  margin: 0;
+}
+.site__header .menu {
+  display: flex;
+  /*    flex-wrap: wrap; */
+  justify-content: space-evenly;
+}
+.site__header .menu .menu-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  transition: transform 400ms ease-in-out;
+  padding-left: 1.6rem;
+}
+.site__header .menu .menu-item a {
+  font-size: clamp(0.5rem, 0.125rem + 2vw, 1.3rem);
+  line-height: 120%;
+  align-self: flex-end;
+  text-align: center;
+  /*   color: var(--texte-clair); */
+  color: var(--fonce-2);
+  font-family: var(--police-mono);
+  text-transform: uppercase;
+  letter-spacing: -0.02rem;
+  word-spacing: -0.4rem;
+  text-shadow: var(--accent-ombre);
+  transition: text-shadow 400ms;
+}
+.site__header .menu .menu-item a:hover,
+.site__header .menu .menu-item a:active {
+  text-shadow: none;
+  color: var(--texte-clair);
+  /*  color: var(--fonce-2); */
+}
+.site__header .menu .menu-item:hover {
+  transform: scale(1.1);
+}
+
 /* .blocflex {
   display: flex;
   justify-content: space-between;
@@ -474,30 +564,22 @@ main li::before {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  /* margin: 2rem; */
-}
-
-.front__titre {
-  color: var(--texte);
+  /*   margin: 2rem; */
 }
 
 .front__article {
   position: relative;
-  background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
+  background-color: var(--blanc);
   padding: 2rem;
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
   border: 1px solid var(--couleur2);
-  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
+  /*   box-shadow: var(--fonce-2) 0.02em 0.02em 0.2em; */
 }
 .front__article h3 {
   text-shadow: var(--titre-ombre);
-}
-.front__article p {
-  color: var(--fonce);
-  text-shadow: var(--texte-ombre);
 }
 .front__article span {
   color: var(--fonce-1);
@@ -512,85 +594,40 @@ main li::before {
   left: -1em;
 }
 
-.site__header {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  background-color: hsl(var(--hFonce), var(--sFonce), 20%);
-  padding: 0.4rem 4rem 0.4rem 2rem;
-  /*-----------------------------------------------------------------menu-entête */
-  /* ********************** Balise nav *******************/
+.site__single {
+  background-color: var(--blanc);
+  padding: 2rem;
+  -webkit-border-top-left-radius: 10px;
+  -khtml-border-radius-topleft: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid var(--couleur2);
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
 }
-.site__header .site__header__titre {
-  align-self: center;
-  flex: 1 0 30%;
-}
-.site__header .site__header__titre h1,
-.site__header a {
-  font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
-}
-.site__header .site__header__titre h2 {
-  font-size: clamp(0.6rem, -0.1875rem + 1.6vw, 1.2rem);
-  color: var(--couleur2);
-  margin-top: -1em;
-  font-family: var(--police-sans);
-}
-.site__header .site__header_nav_recherche {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 0.6rem;
-}
-.site__header .site__header_nav_recherche .site__header__recherche {
-  align-self: flex-end;
-}
-.site__header ul#menu-entete.menu {
-  margin: 0;
-}
-.site__header .menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  list-style-type: none;
-}
-.site__header .menu .menu-item {
-  transition: transform 400ms ease-in-out;
-}
-.site__header .menu .menu-item a {
-  font-size: clamp(0.5rem, 0.125rem + 1.8vw, 1.25rem);
-  text-transform: uppercase;
-  word-spacing: -0.4rem;
-  color: hsl(var(--h), var(--s), 92%);
-  padding-left: 1.4rem;
-  font-family: var(--police-mono);
-  color: var(--texte);
-}
-.site__header .menu .menu-item a:hover {
-  color: var(--couleur2);
-}
-.site__header .menu .menu-item:hover {
-  transform: scale(1.2);
+.site__single h2 {
+  /* color: pink; */
 }
 
 .recherche {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px dotted hsl(var(--hFonce), var(--sFonce), 28%);
+  padding: 0.06rem;
 }
 .recherche .recherche__input {
-  background-color: var(--texte);
+  background-color: hsl(var(--hFonce), var(--sFonce), 20%);
   border: none;
-  box-shadow: 0.05rem 0.05rem 0.2rem var(--fonce-2);
-  padding: 0.2rem;
 }
 .recherche .recherche__bouton {
-  /* Google material symbol search */
   border: none;
+  /* Google material symbol search */
+  padding: 0;
   background-color: hsl(var(--hFonce), var(--sFonce), 20%);
   padding-left: 0.4em;
 }
 .recherche .recherche__bouton .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   color: var(--couleur2);
   cursor: pointer;
   transform: translateY(0.1em);

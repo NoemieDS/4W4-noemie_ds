@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 <main>
-<h5>search.php</h5>
+<h5 class="modele_php">search.php</h5>
 <h2>Résultats de la recherche</h2>
 <?php 
 if(have_posts()): 

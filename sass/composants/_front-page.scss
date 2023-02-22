@@ -1,25 +1,17 @@
-.front__titre {
-  color: var(--texte);
-}
 
 .front__article {
   position: relative;
-  background-color: hsl(var(--hFonce-1), var(--sFonce-1), 92%);
+  background-color:  var(--blanc);
   padding: 2rem;
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
   border: 1px solid var(--couleur2);
-  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
+/*   box-shadow: var(--fonce-2) 0.02em 0.02em 0.2em; */
 
   h3  {
     text-shadow: var(--titre-ombre);
-  }
-
-  p {
-    color: var(--fonce);
-    text-shadow: var(--texte-ombre);
   }
 
   span {
