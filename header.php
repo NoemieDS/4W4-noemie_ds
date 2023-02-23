@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <div class="site__wrapper">
   <header class="site__header">
     <section class="site__header__logo">
       <?php the_custom_logo() ?>

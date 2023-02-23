@@ -8,10 +8,9 @@
     placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" />
   </label>
   <button class="recherche__bouton" type="submit" class="search-submit">
-    <!-- <span class="recherche__icone">&#x1F50D;</span> -->
+  <!--   <span class="recherche__icone">&#x1F50D;</span> -->
     <span class="material-symbols-outlined">
 search
 </span>
-
   </button>
 </form>

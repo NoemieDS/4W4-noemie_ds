@@ -4,3 +4,9 @@ body {
   font-family: var(--police-sans);
 }
 
+/* On limite la largeur sur grand écran */
+.site__wrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+

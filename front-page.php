@@ -12,7 +12,7 @@
     <?php
     if (have_posts()) :
       while (have_posts()) : the_post(); ?>
-        <article class="front__article">
+        <article class="front__articles">
          
           <h3>
             <a href="<?php echo get_permalink(); ?>">

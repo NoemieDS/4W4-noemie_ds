@@ -3,12 +3,11 @@ CSS Clam font-size generator : https://clamp.font-size.app/
 */
 
 h1 {
-  font-size: clamp(1rem, -0.0385rem + 2.9231vw, 3rem);
+  font-size: clamp(1rem, -0.0385rem + 3vw, 2.6rem);
 }
 h2 {
   font-size: clamp(1rem, -0.3125rem + 2.8vw, 2.2rem);
   color: var(--texte-clair);
-  padding: 2rem 0 1rem 0;
 }
 
 h3 {
@@ -30,11 +29,17 @@ h6 {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
-p
+p,
+ul,
+li
  {
   /* font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem); */
   font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.2rem);
+  font-family: var(--police-sans);
+  color: var(--texte-fonce);
+  line-height: 150%;
 }
+
 
 h1,
 h2, 
@@ -44,15 +49,50 @@ h5,
 h6 {
   font-family: var(--police-serif);
 }
-p {
-  font-family: var(--police-sans);
-    color: var(--texte-fonce);
-    text-shadow: var(--texte-ombre);
-    line-height: 150%;
+
+ul, 
+li {
+  list-style-type: none;
 }
 
-code, pre {
+main li::before {
+  content: "";
+  display: inline-block;
+    -webkit-border-radius: 0.375rem;
+    border-radius: 0.375rem;
+    height: 0.4rem;
+    width: 0.4rem;
+    margin-right: 0.5rem;
+    transform: translateY(-0.1rem);
+    background-color: var(--fonce);
+}
+
+hr {
+  border-top: 2px dotted var(--fonce);
+  margin-bottom: 3.6rem;
+}
+ 
+pre,
+blockquote
+{
+  background-color: var(--fonce-2);
+  padding: 2rem ;
+  margin-bottom: 2rem;
+ 
+/*   border : 2px dotted var(--fonce-1); */
+}
+
+li>code {
+  background-color: var(--fonce-2);
+  padding: 0.1rem;
+}
+
+code, 
+pre,
+li>code {
   font-family: var(--police-mono);
+  font-size: clamp(0.84rem, 0.14rem + 1vw, 1rem);
+  white-space: pre-wrap;
 }
 caption {
   line-height: 160%;
@@ -63,3 +103,8 @@ input {
   font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem);
 
 }
+
+strong {
+  font-weight: bold;
+}
+

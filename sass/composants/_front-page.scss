@@ -1,5 +1,5 @@
 
-.front__article {
+.front__articles {
   position: relative;
   background-color:  var(--blanc);
   padding: 2rem;
@@ -8,12 +8,16 @@
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
   border: 1px solid var(--couleur2);
-/*   box-shadow: var(--fonce-2) 0.02em 0.02em 0.2em; */
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--couleur2);
 
   h3  {
     text-shadow: var(--titre-ombre);
   }
 
+  p {
+    text-shadow: var(--texte-ombre);
+  }
+  
   span {
     color: var(--fonce-1);
     position: relative;

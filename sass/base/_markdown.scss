@@ -1,12 +1,15 @@
 /* Les balises qu'on utilise dans la conversion des fichiers markdown */
 
+/* Étant donné que la majorité des styles s'adresse à l'ensemble du thème
+  c'est styles ont plutôt été placé dans heading.scss */
+
 /*   Les listes */
 ul, ol {
 
 }
 
 ul {
-  list-style-type: none;
+
 }
 
 ul>li,
@@ -27,11 +30,7 @@ ol>li>ol{
 }
 
 main li::before {
-  content: "::before";
-  background: lightgray;
-  border-radius: 1ch;
-  padding-inline: 1ch;
-  margin-inline-end: 1ch;
+ 
 }
 
 /* ---------------------------------------------------- pre */

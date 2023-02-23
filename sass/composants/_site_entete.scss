@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-content: center;
   background-color: var(--fond);
-  padding: 0.4rem 4rem 0.4rem 2rem;
+  padding: 0.4rem 4rem 2rem 2rem;
 
   .site__header__titre {
     align-self: center;
@@ -45,10 +45,8 @@
 
   .menu {
     display: flex;
-  /*    flex-wrap: wrap; */
     justify-content: space-evenly;
  
-
     .menu-item {
       display: flex;
       flex-wrap: wrap;

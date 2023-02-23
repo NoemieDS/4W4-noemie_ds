@@ -12,7 +12,7 @@
     <?php
     if (have_posts()) :
       while (have_posts()) : the_post(); ?>
-        <article class="front__article">
+        <article class="front__articles">
          
           <h3>
             <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?> </a>
@@ -21,6 +21,7 @@
           ?>
           <?php //the_excerpt(); //Affiche un résumé de l'article 
           ?>
+          
           <p><?php if(is_category('cours'))  echo 'cours';?></p>
           <p> <?= wp_trim_words(get_the_excerpt(), 10, "<span> &#187;</span>") ?> </p>
         </article>
