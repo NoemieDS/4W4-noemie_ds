@@ -5,6 +5,11 @@
   background-color: var(--fond);
   padding: 0.4rem 4rem 2rem 2rem;
 
+  img {
+    border-top-left-radius: initial;
+    box-shadow: initial;
+  }
+
   .site__header__titre {
     align-self: center;
     flex: 1 1 30%;
@@ -45,6 +50,7 @@
 
   .menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
  
     .menu-item {

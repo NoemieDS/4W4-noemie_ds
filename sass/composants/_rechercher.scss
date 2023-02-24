@@ -2,10 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dotted hsl(var(--hFonce), var(--sFonce), 28%);
+  border: 2px dotted hsl(var(--hFonce), var(--sFonce), 28%);
   
   .recherche__input {
-    background-color: hsl(var(--hFonce), var(--sFonce), 20%);
+    background-color: transparent;
     border: none;
     color: var( --texte-clair);
   }
