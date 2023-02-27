@@ -1,0 +1,29 @@
+:root {
+  /* ************************************************************ Couleurs *** */
+  --hFonce: 235deg;
+  --sFonce: 21%;
+  --hFonce-1: 219deg;
+  --sFonce-1: 15%;
+
+  --fonce: hsl(var(--hFonce), var(--sFonce), 20%); /* #2B2D42 */
+  --fonce-1:hsl(var(--hFonce-1), var(--sFonce-1), 52%); /* #5b667a */
+  --fonce-2:hsl(218deg, 17%, 72%); /* #8D99AE */
+  --blanc:hsl(30, 23%, 95%); /* #EDF2F4 */
+  --couleur1:hsl(204deg, 59%, 50%); /* #368fcb */
+  --couleur2:hsl(161deg, 82%, 27%); /* #0C7C59 */
+  --couleur3:hsl(346deg, 100%, 32%); /* #D80032 */
+
+  --fond: var(--fonce);
+  --texte-fonce: hsl(var(--hFonce), var(--sFonce), 14%);
+  --texte-clair: var(--blanc);
+  
+  /* **************************************************************** Polices *** */
+  --police-sans:'Source Sans 3', sans-serif;
+  --police-serif:'Source Serif Pro', serif;
+  --police-mono: 'Source Code Pro', monospace;
+  
+ /* **************************************************************** Ombres*** */
+  --texte-ombre: var(--fonce-2) 0.1em 0.1em 0.2em;
+  --titre-ombre: var(--fonce-2) 0.01em -0.04em 0.2em;
+  --accent-ombre: var(--couleur1)  0.02em -0.02em 0.4em;
+}

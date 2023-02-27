@@ -1,0 +1,34 @@
+
+.front__articles {
+  position: relative;
+  background-color:  var(--blanc);
+  padding: 2rem;
+  -webkit-border-top-left-radius: 10px;
+  -khtml-border-radius-topleft: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  border: 2px solid var(--couleur2);
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
+
+  h3  {
+    text-shadow: var(--titre-ombre);
+  }
+
+  p {
+    text-shadow: var(--texte-ombre);
+  }
+  
+  span {
+    color: var(--fonce-1);
+    position: relative;
+    font-size: 1.2em;
+    left: 1.2em;
+    white-space: nowrap;
+  }
+
+  span::before {
+    position: absolute;
+    content: "...";
+    left: -1em;
+  }
+}

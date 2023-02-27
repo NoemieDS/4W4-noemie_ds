@@ -1,45 +1,61 @@
-/* Les balise qu'on utilse dans la conversion des fichiers markdown */
+/* Les balises qu'on utilise dans la conversion des fichiers markdown */
 
-/* Liste */
-ul,ol{}
+/* Étant donné que la majorité des styles s'adressent à l'ensemble du thème,
+  c'est styles ont plutôt été placés dans heading.scss */
 
-ul > li,
-ol > li{
+/*   Les listes */
+/* ul, ol {
 
 }
 
 ul {
-    list-style-type: none;
+
+}
+
+ul>li,
+ol>li {
+
 }
 
 ul>li {
+
 }
 
-ol>li{}
-/*
-li::before {
-    content: "»";
-    background: lightgray;
-    border-radius: 1rem;
-    padding-inline: 1rem;
-    margin-inline-end: 1rem;
-  }
-*/
-/* ----------------------------  pre */
+ol>li{
 
-pre {}
+}
 
-code {}
+ol>li>ol{
 
-i{}
+}
 
-blockquote {}
+main li::before {
+ 
+}
 
-hr {}
+/* ---------------------------------------------------- pre */
+/* 
+pre {
 
-strong {}
+}
 
+code {
 
+}
 
+i {
 
+}
 
+strong {
+  
+}
+
+blockquote {
+
+}
+
+hr {
+
+}
+ */ 

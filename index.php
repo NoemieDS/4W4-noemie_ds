@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 <main>
-<h3>index.php</h3>
+<h5 class="modele_php">index.php</h5>
 <?php
     if (have_posts()): 
         while (have_posts()) : the_post();

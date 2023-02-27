@@ -1,12 +1,12 @@
 a {
-
-color : rgb(76, 88, 135);
-
-&:visited {
-    color : rgb(76, 135, 104);
-}
-&:hover {
-    color : rgb(211, 28, 28);
-}
-
-}
+    color : var(--couleur2);
+    text-decoration: none;
+    &:visited {
+      color: var(--couleur1);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color : var(--fonce-1);
+    }
+  }
