@@ -1,12 +1,3 @@
 body {
-  margin: 0 auto;
-  background-color: var(--fond);
-  font-family: var(--police-sans);
+    background-color: aliceblue;
 }
-
-/* On limite la largeur sur grand écran */
-.site__wrapper {
-  max-width: 1800px;
-  margin: 0 auto;
-}
-

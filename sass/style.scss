@@ -1,32 +1,35 @@
 /*
-Theme Name: 2023 4w4 Noémie da Silva
+Theme Name: 2023 4w4 Eddy Martin
 Theme URI: https://referenced.ca
-Author: Noémie da Silva
-Author URI: https://github.com/NoemieDS
-Description: Un thème de base qui nous permettra d'apprendre les rudiments de la création de thème
+Author: Eddy Martin
+Author URI: https://github.com/eddytuto
+Description: Thème de base qui nous permettra d'apprendre les rudiments de la création de thèeme
 Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: 2023-4w4-NoemieDS
+Text Domain: 2023-4w4
 */
-@import "normalize/normalize";
+
 @import "variables/dimension";
+
+
+
+@import "normalize/normalize";
+// @import "normalize/box-sizing";
+
 @import "variables/root";
-@import "normalize/box-sizing";
+
 /* --------------------------------------------- base */
 @import "base/heading";
 // @import "base/espacement";
-@import "base/body";
-@import "base/main";
 @import "base/link";
 @import "base/markdown";
 // @import "base/list";
-/* --------------------------------------------- composant */
-@import "composants/site_entete";
-@import "composants/bloc_flex";
-@import "composants/front-page";
-@import "composants/single";
-@import "composants/rechercher";
-@import "composants/pied_page";
 
+/* --------------------------------------------- composant */
+@import "composant/pied_page";
+@import "composant/site_entete";
+@import "composant/bloc_flex";
+/* --------------------------------------------- layout */
+@import "layout/aside-contenu";

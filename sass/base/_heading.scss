@@ -1,145 +1,53 @@
 /*
-CSS Clam font-size generator : https://clamp.font-size.app/
+css font-size clamp generator *
+
+https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjQwMHB4IiwibWF4V2lkdGgiOiIyNjAwcHgiLCJtaW5Gb250U2l6ZSI6IjE2cHgiLCJtYXhGb250U2l6ZSI6IjcwcHgifQ%3D%3D
+
 */
 
 h1 {
-  font-size: clamp(1rem, -0.0385rem + 3vw, 2.6rem);
-}
-h2 {
-  font-size: clamp(1rem, -0.3125rem + 2.8vw, 2.2rem);
-  color: var(--texte-clair);
-}
+    font-size: clamp(0.875rem, -0.0385rem + 2.9231vw, 3.25rem);
+  }
+  h2 {
+    font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  }
+  h3 {
+    font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
+  }
+  h4 {
+    font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
+  }
+  h5 {
+    font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
+  }
+  h6 {
+    font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+  }
+  
+  P {
+    font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+  }
+  
+  h1 {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  
+  h2 {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    /* font-family: "Slackey", cursive; */
+  }
+  
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  
+  p {
+    /*
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;*/
 
-h3 {
-  font-size: clamp(1rem, -0.25rem + 2.6vw, 2rem);
-}
-
-h4 {
-  font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
-}
-h5 {
-  font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
-}
-
-h5.modele_php {
-  color:var(--fonce-1);
-}
-
-h6 {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
-}
-
-p,
-ul,
-li
- {
-  /* font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem); */
-  font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.2rem);
-  font-family: var(--police-sans);
-  color: var(--texte-fonce);
-  line-height: 150%;
-}
-
-h1,
-h2, 
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--police-serif);
-}
-
-ul,
-ol, 
-li {
-  list-style-type: none;
-}
-
-ul {
-  padding-bottom: 1rem;
-}
-
-main li::before {
-  content: "";
-  display: inline-block;
-    -webkit-border-radius: 0.375rem;
-    border-radius: 0.375rem;
-    height: 0.4rem;
-    width: 0.4rem;
-    margin-right: 0.5rem;
-    transform: translateY(-0.1rem);
-    background-color: var(--fonce);
-}
- 
-li>p {
-  display: inline;
-}
-
-li>code {
-  background-color: var(--fonce-2);
-  border-radius: 2px;
-  padding: 0.18rem;
-}
-
-code, 
-pre,
-li>code {
-  font-family: var(--police-mono);
-  font-size: clamp(0.84rem, 0.14rem + 1vw, 1rem);
-  white-space: pre-wrap;
-}
-
-pre {
-  background-color: var(--fonce-2);
-  max-height: 320px;
-  overflow: scroll;
-  padding: 2rem ;
-  margin-bottom: 3rem;
-  -webkit-border-top-left-radius: 10px;
-  -khtml-border-radius-topleft: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-}
-
-blockquote {
-  padding: 0.6rem 2rem 1rem 2rem;
-}
-
-blockquote>p {
-  font-family: var(--police-serif);
-}
-
-input {
-  font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem);
-}
-
-strong,
-b,
-em,
-i {
-  font-weight: bold;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  margin-top: 1rem;
-  -webkit-border-top-left-radius: 10px;
-  -khtml-border-radius-topleft: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  box-shadow: 0.3rem 0.3rem 0.5rem rgba(80, 80, 80, 0.7);
-}
-
-figcaption {
-  line-height: 160%;
-  font-family: var(--police-serif);
-  transform: translateY(-0.6rem);
-  margin: 0 4rem;
-}
-
-hr {
-  border-top: 2px dotted var(--fonce);
-  margin-top: 1rem;
-  margin-bottom: 3.6rem;
-}
+      font-family:'Times New Roman', Times, serif ;
+  }
