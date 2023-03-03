@@ -17,7 +17,15 @@
   }
   .site__aside {
     grid-area: aside;
-    background-color: rgb(103, 236, 178);
+    background-color: rgba(0, 162, 255, 0.1);
+/*     background-color: hsl(var(--hFonce), var(--sFonce), 30%); */
+    margin: 6rem clamp(1rem, 3vw, 20rem);
+    -webkit-border-top-left-radius: 10px;
+    -khtml-border-radius-topleft: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    border: 2px solid hsl(var(--hFonce), var(--sFonce), 20%);
+    box-shadow: 0.2rem 0.2rem 0.5rem hsl(var(--hFonce), var(--sFonce), 20%);
   }
 
   .site {
@@ -35,7 +43,8 @@
         grid-template-areas:
         "header header"
         "aside main"
-       /*  ". main" */
+        /*le point est un espace vide*/
+       /*  ". main"  */
         "footer footer";
     }
   }

@@ -1,5 +1,5 @@
-/*
-.blocflex {
+
+/* .blocflex {
     display : flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -9,8 +9,7 @@
         border : 1px solid #aaa;
         padding : 10px;
     }
-}
-*/
+} */
 
 .blocflex {
     display: grid;
@@ -18,13 +17,60 @@
     // Cette déclaration sera meilleur quand min() sera mieux supporté
     // grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
     gap: 2rem;
-    margin: 2rem;
-  
-    article {
-      border: 1px solid #aaa;
-      padding: 1rem;
-    }
+    margin: 1rem;
   }
 
 
+  .bloc__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    background-color:  var(--blanc);
+    padding: 2rem;
+    -webkit-border-top-left-radius: 10px;
+    -khtml-border-radius-topleft: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    border: 2px solid var(--couleur2);
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
+  
+    h3,
+    h5,
+    h6  {
+      text-shadow: var(--titre-ombre);
+      margin: 0;
+    }
 
+    
+    p {
+      text-shadow: var(--texte-ombre);
+    }
+    
+    span {
+      color: var(--fonce-1);
+      position: relative;
+      font-size: 1.2em;
+      left: 0.6em;
+      white-space: nowrap;
+    }
+  
+/*     span::before {
+      position: absolute;
+      content: "...";
+      left: -1em;
+    } */
+  }
+  
+.blocflex__galerie {
+  margin: 1rem 1rem 2rem 1rem;
+  display : flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+flex: 1 1 100%;
+
+img {
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
+}
+}

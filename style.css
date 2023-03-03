@@ -603,8 +603,7 @@ a:hover, a:focus, a:active {
   transform: scale(1.1);
 }
 
-/*
-.blocflex {
+/* .blocflex {
     display : flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -614,20 +613,19 @@ a:hover, a:focus, a:active {
         border : 1px solid #aaa;
         padding : 10px;
     }
-}
-*/
+} */
 .blocflex {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 2rem;
-}
-.blocflex article {
-  border: 1px solid #aaa;
-  padding: 1rem;
+  margin: 1rem;
 }
 
-.front__articles {
+.bloc__article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   position: relative;
   background-color: var(--blanc);
   padding: 2rem;
@@ -637,24 +635,38 @@ a:hover, a:focus, a:active {
   border-top-left-radius: 10px;
   border: 2px solid var(--couleur2);
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
+  /*     span::before {
+        position: absolute;
+        content: "...";
+        left: -1em;
+      } */
 }
-.front__articles h3 {
+.bloc__article h3,
+.bloc__article h5,
+.bloc__article h6 {
   text-shadow: var(--titre-ombre);
+  margin: 0;
 }
-.front__articles p {
+.bloc__article p {
   text-shadow: var(--texte-ombre);
 }
-.front__articles span {
+.bloc__article span {
   color: var(--fonce-1);
   position: relative;
   font-size: 1.2em;
-  left: 1.2em;
+  left: 0.6em;
   white-space: nowrap;
 }
-.front__articles span::before {
-  position: absolute;
-  content: "...";
-  left: -1em;
+
+.blocflex__galerie {
+  margin: 1rem 1rem 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+}
+.blocflex__galerie img {
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
 }
 
 .single_titre {
@@ -741,7 +753,15 @@ a:hover, a:focus, a:active {
 
 .site__aside {
   grid-area: aside;
-  background-color: rgb(103, 236, 178);
+  background-color: rgba(0, 162, 255, 0.1);
+  /*     background-color: hsl(var(--hFonce), var(--sFonce), 30%); */
+  margin: 6rem clamp(1rem, 3vw, 20rem);
+  -webkit-border-top-left-radius: 10px;
+  -khtml-border-radius-topleft: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  border: 2px solid hsl(var(--hFonce), var(--sFonce), 20%);
+  box-shadow: 0.2rem 0.2rem 0.5rem hsl(var(--hFonce), var(--sFonce), 20%);
 }
 
 .site {
