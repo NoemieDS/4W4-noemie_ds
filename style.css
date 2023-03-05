@@ -333,6 +333,7 @@ template {
   --couleur1:hsl(204deg, 59%, 50%); /* #368fcb */
   --couleur2:hsl(161deg, 82%, 27%); /* #0C7C59 */
   --couleur3:hsl(346deg, 100%, 32%); /* #D80032 */
+  --couleur4:hsl(161deg, 82%, 32%); /* #0C7C59 */
   --fond: var(--fonce);
   --texte-fonce: hsl(var(--hFonce), var(--sFonce), 14%);
   --texte-clair: var(--blanc);
@@ -826,7 +827,7 @@ a:hover, a:focus, a:active {
   font-size: clamp(0.6rem, 0.125rem + 2vw, 1.3rem);
   line-height: 120%;
   text-align: center;
-  color: var(--couleur2);
+  color: var(--couleur4);
   font-family: var(--police-mono);
   text-shadow: var(--accent-ombre2);
   transition: text-shadow 400ms;
@@ -835,7 +836,7 @@ a:hover, a:focus, a:active {
 .site__aside ul#menu-aside a:hover,
 .site__aside ul#menu-aside a:active {
   text-shadow: none;
-  color: var(--couleur3);
+  color: var(--texte-clair);
 }
 .site__aside ul#menu-aside .menu-item:hover,
 .site__aside ul#menu-aside .menu-item:active {

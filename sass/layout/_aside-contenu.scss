@@ -52,7 +52,7 @@
       font-size: clamp(0.6rem, 0.125rem + 2vw, 1.3rem);
       line-height: 120%;
       text-align: center;
-      color: var(--couleur2);
+      color: var(--couleur4);
       font-family: var(--police-mono);
       text-shadow: var(--accent-ombre2);
       transition: text-shadow 400ms;
@@ -63,7 +63,7 @@
     a:hover,
     a:active {
       text-shadow: none;
-      color: var(--couleur3);
+      color: var(--texte-clair);
     }
 
  
