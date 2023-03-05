@@ -1,15 +1,14 @@
 .single_titre {
   color: var(--texte-fonce);
-/*   color:hsl(204deg, 59%, 60%); */
   text-align: center;
-  padding-bottom: 1.4rem;
+  padding-bottom: 1rem;
 }
 
 .section_fiche {
   max-width: 1200px;
   background-color:  var(--blanc);
-  padding: 1.4rem 4rem 2.8rem 4rem;
-  margin: 0 4rem;
+  padding: 1.4rem 1.6rem 2.8rem 1.6rem;
+  margin: 1rem 1.2rem 1rem 1rem;
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;

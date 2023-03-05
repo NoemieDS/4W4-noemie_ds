@@ -11,9 +11,9 @@
 
 <article class="bloc__article">
   <h3><a href="<?php the_permalink(); ?>"> <?= $sigle ?></a></h3>
-  <h5> <?= $titre_long; ?> </h5>
+  <h4> <?= $titre_long; ?> </h4>
     <?php $lien = get_permalink(); ?>
     <?php $lire = "<span><a href='" . $lien . "'>... &#187;</a></span>" ?>
-   <p> <?= wp_trim_words(get_the_excerpt(), 15, $lire) ?> </p>
+   <p> <?= wp_trim_words(get_the_excerpt(), 20, $lire) ?> </p>
    <h6> <?= $duree; ?> </h6>
 </article>

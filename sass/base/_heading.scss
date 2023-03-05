@@ -15,18 +15,20 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
+  font-size: clamp(0.9rem, -0.1875rem + 2.2vw, 1.875rem);
 }
 h5 {
-  font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
+  font-size: clamp(0.7rem, -0.0313rem + 1.7vw, 1.5625rem);
 }
 
 h5.modele_php {
   color:var(--fonce-1);
+  padding: 0.2rem;
+  margin: 0.2rem;
 }
 
 h6 {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+  font-size: clamp(0.6rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
 p,
@@ -53,9 +55,11 @@ ul,
 ol, 
 li {
   list-style-type: none;
+
 }
 
 ul {
+padding-right: 20px;
   padding-bottom: 1rem;
 }
 
@@ -78,7 +82,7 @@ li>p {
 li>code {
   background-color: var(--fonce-2);
   border-radius: 2px;
-  padding: 0.18rem;
+  padding: 0.14rem;
 }
 
 code, 
@@ -123,7 +127,7 @@ i {
 img {
   width: 100%;
   height: auto;
-  margin-top: 1rem;
+  margin-top: 0.4rem;
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;

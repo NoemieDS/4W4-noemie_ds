@@ -12,5 +12,5 @@
   <h3><a href="<?php the_permalink(); ?>"> <?= $titre ?></a></h3>
     <?php $lien = get_permalink(); ?>
     <?php $lire = "<span><a href='" . $lien . "'>... &#187;</a></span>" ?>
-   <p> <?= wp_trim_words(get_the_excerpt(), 15, $lire) ?> </p>
+   <p> <?= wp_trim_words(get_the_excerpt(), 20, $lire) ?> </p>
 </article>

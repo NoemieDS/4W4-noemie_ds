@@ -37,7 +37,7 @@
     </div>
   </header>
 <aside class="site__aside">
-    <h3>Menu secondaire</h3>
+    <h5 class="modele_php">Menu secondaire</h5>
     <?php wp_nav_menu(array(
         "menu" => "aside",
         "container" => "nav"  

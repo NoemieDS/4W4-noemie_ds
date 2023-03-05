@@ -28,14 +28,15 @@
     align-items: flex-start;
     position: relative;
     background-color:  var(--blanc);
-    padding: 2rem;
+    padding: 1.8rem;
+    margin: 0 0.2rem 0.2rem 0;
     -webkit-border-top-left-radius: 10px;
     -khtml-border-radius-topleft: 10px;
     -moz-border-radius-topleft: 10px;
     border-top-left-radius: 10px;
     border: 2px solid var(--couleur2);
     box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
-  
+      
     h3,
     h5,
     h6  {
@@ -43,9 +44,15 @@
       margin: 0;
     }
 
+    h4 {
+      margin: 0.4rem 0;
+      color: var(--fonce);
+    }
+
     
     p {
       text-shadow: var(--texte-ombre);
+      margin: 0.8rem 0;
     }
     
     span {
@@ -64,7 +71,7 @@
   }
   
 .blocflex__galerie {
-  margin: 1rem 1rem 2rem 1rem;
+  margin: 1rem 1.2rem 1.4rem 1rem;
   display : flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -72,5 +79,12 @@ flex: 1 1 100%;
 
 img {
   box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
+  transition: transform 800ms;
 }
+img:hover,
+img:active {
+  transform: scale(1.2);
+  z-index: 100;
+}
+
 }

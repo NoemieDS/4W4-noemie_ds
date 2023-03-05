@@ -7,7 +7,7 @@
 ?>
 <?php get_header(); ?>
 <main>
-  <h2 class="front__titre">Les derniers articles de front-page.php</h2>
+  <h2>Les derniers articles de front-page.php</h2>
 
   <?php
   if (have_posts()) :
