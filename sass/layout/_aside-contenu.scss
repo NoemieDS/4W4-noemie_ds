@@ -38,6 +38,7 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 0px;
+     transition: transform 400ms ease-in-out;
   }
 
   ul#menu-aside {
@@ -46,6 +47,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 0 0 0.6rem 0;
+   
     a {
       font-size: clamp(0.6rem, 0.125rem + 2vw, 1.3rem);
       line-height: 120%;
@@ -55,12 +57,13 @@
       text-shadow: var(--accent-ombre2);
       transition: text-shadow 400ms;
       padding: 0 0.4rem;
+ 
     }
 
     a:hover,
     a:active {
       text-shadow: none;
-      color: var(--texte-clair);
+      color: var(--couleur3);
     }
 
  

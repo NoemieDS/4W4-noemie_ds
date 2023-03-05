@@ -59,8 +59,9 @@ li {
 }
 
 ul {
-padding-right: 20px;
-  padding-bottom: 1rem;
+padding-right: 0.8rem;
+padding-bottom: 1rem;
+padding-inline-start: 1rem;
 }
 
 main li::before {
@@ -136,10 +137,11 @@ img {
 }
 
 figcaption {
-  line-height: 160%;
+  font-size: clamp(0.7rem, 0.125rem + 1.2vw, 1.1rem); 
   font-family: var(--police-serif);
   transform: translateY(-0.6rem);
-  margin: 0 4rem;
+  margin: 0 2rem;
+  line-height: 130%;
 }
 
 hr {

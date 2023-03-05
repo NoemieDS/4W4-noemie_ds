@@ -29,7 +29,7 @@
     position: relative;
     background-color:  var(--blanc);
     padding: 1.8rem;
-    margin: 0 0.2rem 0.2rem 0;
+    margin: 0 0.8rem 0.2rem 0;
     -webkit-border-top-left-radius: 10px;
     -khtml-border-radius-topleft: 10px;
     -moz-border-radius-topleft: 10px;
@@ -71,7 +71,8 @@
   }
   
 .blocflex__galerie {
-  margin: 1rem 1.2rem 1.4rem 1rem;
+  
+  margin: 1rem 1.6rem 1.4rem 1rem;
   display : flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -79,7 +80,7 @@ flex: 1 1 100%;
 
 img {
   box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
-  transition: transform 800ms;
+  transition: all 800ms;
 }
 img:hover,
 img:active {

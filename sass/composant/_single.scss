@@ -5,10 +5,9 @@
 }
 
 .section_fiche {
-  max-width: 1200px;
   background-color:  var(--blanc);
-  padding: 1.4rem 1.6rem 2.8rem 1.6rem;
-  margin: 1rem 1.2rem 1rem 1rem;
+  padding: 1.4rem 1rem 2.8rem 1rem;
+  margin: 0.8rem 1rem 1rem 0.8rem;
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;
@@ -16,11 +15,16 @@
   border: 2px solid var(--couleur2);
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
 
+  @media screen and (min-width: 768px) {
+    max-width: 1200px
+  }
+
     
   .section_fiche_contenu {
-    /* padding: 2rem; */
-    max-width: 960px;
-    margin: 0 auto;
+ 
+    @media screen and (min-width: 768px) {
+      max-width: 960px;
+    }
     
     p,
     ul,
