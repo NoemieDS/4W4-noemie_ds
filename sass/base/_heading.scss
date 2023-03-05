@@ -96,9 +96,12 @@ li>code {
 
 pre {
   background-color: var(--fonce-2);
+  max-width: 260px;
   max-height: 320px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding: 2rem ;
+  margin: 0 auto;
   margin-bottom: 3rem;
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
