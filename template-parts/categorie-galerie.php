@@ -5,25 +5,16 @@
 * COMMENT NE PAS AFFICHER LE TITRE SUR LA PAGE D'ACCUEIL ??
 */
 $titre = get_the_title();
-$lien = get_permalink(); 
-$accueil = get_home_url();
 ?>
 
-
-
-<section class="blocflex__galerie"> 
+<section class="blocflex__galerie <?php echo (!is_front_page()?'bloc__article':'');?>"> 
 
 <?php 
 
-if(!$accueil)
- {?>
-   <h3><a href="<?php the_permalink(); ?>"> <?= $titre ?></a></h3>
-   <?php
-}
+if(!is_front_page()) { ?>
+<h3><a href="<?php the_permalink(); ?>"> <?= $titre ?></a></h3> 
+<?php }
+ the_content();
 ?>
 
-   <!--  <?php $lire = "<span><a href='" . $lien . "'>... &#187;</a></span>" ?> -->
-  <?php
-   the_content();
-?>
 </section>

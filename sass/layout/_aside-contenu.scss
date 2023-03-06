@@ -91,7 +91,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 992px) {
     grid-template-columns: 20% auto;
     grid-template-areas:
       "header header"
@@ -100,4 +100,15 @@
       /*  ". main"  */
       "footer footer";
   }
+}
+.no-aside {
+  
+  @media screen and (min-width: 992px) {
+    grid-template-columns: auto;
+    grid-template-areas:
+    "header"
+    "aside"
+    "main"
+    "footer";
+}
 }

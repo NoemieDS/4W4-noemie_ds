@@ -30,6 +30,17 @@ add_theme_support( 'custom-logo',
 ) );
 add_theme_support( 'post-thumbnails' );
 
+/*-------------------------------------------------Modifications des choix du menu cours */
+function personnaliser_menu_item_titre($title, $item, $args, $depth) {
+    // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
+    if($args->menu == 'cours') {
+// Modifier la longueur du titre en fonction de vos besoins
+$title = wp_trim_words($title, 3, ' ... '); //on garde uniquement 3 mots pour le titre
+}
+return $title;
+}
+add_filter('nav_menu_item_title', 'personnaliser_menu_item_titre', 10, 4);
+
 
 /**
  * Modifie la requete principale de Wordpress avant qu'elle soit exécuté
