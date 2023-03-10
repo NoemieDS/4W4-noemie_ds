@@ -15,7 +15,14 @@
   <?php wp_head(); ?>
 </head>
 
-<body class="site <?php echo (is_front_page()?'no-aside':'');?>">
+<?php
+$nouvelle_classe = "";
+if (is_front_page()) {
+  $nouvelle_classe = 'no-aside';
+}
+?>
+
+<body class="site <?= $nouvelle_classe ?>">
 
   <header class="site__header">
     <section class="site__header__logo">
@@ -27,20 +34,24 @@
     </section>
 
     <div class="site__header_nav_recherche">
+      <input type="checkbox" id="chkMenu" value="">
+      <label class="burger" for="chkMenu"><span class="material-symbols-outlined">
+          menu
+        </span></label>
+      <?php wp_nav_menu(array(
+        "menu" => "entete",
+        "container" => "nav"
+      )) ?>
       <section class="site__header__recherche">
         <?php
         get_search_form();
         ?>
       </section>
-      <?php wp_nav_menu(array(
-        "menu" => "entete",
-        "container" => "nav"
-      )) ?>
     </div>
+
   </header>
   <?php
-  if(!is_front_page()) {
+  if (!is_front_page()) {
     get_template_part("template-parts/aside");
   }
-
   ?>

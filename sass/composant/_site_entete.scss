@@ -1,3 +1,5 @@
+/************************** Ent^te de la page ************/
+
 .site__header {
   display: flex;
   justify-content: space-between;
@@ -5,13 +7,14 @@
   background-color: var(--fond);
   padding: 0.4rem 4rem 2rem 2rem;
   margin-top: 0.4rem;
+
 .site__header__logo {
   img {
     border-top-left-radius: initial;
     box-shadow: initial;
     width: 90%;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: $largeur__bureau) {
       width: 100%;
     }
   }
@@ -41,10 +44,31 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 0.6rem;
+    align-items: flex-end;
+    /*   gap: 0.6rem; */
+    white-space: nowrap;
+
+    /* Icone menu burger */
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48;
+      transform: scaleY(1.4);
+      color: var(--fonce-2);
+    }
+
+
+    @media screen and (min-width: $largeur__tablette) {
+      gap: 1rem;
+    }
 
     .site__header__recherche {
-      align-self: flex-end;
+    
+      @media screen and (min-width: $largeur__tablette) {
+        order: -1;
+      }
     }
   }
 
@@ -54,13 +78,33 @@
   li#menu-entete.menu {
     margin: 0;
   }
+  
+  .menu-entete-container {
+    transform: translateX(300px);
+    transition: transform 500ms;
+
+    @media screen and (min-width: $largeur__tablette) {
+      transform: translateX(0);
+    }
+  }
 
   .menu {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
- 
- 
+    justify-content: flex-end;
+    align-items: flex-end;
+  
+    @media screen and (min-width: $largeur__tablette) {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-end;
+    /*   flex-wrap: nowrap; */
+      transform: translateX(0);
+      gap: 1rem;
+    }
+
+   
     .menu-item {
       display: flex;
       flex-wrap: wrap;
@@ -68,7 +112,7 @@
       list-style-type: none;
       transition: transform 400ms ease-in-out;
       margin-top: 0.6rem;
-
+   
       a {
         font-size: clamp(0.8rem, 0.125rem + 2vw, 1.3rem);
         line-height: 120%;
@@ -81,7 +125,7 @@
         word-spacing: -0.1rem;
         text-shadow: var(--accent-ombre);
         transition: text-shadow 400ms;
-        padding: 0 0.5rem 0 0;
+        /* padding: 0 0.5rem 0 0; */
       }
 
       a:hover,
@@ -90,20 +134,23 @@
         color: var(--texte-clair);
        /*  color: var(--fonce-2); */
       }
-
    
     }
     .menu-item:hover,
     .menu-item:active {
       transform: scale(1.1);
     }
-    @media screen and (min-width: 992px) {
-  
-      flex-direction: row;
-      padding-left: 1.6rem;
-      padding-bottom: 0rem;
-    }
+ 
   }
+  }
+
+  #chkMenu {
+    display: none;
+  }
+
+  #chkMenu:checked ~ .menu-entete-container
+/*   #chkMenu:checked~#menu-entete  */{
+    transform: translateX(0)
   }
 
 

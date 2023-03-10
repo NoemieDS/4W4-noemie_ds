@@ -31,8 +31,9 @@ Text Domain: 2023-4w4-NoemieDS
 /* --------------------------------------------- composant */
 @import "composant/pied_page";
 @import "composant/site_entete";
+@import "composant/burger";
+@import "composant/rechercher";
 @import "composant/bloc_flex";
 @import "composant/single";
-@import "composant/rechercher";
 /* --------------------------------------------- layout */
 @import "layout/aside-contenu";

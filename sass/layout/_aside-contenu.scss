@@ -103,6 +103,11 @@
 }
 .no-aside {
   
+/*   grid-template-areas:
+  "header"
+  "main"
+  "footer"; */
+  
   @media screen and (min-width: 992px) {
     grid-template-columns: auto;
     grid-template-areas:
