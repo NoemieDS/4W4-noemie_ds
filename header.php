@@ -22,7 +22,8 @@ if (is_front_page()) {
 }
 ?>
 
-<body class="site <?= $nouvelle_classe ?>">
+<body>
+<div class="site <?= $nouvelle_classe ?>">
   <header class="site__header">
     <section class="site__header__logo">
       <?php the_custom_logo() ?>

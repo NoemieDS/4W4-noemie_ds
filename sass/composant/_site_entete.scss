@@ -4,8 +4,12 @@
   justify-content: space-between;
   align-content: center;
   background-color: var(--fond);
-  padding: 0.4rem 4rem 2rem 2rem;
-  margin-top: 0.4rem;
+  padding: 1rem 1rem 2rem 0.4rem;
+
+  @media screen and (min-width: $largeur__bureau) {
+    padding: 0;
+    margin-bottom: 2rem;
+  }
 
 .site__header__logo {
   img {
@@ -102,6 +106,12 @@
       transform: translateX(0);
       gap: 1rem;
     }
+
+    @media screen and (min-width: $largeur__bureau) {
+      gap: 1rem clamp(1rem, 3vw, 20rem);
+      flex-wrap: nowrap;
+    }
+
 
    
     .menu-item {

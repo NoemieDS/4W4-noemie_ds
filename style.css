@@ -559,10 +559,15 @@ a:hover, a:focus, a:active {
   justify-content: space-between;
   align-content: center;
   background-color: var(--fond);
-  padding: 0.4rem 4rem 2rem 2rem;
-  margin-top: 0.4rem;
+  padding: 1rem 1rem 2rem 0.4rem;
   /*-----------------------------------------------------------------menu-entête */
   /* ********************** Balise nav *******************/
+}
+@media screen and (min-width: 992px) {
+  .site__header {
+    padding: 0;
+    margin-bottom: 2rem;
+  }
 }
 .site__header .site__header__logo img {
   border-top-left-radius: initial;
@@ -641,6 +646,12 @@ a:hover, a:focus, a:active {
     /*   flex-wrap: nowrap; */
     transform: translateX(0);
     gap: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .site__header .menu {
+    gap: 1rem clamp(1rem, 3vw, 20rem);
+    flex-wrap: nowrap;
   }
 }
 .site__header .menu .menu-item {
@@ -754,7 +765,7 @@ a:hover, a:focus, a:active {
   position: relative;
   background-color: var(--blanc);
   padding: 1.8rem;
-  margin: 0 0.8rem 0.2rem 0;
+  margin: 1rem 0.8rem 0.2rem 0;
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;
@@ -783,6 +794,11 @@ a:hover, a:focus, a:active {
   left: 0.6em;
   white-space: nowrap;
 }
+@media screen and (min-width: 992px) {
+  .bloc__article {
+    margin: 1rem;
+  }
+}
 
 .blocflex__galerie {
   margin: 1rem 1.6rem 1.4rem 1rem;
@@ -802,7 +818,8 @@ a:hover, a:focus, a:active {
 @media screen and (min-width: 992px) {
   .blocflex__galerie {
     background-color: var(--blanc);
-    padding: 1.8rem;
+    padding: 0rem 1.4rem 1rem 1.4rem;
+    /*  margin: 2rem 0 4rem 0; */
     -webkit-border-top-left-radius: 10px;
     -khtml-border-radius-topleft: 10px;
     -moz-border-radius-topleft: 10px;
@@ -811,15 +828,18 @@ a:hover, a:focus, a:active {
     box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
   }
   .blocflex__galerie img {
-    padding: 1rem;
+    padding: 0.6rem;
+    /*   background-color: var(--blanc); */
   }
 }
 @media screen and (min-width: 1400px) {
-  .blocflex__galerie figure {
-    margin: 2%;
+  .blocflex__galerie {
+    /*    img {
+        padding: 2rem;
+      } */
   }
-  .blocflex__galerie img {
-    padding: 1rem;
+  .blocflex__galerie figure {
+    padding: 1%;
   }
 }
 
@@ -867,6 +887,12 @@ a:hover, a:focus, a:active {
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
 }
+@media screen and (min-width: 992px) {
+  .site {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+}
 .site main h2 {
   padding: 0.6rem 0 0 1rem;
 }
@@ -879,7 +905,7 @@ a:hover, a:focus, a:active {
 
 .site__header {
   grid-area: header;
-  padding: 1rem clamp(1rem, 3vw, 20rem);
+  /*  padding: 1rem clamp(1rem, 3vw, 20rem); */
 }
 
 .site__main {
@@ -907,8 +933,10 @@ a:hover, a:focus, a:active {
 @media screen and (min-width: 992px) {
   .site__aside {
     max-width: 340px;
+    min-height: 120px;
     flex-direction: column;
-    margin-top: 2rem;
+    justify-content: flex-start;
+    margin-top: 4rem;
     margin-left: 5%;
     margin-right: 5%;
   }
@@ -940,7 +968,7 @@ a:hover, a:focus, a:active {
   transition: transform 400ms ease-in-out;
 }
 .site__aside > nav > ul li a {
-  font-size: clamp(0.6rem, 0.2rem + 1.2vw, 0.9rem);
+  font-size: clamp(0.6rem, 0.2rem + 1.2vw, 0.8rem);
   line-height: 160%;
   color: var(--couleur4);
   font-family: var(--police-mono);

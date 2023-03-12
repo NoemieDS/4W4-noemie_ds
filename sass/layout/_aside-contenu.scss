@@ -11,6 +11,10 @@
     "main"
     "footer";
   // row-gap: 50px;
+  @media screen and (min-width: $largeur__bureau) {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
 
   main {
     h2 {
@@ -31,7 +35,7 @@
 
 .site__header {
   grid-area: header;
-  padding: 1rem clamp(1rem, 3vw, 20rem);
+ /*  padding: 1rem clamp(1rem, 3vw, 20rem); */
 }
 
 .site__main {
@@ -58,11 +62,12 @@
   
   @media screen and (min-width: $largeur__bureau) {
     max-width: 340px;
+    min-height: 120px;
     flex-direction: column;
-    margin-top: 2rem;
+    justify-content: flex-start;
+    margin-top: 4rem;
     margin-left: 5%;
     margin-right: 5%;
- 
   }
 
  &  > nav > ul {
@@ -91,7 +96,7 @@
     transition: transform 400ms ease-in-out;
 
     a {
-      font-size: clamp(0.6rem, 0.2rem + 1.2vw, 0.9rem);
+      font-size: clamp(0.6rem, 0.2rem + 1.2vw, 0.8rem);
       line-height: 160%;
       color: var(--couleur4);
       font-family: var(--police-mono);

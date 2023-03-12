@@ -40,7 +40,7 @@ add_theme_support('post-thumbnails');
 function personnaliser_menu_item_titre($title, $item, $args)
 {
     // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
-    if($args->menu == 'cours') {
+    if ($args->menu == 'cours') {
 
         // Modifier la longueur du titre en fonction de vos besoins
 
@@ -57,9 +57,6 @@ function personnaliser_menu_item_titre($title, $item, $args)
             $title = substr($title, 4);
         }
     }
-    return $title;
-
-
     /*-------------------------------------------------Modifications des choix du menu 4w4 */
     if ($args->menu == '4w4') {
         // Modifier la longueur du titre en fonction de vos besoins
@@ -68,6 +65,7 @@ function personnaliser_menu_item_titre($title, $item, $args)
             $title = substr($title, 1);
         }
     }
+
     return $title;
 }
 add_filter('nav_menu_item_title', 'personnaliser_menu_item_titre', 10, 3);
