@@ -11,7 +11,7 @@
     "main"
     "footer";
   // row-gap: 50px;
-  @media screen and (min-width: $largeur__bureau) {
+  @media screen and (min-width: $largeur__bureau_large) {
     max-width: 80vw;
     margin: 0 auto;
   }
@@ -96,7 +96,7 @@
     transition: transform 400ms ease-in-out;
 
     a {
-      font-size: clamp(0.6rem, 0.2rem + 1.2vw, 0.8rem);
+      font-size: clamp(0.6rem, 0.4rem + 1.2vw, 0.8rem);
       line-height: 160%;
       color: var(--couleur4);
       font-family: var(--police-mono);

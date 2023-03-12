@@ -26,8 +26,9 @@
   align-items: flex-start;
   position: relative;
   background-color: var(--blanc);
+  margin: 0 0.2rem;
   padding: 1.8rem;
-  margin: 1rem 0.8rem 0.2rem 0;
+  transform: translateX(-0.06rem);
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;
@@ -94,7 +95,6 @@
 
     img {
       padding: 0.6rem;
-    /*   background-color: var(--blanc); */
     }
 
   }

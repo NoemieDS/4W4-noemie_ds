@@ -36,7 +36,7 @@ ul,
 li
  {
   /* font-size: clamp(0.8rem, 0.125rem + 1.3vw, 1.1rem); */
-  font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.1rem);
+  font-size: clamp(0.8rem, 0.6rem + 1.16vw, 1.1rem);
   font-family: var(--police-sans);
   color: var(--texte-fonce);
   line-height: 150%;
@@ -157,7 +157,7 @@ img {
 figcaption {
   font-size: clamp(0.7rem, 0.125rem + 1.2vw, 1.1rem); 
   font-family: var(--police-serif);
-  transform: translateY(-0.6rem);
+  transform: translateY(-0.2rem);
   margin: 0 2rem;
   line-height: 130%;
 }

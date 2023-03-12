@@ -2,77 +2,53 @@
 .site__header {
   display: flex;
   justify-content: space-between;
-  align-content: center;
   background-color: var(--fond);
   padding: 1rem 1rem 2rem 0.4rem;
 
   @media screen and (min-width: $largeur__bureau) {
-    padding: 0;
+    padding: 0.8rem;
     margin-bottom: 2rem;
   }
 
-.site__header__logo {
-  img {
-    border-top-left-radius: initial;
-    box-shadow: initial;
-    width: 90%;
+  .site__header__logo {
+    img {
+      border-top-left-radius: initial;
+      box-shadow: initial;
+      width: 90%;
 
-    @media screen and (min-width: $largeur__bureau) {
-      width: 100%;
+      @media screen and (min-width: $largeur__bureau) {
+        width: 100%;
+      }
+    }
+    .site__header__titre {
+      align-self: center;
+      flex: 1 1 30%;
+    }
+    h1,
+    a {
+      font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
+    }
+    .site__header__titre {
+      h2 {
+        font-size: clamp(0.7rem, -0.1875rem + 1.6vw, 1.2rem);
+        color: var(--couleur2);
+        margin-top: -1em;
+        padding: 0;
+        font-family: var(--police-sans);
+      }
     }
   }
-}
-
-  .site__header__titre {
-    align-self: center;
-    flex: 1 1 30%;
-  }
-
-  .site__header__titre h1,
-  a {
-    font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
-  }
-
-  .site__header__titre {
-    h2 {
-      font-size: clamp(0.7rem, -0.1875rem + 1.6vw, 1.2rem);
-      color: var(--couleur2);
-      margin-top: -1em;
-      padding: 0;
-      font-family: var(--police-sans);
-    }
-  }
-
   .site__header_nav_recherche {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    /*   gap: 0.6rem; */
-    white-space: nowrap;
+
+    background-color: aquamarine;
 
     /* Icone menu burger */
     .material-symbols-outlined {
-      font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 48;
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
       transform: scaleY(1.4);
       color: var(--fonce-2);
     }
-
-
-    @media screen and (min-width: $largeur__tablette) {
-      gap: 1rem;
-    }
-
-    .site__header__recherche {
     
-      @media screen and (min-width: $largeur__tablette) {
-        order: -1;
-      }
-    }
   }
 
   /*-----------------------------------------------------------------menu-entête */
@@ -81,7 +57,7 @@
   li#menu-entete.menu {
     margin: 0;
   }
-  
+
   .menu-entete-container {
     transform: translateX(300px);
     transition: transform 500ms;
@@ -97,31 +73,24 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: flex-end;
-  
+
     @media screen and (min-width: $largeur__tablette) {
       flex-direction: row;
       align-items: flex-end;
       justify-content: flex-end;
-    /*   flex-wrap: nowrap; */
+      /*   flex-wrap: nowrap; */
       transform: translateX(0);
-      gap: 1rem;
-    }
-
-    @media screen and (min-width: $largeur__bureau) {
       gap: 1rem clamp(1rem, 3vw, 20rem);
-      flex-wrap: nowrap;
     }
 
-
-   
     .menu-item {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
       list-style-type: none;
-      transition: transform 400ms ease-in-out;
+      transition: transform 400ms ease-in;
       margin-top: 0.6rem;
-   
+
       a {
         font-size: clamp(0.8rem, 0.125rem + 2vw, 1.3rem);
         line-height: 120%;
@@ -137,29 +106,29 @@
         /* padding: 0 0.5rem 0 0; */
       }
 
-      a:hover,
-      a:active {
+      a:hover {
         text-shadow: none;
         color: var(--texte-clair);
-       /*  color: var(--fonce-2); */
+        transition: color 600ms;
       }
-   
+
+      a:active {
+        text-shadow: none;
+        color: var(--couleur3);
+      }
     }
     .menu-item:hover,
     .menu-item:active {
       transform: scale(1.1);
     }
- 
   }
-  }
+}
 
-  #chkMenu {
-    display: none;
-  }
+#chkMenu {
+  display: none;
+}
 
-  #chkMenu:checked ~ .menu-entete-container
-/*   #chkMenu:checked~#menu-entete  */{
-    transform: translateX(0)
-  }
-
-
+#chkMenu:checked ~ .menu-entete-container
+/*   #chkMenu:checked~#menu-entete  */ {
+  transform: translateX(0);
+}
