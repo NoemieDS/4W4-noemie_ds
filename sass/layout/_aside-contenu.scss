@@ -62,6 +62,7 @@
     margin-top: 2rem;
     margin-left: 5%;
     margin-right: 5%;
+ 
   }
 
  &  > nav > ul {
@@ -73,10 +74,12 @@
   padding: 1rem;
   
   @media screen and (min-width: $largeur__bureau) {
+    flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     padding: 0.6rem;
-    text-indent: -52px; 
-    margin-left: 52px; 
+    text-indent: -48px; 
+    margin-left: 48px; 
   }
  
   li {

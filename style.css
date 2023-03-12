@@ -923,10 +923,12 @@ a:hover, a:focus, a:active {
 }
 @media screen and (min-width: 992px) {
   .site__aside > nav > ul {
+    flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     padding: 0.6rem;
-    text-indent: -52px;
-    margin-left: 52px;
+    text-indent: -48px;
+    margin-left: 48px;
   }
 }
 .site__aside > nav > ul li {
