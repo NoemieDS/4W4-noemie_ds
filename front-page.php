@@ -6,8 +6,8 @@
  */
 ?>
 <?php get_header(); ?>
-<main>
-  <h2>Les derniers articles de front-page.php</h2>
+<main class="site__main no-aside">
+  <h2>Les derniers articles de 4W4</h2>
   <?php
   if (have_posts()) :
     while (have_posts()) : the_post();

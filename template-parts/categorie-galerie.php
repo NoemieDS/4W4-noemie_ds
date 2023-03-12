@@ -7,7 +7,7 @@
 $titre = get_the_title();
 ?>
 
-<section class="blocflex__galerie <?php echo (!is_front_page()?'bloc__article':'');?>"> 
+<section class="blocflex__galerie"> 
 
 <?php 
 

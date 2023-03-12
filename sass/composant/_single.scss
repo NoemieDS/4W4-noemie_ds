@@ -15,17 +15,15 @@
   border: 2px solid var(--couleur2);
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
 
-  @media screen and (min-width: 768px) {
-    max-width: 1200px
+  @media screen and (min-width: $largeur__bureau) {
+    max-width: 1200px;
   }
 
     
   .section_fiche_contenu {
+    margin: 0 auto;
+    padding: 0 2rem;
  
-    @media screen and (min-width: 992px) {
-      max-width: 960px;
-    }
-    
     p,
     ul,
     li {

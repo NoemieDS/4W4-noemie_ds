@@ -23,7 +23,6 @@ if (is_front_page()) {
 ?>
 
 <body class="site <?= $nouvelle_classe ?>">
-
   <header class="site__header">
     <section class="site__header__logo">
       <?php the_custom_logo() ?>
@@ -48,10 +47,10 @@ if (is_front_page()) {
         ?>
       </section>
     </div>
-
   </header>
   <?php
   if (!is_front_page()) {
     get_template_part("template-parts/aside");
   }
   ?>
+ 

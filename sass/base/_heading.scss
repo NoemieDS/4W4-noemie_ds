@@ -3,7 +3,7 @@ CSS Clam font-size generator : https://clamp.font-size.app/
 */
 
 h1 {
-  font-size: clamp(1rem, -0.0385rem + 3vw, 2.6rem);
+  font-size: clamp(1rem, -0.0385rem + 3vw, 2rem);
 }
 h2 {
   font-size: clamp(1rem, -0.3125rem + 2.8vw, 2.2rem);
@@ -11,11 +11,11 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1rem, -0.25rem + 2.6vw, 2rem);
+  font-size: clamp(1rem, -0.25rem + 2.6vw, 1.6rem);
 }
 
 h4 {
-  font-size: clamp(0.9rem, -0.1875rem + 2.2vw, 1.875rem);
+  font-size: clamp(0.9rem, -0.1875rem + 2.2vw, 1.5rem);
 }
 h5 {
   font-size: clamp(0.7rem, -0.0313rem + 1.7vw, 1.5625rem);
@@ -35,8 +35,8 @@ p,
 ul,
 li
  {
-  /* font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem); */
-  font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.2rem);
+  /* font-size: clamp(0.8rem, 0.125rem + 1.3vw, 1.1rem); */
+  font-size: clamp(0.8rem, 0.3056rem + 1.16vw, 1.1rem);
   font-family: var(--police-sans);
   color: var(--texte-fonce);
   line-height: 150%;
@@ -90,7 +90,7 @@ code,
 pre,
 li>code {
   font-family: var(--police-mono);
-  font-size: clamp(0.84rem, 0.14rem + 1vw, 1rem);
+  font-size: clamp(0.84rem, 0.14rem + 1vw, 0.9rem);
   white-space: pre-wrap;
 }
 
@@ -107,6 +107,21 @@ pre {
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
+
+  @media screen and (min-width:$largeur__tablette) {
+    max-width: 500px;
+    max-height: 320px;
+  }
+
+  @media screen and (min-width:$largeur__bureau) {
+    max-width: 600px;
+    max-height: 320px;
+  }
+
+  @media screen and (min-width:$largeur__bureau_large) {
+    max-width: 800px;
+    max-height: 320px;
+  }
 }
 
 blockquote {
