@@ -1,0 +1,38 @@
+.site__aside .menu-cours-container {
+  a,
+  p {
+    display: inline;
+    padding: 0;
+  }
+  
+  li {
+  @media screen and (min-width: $largeur__bureau) {
+    padding-bottom: 0.6rem;
+    line-height: 100%;
+  }
+}
+  .sigle-telephone {
+    display: block;
+    padding: 0 1rem;
+    @media screen and (min-width: $largeur__bureau) {
+      display: none;
+    }
+  }
+
+  .sigle-bureau {
+    display: none;
+    @media screen and (min-width: $largeur__bureau) {
+      display: inline;
+    }
+  }
+
+  .cours-titres {
+    display: none;
+    padding-left: 0.3rem;
+    @media screen and (min-width: $largeur__bureau) {
+      display: inline;
+      text-indent: -18px;
+      margin-left: 18px;
+    }
+  }
+}

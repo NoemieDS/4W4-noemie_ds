@@ -594,7 +594,6 @@ a:hover, a:focus, a:active {
   font-family: var(--police-sans);
 }
 .site__header .site__header_nav_recherche {
-  background-color: aquamarine;
   /* Icone menu burger */
 }
 .site__header .site__header_nav_recherche .material-symbols-outlined {
@@ -865,6 +864,46 @@ a:hover, a:focus, a:active {
   }
 }
 
+.site__aside .menu-cours-container a,
+.site__aside .menu-cours-container p {
+  display: inline;
+  padding: 0;
+}
+@media screen and (min-width: 992px) {
+  .site__aside .menu-cours-container li {
+    padding-bottom: 0.6rem;
+    line-height: 100%;
+  }
+}
+.site__aside .menu-cours-container .sigle-telephone {
+  display: block;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 992px) {
+  .site__aside .menu-cours-container .sigle-telephone {
+    display: none;
+  }
+}
+.site__aside .menu-cours-container .sigle-bureau {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .site__aside .menu-cours-container .sigle-bureau {
+    display: inline;
+  }
+}
+.site__aside .menu-cours-container .cours-titres {
+  display: none;
+  padding-left: 0.3rem;
+}
+@media screen and (min-width: 992px) {
+  .site__aside .menu-cours-container .cours-titres {
+    display: inline;
+    text-indent: -18px;
+    margin-left: 18px;
+  }
+}
+
 /* --------------------------------------------- layout */
 /**
 *  Mise en page général avec display:grid
@@ -954,7 +993,8 @@ a:hover, a:focus, a:active {
   padding-inline-start: 0px;
   transition: transform 400ms ease-in-out;
 }
-.site__aside > nav > ul li a {
+.site__aside > nav > ul li a,
+.site__aside > nav > ul li p {
   font-size: clamp(0.6rem, 0.4rem + 1.2vw, 0.8rem);
   line-height: 160%;
   color: var(--couleur4);
@@ -965,12 +1005,16 @@ a:hover, a:focus, a:active {
   padding: 0 1rem;
 }
 .site__aside > nav > ul li a:hover,
-.site__aside > nav > ul li a:active {
+.site__aside > nav > ul li a:active,
+.site__aside > nav > ul li p:hover,
+.site__aside > nav > ul li p:active {
   text-shadow: none;
   color: var(--texte-clair);
 }
 .site__aside > nav > ul li a .menu:hover,
-.site__aside > nav > ul li a .menu:active {
+.site__aside > nav > ul li a .menu:active,
+.site__aside > nav > ul li p .menu:hover,
+.site__aside > nav > ul li p .menu:active {
   transform: scale(1.1);
 }
 @media screen and (min-width: 992px) {

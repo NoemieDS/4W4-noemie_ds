@@ -9,8 +9,12 @@ function ajouter_styles()
         array(), // les fichiers css qui dépendent de style.css
         filemtime(get_template_directory() . '/style.css')  // version de notre style.css
     );
+
+    /* Polices de Google */
+wp_enqueue_style('style-goolefont', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200', false);
+
 }
-add_action('wp_enqueue_scripts', 'ajouter_styles');
+add_action('wp_enqueue_scripts', 'ajouter_styles' );
 
 
 
@@ -35,6 +39,7 @@ add_theme_support(
     )
 );
 add_theme_support('post-thumbnails');
+add_theme_support('custom-background', array());
 
 /*-------------------------------------------------Modifications des choix du menu cours */
 function personnaliser_menu_item_titre($title, $item, $args)
@@ -42,20 +47,12 @@ function personnaliser_menu_item_titre($title, $item, $args)
     // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
     if ($args->menu == 'cours') {
 
-        // Modifier la longueur du titre en fonction de vos besoins
+        // Modifier la longueur du titre en fonction des besoins
+        $sigle = substr($title, 0, 7);
+        $sigleBureau = substr($title, 4, 3);
+        $title = substr($title, 7);
+        $title = "<code class='sigle-telephone'>" . $sigle . "</code>" . "<code class='sigle-bureau'>" . $sigleBureau . "</code>" . "<p class='cours-titres'>" . wp_trim_words($title, 3, ' ... ') . "<p>";
 
-        if (strlen($title) < '10') {
-            wp_trim_words($title, 2, ' ... ');
-        } else {
-            $title = wp_trim_words($title, 3, ' ... '); //on garde uniquement 3 mots pour le titre
-        }
-
-        if (substr($title, 0, 1) == '5') {
-            $title = substr($title, 4);
-        }
-        if (substr($title, 0, 1) == '3') {
-            $title = substr($title, 4);
-        }
     }
     /*-------------------------------------------------Modifications des choix du menu 4w4 */
     if ($args->menu == '4w4') {
