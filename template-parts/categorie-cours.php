@@ -3,8 +3,8 @@
  * Template part pour afficher une blocflex article cours TIM
  */
     $titre = get_the_title();
-    $sigle = substr($titre, 0, 7); //582-1W1 - Mise en page web, garde de 0 au 7e caractère
-    $titre_long = substr($titre, 7, -5); //part du 7e et ramasse pas les 7 dernier
+    $sigle = substr($titre, 0, 7); //"582-1W1 - Mise en page web", garde de 0 au 7e caractère
+    $titre_long = substr($titre, 7, -6); //part du 7e et ramasse pas les 6 derniers
     $duree = substr($titre, -6)
     //strpos($titre, '()') permet de trouver la position dans une chaine
   ?>

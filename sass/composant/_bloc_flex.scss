@@ -22,7 +22,7 @@
 .bloc__article {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
   position: relative;
   background-color: var(--blanc);
@@ -86,7 +86,8 @@
   @media screen and (min-width: $largeur__bureau) {
     background-color: var(--blanc);
     padding: 0rem 1.4rem 1rem 1.4rem;
-   /*  margin: 2rem 0 4rem 0; */
+    margin: 0 auto;
+    margin-top: 0.5rem;
     -webkit-border-top-left-radius: 10px;
     -khtml-border-radius-topleft: 10px;
     -moz-border-radius-topleft: 10px;

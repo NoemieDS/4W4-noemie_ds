@@ -7,7 +7,7 @@
 ?>
 <?php get_header(); ?>
 <main class="site__main no-aside">
-  <h2>Les derniers articles de 4W4</h2>
+  <h2>Les Timiens créent avec des ordinateurs</h2>
   <?php
   if (have_posts()) :
     while (have_posts()) : the_post();

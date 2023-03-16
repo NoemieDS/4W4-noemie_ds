@@ -470,7 +470,7 @@ pre {
     max-height: 320px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1800px) {
   pre {
     max-width: 800px;
     max-height: 320px;
@@ -784,7 +784,7 @@ a:hover, a:focus, a:active {
 .bloc__article {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
   position: relative;
   background-color: var(--blanc);
@@ -845,7 +845,8 @@ a:hover, a:focus, a:active {
   .blocflex__galerie {
     background-color: var(--blanc);
     padding: 0rem 1.4rem 1rem 1.4rem;
-    /*  margin: 2rem 0 4rem 0; */
+    margin: 0 auto;
+    margin-top: 0.5rem;
     -webkit-border-top-left-radius: 10px;
     -khtml-border-radius-topleft: 10px;
     -moz-border-radius-topleft: 10px;
@@ -857,7 +858,7 @@ a:hover, a:focus, a:active {
     padding: 0.6rem;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1800px) {
   .blocflex__galerie {
     /*    img {
         padding: 2rem;
@@ -909,6 +910,20 @@ a:hover, a:focus, a:active {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .site__aside .menu-cours-container ul {
+    text-indent: -42px;
+    margin-left: 42px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .site__aside .menu-cours-container li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 0.6rem;
+  }
+}
 .site__aside .menu-cours-container a,
 .site__aside .menu-cours-container p {
   display: inline;
@@ -938,8 +953,8 @@ a:hover, a:focus, a:active {
 @media screen and (min-width: 992px) {
   .site__aside .menu-cours-container .cours-titres {
     display: inline;
-    text-indent: -18px;
-    margin-left: 18px;
+    /*   text-indent: -10px;
+      margin-left: 10px; */
   }
 }
 
@@ -958,15 +973,29 @@ a:hover, a:focus, a:active {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1800px) {
   .site {
     max-width: 90vw;
     margin: 0 auto;
   }
 }
+.site main {
+  min-height: 30vmax;
+}
 .site main h2 {
   margin: 0;
   padding: 0.8rem 0 0 1rem;
+}
+@media screen and (min-width: 992px) {
+  .site main h2 {
+    padding: 1rem;
+    margin-left: 5rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .site main h2 {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 992px) {
   .site {
@@ -983,6 +1012,18 @@ a:hover, a:focus, a:active {
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+@media screen and (min-width: 992px) {
+  .site__main {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .site__main {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .site__footer {
@@ -1016,7 +1057,7 @@ a:hover, a:focus, a:active {
 .site__aside > nav > ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   margin: 0;
   padding: 1rem;
@@ -1027,8 +1068,8 @@ a:hover, a:focus, a:active {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0.6rem;
-    text-indent: -48px;
-    margin-left: 48px;
+    text-indent: -60px;
+    margin-left: 60px;
   }
 }
 .site__aside > nav > ul li {
@@ -1039,6 +1080,11 @@ a:hover, a:focus, a:active {
   padding-inline-start: 0px;
   transition: transform 400ms ease-in-out;
   padding-bottom: 0.6rem;
+}
+@media screen and (min-width: 992px) {
+  .site__aside > nav > ul li {
+    padding-top: 1rem;
+  }
 }
 .site__aside > nav > ul li a,
 .site__aside > nav > ul li p {

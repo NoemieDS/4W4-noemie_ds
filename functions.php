@@ -51,7 +51,13 @@ function personnaliser_menu_item_titre($title, $item, $args)
         $sigle = substr($title, 0, 7);
         $sigleBureau = substr($title, 4, 3);
         $title = substr($title, 7);
-        $title = "<code class='sigle-telephone'>" . $sigle . "</code>" . "<code class='sigle-bureau'>" . $sigleBureau . "</code>" . "<p class='cours-titres'>" . wp_trim_words($title, 3, ' ... ') . "<p>";
+        $title = wp_trim_words($title, 3, ' ... ');
+        $titleFinal = explode( " ",  $title );
+        array_splice( $titleFinal, -1 );
+          
+        $title = "<code class='sigle-telephone'>" . $sigle . "</code>" . "<code class='sigle-bureau'>" . $sigleBureau . 
+        "</code>" . "<p class='cours-titres'>" . 
+         implode( " ",  $titleFinal) . "<p>";
 
     }
     /*-------------------------------------------------Modifications des choix du menu 4w4 */

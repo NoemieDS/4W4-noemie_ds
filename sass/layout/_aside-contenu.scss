@@ -21,9 +21,17 @@
   }
 
   main {
+    min-height: 30vmax;
     h2 {
       margin: 0;
       padding: 0.8rem 0 0 1rem;
+      @media screen and (min-width: $largeur__bureau) {
+        padding: 1rem;
+        margin-left: 5rem;
+      }
+      @media screen and (min-width: $largeur__bureau_large) {
+       text-align: center;
+      }
     }
   }
 
@@ -46,6 +54,14 @@
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  @media screen and (min-width: $largeur__bureau) {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $largeur__bureau_large) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .site__footer {
@@ -78,18 +94,19 @@
   & > nav > ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     margin: 0;
     padding: 1rem;
+    
 
     @media screen and (min-width: $largeur__bureau) {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
       padding: 0.6rem;
-      text-indent: -48px;
-      margin-left: 48px;
+      text-indent: -60px;
+      margin-left: 60px;
     }
 
     li {
@@ -99,8 +116,11 @@
       margin-inline-end: 0px;
       padding-inline-start: 0px;
       transition: transform 400ms ease-in-out;
-      padding-bottom: 0.6rem;
-  
+      padding-bottom: 0.6rem;    
+      @media screen and (min-width: $largeur__bureau) {
+        padding-top: 1rem;
+      }
+     
       a,
       p {
         font-size: clamp(0.6rem, 0.4rem + 1.2vw, 1rem);

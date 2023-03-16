@@ -2,7 +2,6 @@
 /* 
 * Template part pour afficher la galerie dans la page d'accueil
 *
-* COMMENT NE PAS AFFICHER LE TITRE SUR LA PAGE D'ACCUEIL ??
 */
 $titre = get_the_title();
 ?>
