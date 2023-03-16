@@ -5,12 +5,6 @@
     padding: 0;
   }
   
-  li {
-  @media screen and (min-width: $largeur__bureau) {
-    padding-bottom: 0.6rem;
-    line-height: 100%;
-  }
-}
   .sigle-telephone {
     display: block;
     padding: 0 1rem;

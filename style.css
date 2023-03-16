@@ -914,12 +914,6 @@ a:hover, a:focus, a:active {
   display: inline;
   padding: 0;
 }
-@media screen and (min-width: 992px) {
-  .site__aside .menu-cours-container li {
-    padding-bottom: 0.6rem;
-    line-height: 100%;
-  }
-}
 .site__aside .menu-cours-container .sigle-telephone {
   display: block;
   padding: 0 1rem;
@@ -1022,7 +1016,7 @@ a:hover, a:focus, a:active {
 .site__aside > nav > ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0;
   padding: 1rem;
@@ -1044,11 +1038,12 @@ a:hover, a:focus, a:active {
   margin-inline-end: 0px;
   padding-inline-start: 0px;
   transition: transform 400ms ease-in-out;
+  padding-bottom: 0.6rem;
 }
 .site__aside > nav > ul li a,
 .site__aside > nav > ul li p {
-  font-size: clamp(0.6rem, 0.4rem + 1.2vw, 0.8rem);
-  line-height: 160%;
+  font-size: clamp(0.6rem, 0.4rem + 1.2vw, 1rem);
+  line-height: 100%;
   color: var(--couleur4);
   font-family: var(--police-mono);
   text-shadow: var(--accent-ombre2);
