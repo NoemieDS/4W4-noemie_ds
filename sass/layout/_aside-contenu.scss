@@ -11,8 +11,12 @@
     "main"
     "footer";
   // row-gap: 50px;
+  @media screen and (min-width: $largeur__bureau) {
+    max-width: 95vw;
+    margin: 0 auto;
+  }
   @media screen and (min-width: $largeur__bureau_large) {
-    max-width: 80vw;
+    max-width: 90vw;
     margin: 0 auto;
   }
 

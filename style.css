@@ -571,10 +571,13 @@ a:hover, a:focus, a:active {
   border-top-left-radius: initial;
   box-shadow: initial;
   width: 90%;
+  margin-right: 0;
+  padding-right: 0;
 }
 @media screen and (min-width: 992px) {
   .site__header .site__header__logo img {
     width: 100%;
+    padding-right: 1rem;
   }
 }
 .site__header .site__header__titre {
@@ -606,21 +609,20 @@ a:hover, a:focus, a:active {
 }
 .site__header .site__header_nav_recherche .burger > span {
   position: fixed;
-  right: 6vw;
+  right: 4vw;
   padding: 1rem 0;
   transition: all 500ms;
 }
 @media screen and (min-width: 800px) {
   .site__header .site__header_nav_recherche {
-    padding-top: 2rem;
+    padding-top: 3rem;
   }
 }
-.site__header ul#menu-entete.menu,
-.site__header li#menu-entete.menu {
+.site__header ul#menu-entete.menu {
   margin: 0;
   padding: 0;
   position: fixed;
-  right: 5vw;
+  right: 4vw;
 }
 .site__header ul#menu-entete.menu {
   transform: translateX(150px);
@@ -629,6 +631,13 @@ a:hover, a:focus, a:active {
 @media screen and (min-width: 800px) {
   .site__header ul#menu-entete.menu {
     transform: translateX(0);
+    position: relative;
+    right: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .site__header ul#menu-entete.menu {
+    padding-top: 2rem;
   }
 }
 .site__header .menu {
@@ -719,7 +728,7 @@ a:hover, a:focus, a:active {
   border: 2px dotted hsl(var(--hFonce), var(--sFonce), 28%);
 }
 .recherche .recherche__input[type=search] {
-  width: 35vw;
+  width: 32vw;
   height: 2.5em;
 }
 @media screen and (min-width: 992px) {
@@ -949,9 +958,15 @@ a:hover, a:focus, a:active {
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
 }
+@media screen and (min-width: 992px) {
+  .site {
+    max-width: 95vw;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 1400px) {
   .site {
-    max-width: 80vw;
+    max-width: 90vw;
     margin: 0 auto;
   }
 }
