@@ -69,8 +69,9 @@
 .blocflex__galerie {
   margin: 1rem 1.6rem 1.4rem 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   img {
     box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);

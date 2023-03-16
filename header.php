@@ -28,19 +28,21 @@ if (is_front_page()) {
     </section>
 
     <div class="site__header_nav_recherche">
-      <input type="checkbox" id="chkMenu" value="">
-      <label class="burger" for="chkMenu"><span class="material-symbols-outlined">
-          menu
-        </span></label>
-      <?php wp_nav_menu(array(
-        "menu" => "entete",
-        "container" => "nav"
-      )) ?>
-      <section class="site__header__recherche">
+    <section class="site__header__recherche">
         <?php
         get_search_form();
         ?>
       </section>
+      <input type="checkbox" id="chkMenu" value="">
+      <label class="burger" for="chkMenu"><span class="material-symbols-outlined">
+          menu
+        </span></label>
+        
+      <?php wp_nav_menu(array(
+        "menu" => "entete",
+        "container" => "nav"
+      )) ?>
+  
     </div>
   </header>
   <?php

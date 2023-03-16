@@ -558,14 +558,13 @@ a:hover, a:focus, a:active {
   display: flex;
   justify-content: space-between;
   background-color: var(--fond);
-  padding: 1rem 1rem 2rem 0.4rem;
+  padding: 1rem 1rem 0rem 0.4rem;
   /*-----------------------------------------------------------------menu-entête */
   /* ********************** Balise nav *******************/
 }
 @media screen and (min-width: 992px) {
   .site__header {
     padding: 0.8rem;
-    margin-bottom: 2rem;
   }
 }
 .site__header .site__header__logo img {
@@ -578,39 +577,57 @@ a:hover, a:focus, a:active {
     width: 100%;
   }
 }
-.site__header .site__header__logo .site__header__titre {
+.site__header .site__header__titre {
   align-self: center;
   flex: 1 1 30%;
 }
-.site__header .site__header__logo h1,
-.site__header .site__header__logo a {
+.site__header .site__header__titre h1,
+.site__header .site__header__titre a {
   font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
 }
-.site__header .site__header__logo .site__header__titre h2 {
+.site__header .site__header__titre h2 {
   font-size: clamp(0.7rem, -0.1875rem + 1.6vw, 1.2rem);
   color: var(--couleur2);
   margin-top: -1em;
-  padding: 0;
   font-family: var(--police-sans);
+}
+@media screen and (min-width: 800px) {
+  .site__header .site__header__titre {
+    width: 100%;
+  }
 }
 .site__header .site__header_nav_recherche {
   /* Icone menu burger */
 }
 .site__header .site__header_nav_recherche .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-  transform: scaleY(1.4);
+  transform: scale(1.2, 1.6);
   color: var(--fonce-2);
+}
+.site__header .site__header_nav_recherche .burger > span {
+  position: fixed;
+  right: 6vw;
+  padding: 1rem 0;
+  transition: all 500ms;
+}
+@media screen and (min-width: 800px) {
+  .site__header .site__header_nav_recherche {
+    padding-top: 2rem;
+  }
 }
 .site__header ul#menu-entete.menu,
 .site__header li#menu-entete.menu {
   margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 5vw;
 }
-.site__header .menu-entete-container {
-  transform: translateX(300px);
+.site__header ul#menu-entete.menu {
+  transform: translateX(150px);
   transition: transform 500ms;
 }
 @media screen and (min-width: 800px) {
-  .site__header .menu-entete-container {
+  .site__header ul#menu-entete.menu {
     transform: translateX(0);
   }
 }
@@ -623,12 +640,14 @@ a:hover, a:focus, a:active {
 }
 @media screen and (min-width: 800px) {
   .site__header .menu {
+    display: flex;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: flex-end;
-    /*   flex-wrap: nowrap; */
+    justify-content: flex-start;
+    flex-wrap: nowrap;
     transform: translateX(0);
     gap: 1rem clamp(1rem, 3vw, 20rem);
+    padding-top: 2rem;
   }
 }
 .site__header .menu .menu-item {
@@ -637,7 +656,7 @@ a:hover, a:focus, a:active {
   justify-content: space-evenly;
   list-style-type: none;
   transition: transform 400ms ease-in;
-  margin-top: 0.6rem;
+  margin-top: 1rem;
 }
 .site__header .menu .menu-item a {
   font-size: clamp(0.8rem, 0.125rem + 2vw, 1.3rem);
@@ -671,8 +690,13 @@ a:hover, a:focus, a:active {
   display: none;
 }
 
-#chkMenu:checked ~ .menu-entete-container {
+#chkMenu:checked + label + nav > ul#menu-entete.menu {
   transform: translateX(0);
+}
+
+#chkMenu:checked + label > span {
+  transform: translateX(-120px) scale(1.6, 1.2) rotate(90deg);
+  color: var(--couleur3);
 }
 
 /***********************************Bouton burger ***************/
@@ -691,13 +715,23 @@ a:hover, a:focus, a:active {
 .recherche {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border: 2px dotted hsl(var(--hFonce), var(--sFonce), 28%);
+}
+.recherche .recherche__input[type=search] {
+  width: 35vw;
+  height: 2.5em;
+}
+@media screen and (min-width: 992px) {
+  .recherche .recherche__input[type=search] {
+    width: 20vw;
+  }
 }
 .recherche .recherche__input {
   background-color: transparent;
   border: none;
   color: var(--texte-clair);
+  padding-left: 0.4rem;
 }
 .recherche .recherche__input:focus {
   outline: none;
@@ -717,6 +751,7 @@ a:hover, a:focus, a:active {
   color: var(--couleur2);
   cursor: pointer;
   transform: translateY(0.1em);
+  padding-right: 0.4rem;
 }
 
 /* .blocflex {
@@ -784,8 +819,9 @@ a:hover, a:focus, a:active {
 .blocflex__galerie {
   margin: 1rem 1.6rem 1.4rem 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 .blocflex__galerie img {
   box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
@@ -920,7 +956,8 @@ a:hover, a:focus, a:active {
   }
 }
 .site main h2 {
-  padding: 0.6rem 0 0 1rem;
+  margin: 0;
+  padding: 0.8rem 0 0 1rem;
 }
 @media screen and (min-width: 992px) {
   .site {
