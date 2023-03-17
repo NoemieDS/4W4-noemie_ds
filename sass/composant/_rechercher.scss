@@ -7,9 +7,9 @@
   .recherche__input[type="search"] {
      width: 32vw;
      height: 2.5em;
-     @media screen and (min-width: $largeur__bureau) {
+    /*  @media screen and (min-width: $largeur__bureau) {
       width: 20vw;
-     }
+     } */
    }
    
   .recherche__input {
@@ -17,6 +17,10 @@
     border: none;
     color: var( --texte-clair);
     padding-left: 0.4rem;
+    font-size: 0.6rem;
+    @media screen and (min-width: $largeur__bureau) {
+      font-size: 0.8rem;
+    }
   }
 
    .recherche__input:focus {

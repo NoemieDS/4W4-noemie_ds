@@ -51,7 +51,7 @@
       color: var(--fonce-2);
     }
     .burger>span {
-      position: fixed;  
+      position: absolute;  
       right: 4vw;
       padding: 1rem 0;
       transition: all 500ms;
@@ -72,7 +72,7 @@
   }
 
   ul#menu-entete.menu {
-    transform: translateX(150px);
+    transform: translateX(170px);
     transition: transform 500ms;
 
     @media screen and (min-width: $largeur__tablette) {
@@ -102,8 +102,6 @@
       gap: 1rem clamp(1rem, 3vw, 20rem);
       padding-top: 2rem;
     }
-
-   
 
     .menu-item {
       display: flex;
@@ -151,11 +149,10 @@
 }
 
 #chkMenu:checked+label+nav>ul#menu-entete.menu {
-  transform: translateX(0);
+  transform: translateX(-50px);
 }
 
 #chkMenu:checked+label>span {
-  transform: translateX(-120px) scale(1.6, 1.2) rotate(90deg);
+  transform: /* translateX(-120px) */ scale(1.6, 1.2) rotate(90deg);
   color: var(--couleur3);
-  
 }

@@ -21,9 +21,9 @@
   }
 
   main {
-    min-height: 30vmax;
+    min-height: 40vmax;
     h2 {
-      margin: 0;
+      margin: 1.4rem 0;
       padding: 0.8rem 0 0 1rem;
       @media screen and (min-width: $largeur__bureau) {
         padding: 1rem;
@@ -71,7 +71,7 @@
 .site__aside {
   grid-area: aside;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   justify-content: center;
   align-content: center;
   -webkit-border-top-left-radius: 10px;
@@ -80,6 +80,7 @@
   border-top-left-radius: 10px;
   box-shadow: 0.2rem 0.2rem 0.5rem hsl(var(--hFonce), var(--sFonce), 10%);
   padding: 0;
+  margin: 1.5rem 0;
 
   @media screen and (min-width: $largeur__bureau) {
     max-width: 360px;
