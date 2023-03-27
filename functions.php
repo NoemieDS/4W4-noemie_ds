@@ -39,7 +39,8 @@ add_theme_support(
     )
 );
 add_theme_support('post-thumbnails');
-add_theme_support('custom-background', array());
+//add_theme_support('custom-background', array());
+add_theme_support('custom-background');
 
 /*-------------------------------------------------Modifications des choix du menu cours */
 function personnaliser_menu_item_titre($title, $item, $args)
@@ -58,8 +59,8 @@ function personnaliser_menu_item_titre($title, $item, $args)
         $title = "<code class='sigle-telephone'>" . $sigle . "</code>" . "<code class='sigle-bureau'>" . $sigleBureau . 
         "</code>" . "<p class='cours-titres'>" . 
          implode( " ",  $titleFinal) . "<p>";
-
     }
+    
     /*-------------------------------------------------Modifications des choix du menu 4w4 */
     if ($args->menu == '4w4') {
         // Modifier la longueur du titre en fonction de vos besoins
@@ -81,16 +82,19 @@ add_filter('nav_menu_item_title', 'personnaliser_menu_item_titre', 10, 3);
  * Dans ce cas çi nous filtrons la requête de la page d'accueil
  * @param WP_query  $query la requête principal de WP
  */
-function cidweb_modifie_requete_principal($query)
+function cidweb_modifie_requete_principal($query) //s'exécute à chaque page
 {
     if (
         $query->is_home()
-        && $query->is_main_query()
-        && !is_admin()
+        && $query->is_main_query() //ce n'est pas une requête secondaire
+        && !is_admin() // c'est pas le tableau de bord (car il y a là aussi une requête principale)
     ) {
-        $query->set('category_name', '4w4');
+        $query->set('category_name', '4w4'); //On affiche 4W4 sur la page principale
         $query->set('orderby', 'title');
         $query->set('order', 'ASC');
     }
 }
-add_action('pre_get_posts', 'cidweb_modifie_requete_principal');
+//add_action est un écouteur (JS : add event listener)
+//pre_get_posts est un hook c'est comme un event en JS, donne une chance de modifier la requête 
+//principale avant qu'elle soit exécuté
+add_action('pre_get_posts', 'cidweb_modifie_requete_principal'); 

@@ -16,7 +16,7 @@ if (is_front_page()) {
 }
 ?>
 
-<body>
+<body class="custom-background" >
 <div class="site <?= $nouvelle_classe ?>">
   <header class="site__header">
     <section class="site__header__logo">

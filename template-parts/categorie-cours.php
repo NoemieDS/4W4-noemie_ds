@@ -5,9 +5,11 @@
     $titre = get_the_title();
     $sigle = substr($titre, 0, 7); //"582-1W1 - Mise en page web", garde de 0 au 7e caractère
     $titre_long = substr($titre, 7, -6); //part du 7e et ramasse pas les 6 derniers
-    $duree = substr($titre, -6)
-    //strpos($titre, '()') permet de trouver la position dans une chaine
+   // $duree = substr($titre, -6)
+    $duree = substr($titre, strpos($titre,'(')); //plus optimal
   ?>
+
+
 
 <article class="bloc__article">
   <h3><a href="<?php the_permalink(); ?>"> <?= $sigle ?></a></h3>
@@ -16,4 +18,6 @@
     <?php $lire = "<span><a href='" . $lien . "'>... &#187;</a></span>" ?>
    <p> <?= wp_trim_words(get_the_excerpt(), 20, $lire) ?> </p>
    <h6> <?= $duree; ?> </h6>
+   <p><?php the_field('enseignant'); ?>
+   <br/><?php the_field('domaine'); ?></br>
 </article>
