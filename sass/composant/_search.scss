@@ -1,66 +1,74 @@
 .search_titre {
   text-align: center;
   padding-bottom: 1rem;
-  font-size: clamp(1.5rem, -0.3125rem + 2.8vw, 2.2rem);
+  font-size: clamp(1.5rem, +1rem + 2.8vw, 2.2rem);
 }
 
 .search_resultat {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
 
-@media screen and (min-width: $largeur__bureau) {
-  flex-direction: row;
-}
+  @media screen and (min-width: $largeur__bureau) {
+    flex-direction: row;
+  }
 }
 
 .search_resultat_titre,
 .search_resultat_extrait {
   width: 85vw;
   padding: 1rem;
-  margin: 1rem clamp(1rem, 3vw, 24rem); 
+  margin: 1rem clamp(1rem, 3vw, 24rem);
 
   @media screen and (min-width: $largeur__bureau) {
     padding: 4%;
+    align-self: flex-start;
   }
 }
-
 
 .search_resultat_titre {
-  background-color:  var(--blanc);
+  background-color: var(--blanc);
   border-top-left-radius: 10px;
+  h3,
+  h4 {
+    margin: 0.4rem 0;
+  }
+  p {
+    font-size: clamp(1rem, -0.25rem + 2.6vw, 1.1rem);
+  }
+  h4 {
+    font-size: clamp(1.2rem, -0.25rem + 2.6vw, 1.6rem);
+  }
   @media screen and (min-width: $largeur__bureau) {
     flex: 1 1 30%;
-    h3 {
-      font-size: clamp(1rem, -0.25rem + 2.6vw, 1.2rem);
+  }
+}
+.search_resultat_extrait {
+  color: var(--texte-clair);
+  background-color: var(--fonce-1);
+  margin: 0 auto;
+  border-bottom-right-radius: 10px;
+  text-shadow: var(--fonce);
+  line-height: 180%;
+
+  a {
+    color: var(--fonce);
+  }
+
+  @media screen and (min-width: $largeur__bureau) {
+    flex: 1 1 70%;
+    background-color: transparent;
+    padding-top: 0.4rem;
+
+    a {
+      color: unset;
     }
   }
 }
-  .search_resultat_extrait {
-   color: var( --texte-clair);
-    background-color: var(--fonce-1);
-    margin: 0 auto;
-    border-bottom-right-radius: 10px;
-    text-shadow: var(--fonce);
 
-    p,
-    ul,
-    li {
-      line-height: 180%;
-    }
-   
-    @media screen and (min-width: $largeur__bureau) {
-      flex: 1 1 70%;
-      background-color: transparent;
-      line-height: 180%;
-    }
-  }
-
-  .search_diviseur {
-    box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
-    margin-bottom: 2rem;
-  }
-
-
+.search_diviseur {
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
+  margin-bottom: 2rem;
+}
