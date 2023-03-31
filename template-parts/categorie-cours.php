@@ -18,6 +18,6 @@
     <?php $lire = "<span><a href='" . $lien . "'>... &#187;</a></span>" ?>
    <p> <?= wp_trim_words(get_the_excerpt(), 20, $lire) ?> </p>
    <h6> <?= $duree; ?> </h6>
-   <p><?php the_field('enseignant'); ?>
-   <br/><?php the_field('domaine'); ?></br>
+   <p>Enseignant: <?php the_field('enseignant'); ?>
+   <br/>Domaine: <?php the_field('domaine'); ?></br>
 </article>
