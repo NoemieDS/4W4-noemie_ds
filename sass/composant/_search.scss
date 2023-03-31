@@ -50,10 +50,7 @@ margin: 0 auto;
     li {
       line-height: 180%;
     }
-
-    a {
-      color: var(--fonce);
-    }
+   
     @media screen and (min-width: $largeur__bureau) {
       flex: 1 1 70%;
       background-color: transparent;
