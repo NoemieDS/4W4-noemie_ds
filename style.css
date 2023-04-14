@@ -329,7 +329,7 @@ template {
   --fonce: hsl(var(--hFonce), var(--sFonce), 20%); /* #2B2D42 */
   --fonce-1:hsl(var(--hFonce-1), var(--sFonce-1), 52%); /* #5b667a */
   --fonce-2:hsl(218deg, 17%, 72%); /* #8D99AE */
-  --blanc:hsl(30, 23%, 95%); /* #EDF2F4 */
+  --blanc:hsl(30deg, 23%, 95%); /* #EDF2F4 */
   --couleur1:hsl(204deg, 59%, 50%); /* #368fcb */
   --couleur2:hsl(161deg, 82%, 27%); /* #0C7C59 */
   --couleur3:hsl(346deg, 100%, 32%); /* #D80032 */
