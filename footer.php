@@ -4,13 +4,18 @@
   <section> <?php the_custom_logo() ?>    
     </section>
   <section>
-    <?php wp_nav_menu(array(
-      "menu" => "pied2page",
-      "container" => "nav"
-    )) ?>
+    <div class="sidebar">
+    <?php dynamic_sidebar( 'footer_1' ); ?>
+</div>
+<div class="footer-date">
+<?= date("Y") ?>
+</div>
   </section>
-  <section class="footer-date">
-  <?= date("Y") ?>
+  <section >
+ 
+  <div class="sidebar">
+    <?php dynamic_sidebar( 'footer_2' ); ?>
+</div>
   </section>
 </footer>
 <?php wp_footer(); ?>

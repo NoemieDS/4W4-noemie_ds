@@ -98,3 +98,27 @@ function cidweb_modifie_requete_principal($query) //s'exécute à chaque page
 //pre_get_posts est un hook c'est comme un event en JS, donne une chance de modifier la requête 
 //principale avant qu'elle soit exécuté
 add_action('pre_get_posts', 'cidweb_modifie_requete_principal'); 
+
+// Enregistrer le sidebar
+function enregistrer_sidebar() {
+    register_sidebar( array(
+        'name' => __( 'Footer 1', '4w4-noemie_ds' ),
+        'id' => 'footer_1',
+        'description' => __( 'Une zone pour afficher des widgets dans le footer.', '4w4-noemie_ds' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Footer 2', '4w4-noemie_ds' ),
+        'id' => 'footer_2',
+        'description' => __( 'Une zone pour afficher des widgets dans le footer.', '4w4-noemie_ds' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'enregistrer_sidebar' );
