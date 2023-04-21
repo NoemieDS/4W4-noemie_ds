@@ -120,5 +120,15 @@ function enregistrer_sidebar() {
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ) );
+
+    register_sidebar( array(
+        'name' => __( 'Footer 3', '4w4-noemie_ds' ),
+        'id' => 'footer_3',
+        'description' => __( 'Une zone pour afficher des widgets dans le footer.', '4w4-noemie_ds' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'enregistrer_sidebar' );

@@ -543,80 +543,49 @@ a:hover, a:focus, a:active {
 /* --------------------------------------------- composant */
 .site__footer {
   width: 100%;
+  height: 100%;
   margin-top: 2.6rem;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   background-color: var(--couleur2);
+  padding-bottom: 3vh;
 }
-.site__footer section {
-  height: 20vh;
+.site__footer .footer_ligne1 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  border-right: 2px dotted var(--fonce);
-  flex: 1;
+  width: 100%;
 }
-.site__footer img.custom-logo {
+.site__footer .footer_ligne1 section {
+  border-right: 2px dotted var(--fonce);
+  background-color: aqua;
+}
+.site__footer .footer_ligne1 section:last-of-type {
+  border-right: none;
+}
+.site__footer .footer_ligne1 img.custom-logo {
   box-shadow: initial;
   width: 90%;
 }
-.site__footer nav {
+.site__footer .footer-ligne2 {
+  width: 100%;
+  font-family: var(--police-sans);
+  font-size: clamp(0.6rem, 0.6rem + 1vw, 0.8rem);
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
 }
-.site__footer li {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 0px;
-  transition: transform 400ms ease-in-out;
-  text-align: center;
-  padding-bottom: 1rem;
+.site__footer .footer-ligne2 p {
+  margin: 0;
+  padding: 0;
 }
-.site__footer li a,
-.site__footer li p {
-  font-size: clamp(0.6rem, 1rem + 1.2vw, 1rem);
-  line-height: 100%;
-  color: var(--fonce);
-  font-family: var(--police-mono);
-  text-shadow: var(--accent-ombre2);
-  transition: text-shadow 400ms;
-  display: block;
-  white-space: nowrap;
-}
-@media screen and (min-width: 992px) {
-  .site__footer li a,
-  .site__footer li p {
-    margin: 0 1rem;
-  }
-}
-.site__footer li a:hover,
-.site__footer li a:active,
-.site__footer li p:hover,
-.site__footer li p:active {
-  text-shadow: none;
-  color: var(--texte-clair);
-}
-.site__footer li a .menu:hover,
-.site__footer li a .menu:active,
-.site__footer li p .menu:hover,
-.site__footer li p .menu:active {
-  transform: scale(1.1);
-}
-@media screen and (min-width: 992px) {
-  .site__footer li {
-    /* white-space: nowrap; */
-    line-height: 140%;
-  }
-}
-.site__footer .footer-date {
-  font-size: 0.8rem;
+.site__footer .footer-ligne2 a {
+  color: hsl(var(--hFonce), var(--sFonce), 30%);
 }
 
 /************************** Ent^te de la page ************/

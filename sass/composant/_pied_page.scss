@@ -1,82 +1,54 @@
 .site__footer {
   width: 100%;
+  height: 100%;
   margin-top: 2.6rem;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   background-color: var(--couleur2);
+  padding-bottom: 3vh;
 
-  section {
-    height: 20vh;
+  .footer_ligne1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    
+
+    & section {
+      border-right: 2px dotted var(--fonce);
+      background-color: aqua;
+    }
+
+    section:last-of-type {
+      border-right: none;
+    }
+  
+    img.custom-logo {
+      box-shadow: initial;
+      width: 90%;
+    }
+  }
+
+  .footer-ligne2 {
+    width: 100%;
+    font-family: var(--police-sans);
+    font-size: clamp(0.6rem, 0.6rem + 1vw, 0.8rem);
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 2px dotted var(--fonce);
-    flex: 1;
-  }
 
-  img.custom-logo {
-    box-shadow: initial;
-    width: 90%;
-  }
-
- 
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
+    & p {
+      margin: 0;
+      padding: 0;
     }
 
-  li {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
-    transition: transform 400ms ease-in-out;
-    text-align: center;
-    padding-bottom: 1rem;
-   
-    a,
-    p {
-      font-size: clamp(0.6rem, 1rem + 1.2vw, 1rem);
-      line-height: 100%;
-      color: var(--fonce);
-      font-family: var(--police-mono);
-      text-shadow: var(--accent-ombre2);
-      transition: text-shadow 400ms;
-      display: block;
-      white-space: nowrap;
-
-      @media screen and (min-width: $largeur__bureau) {
-        margin: 0 1rem;
-      }
+    & a {
+      color: hsl(var(--hFonce), var(--sFonce), 30%);
     }
-
-    a:hover,
-    a:active,
-    p:hover,
-    p:active {
-      text-shadow: none;
-      color: var(--texte-clair);
-    }
-
-    a .menu:hover,
-    a .menu:active,
-    p .menu:hover,
-    p .menu:active {
-      transform: scale(1.1);
-    }
-
-    @media screen and (min-width: $largeur__bureau) {
-      /* white-space: nowrap; */
-      line-height: 140%;
-    }
-  }
-  .footer-date {
-    font-size: 0.8rem;
   }
 }
