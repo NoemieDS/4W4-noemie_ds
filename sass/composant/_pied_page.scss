@@ -9,25 +9,50 @@
   background-color: var(--couleur2);
   padding-bottom: 3vh;
 
+  & h1, h2, h3, h4, h5, h6, p, li, ul {
+    margin: 0;
+    padding: 0.8rem 0 0 0;
+  }
+
+
   .footer_ligne1 {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    
-
-    & section {
+    margin: 1rem 0 2rem 0;
+    /*
+    a:hover,
+    a:active,
+    p:hover,
+    p:active {
+      text-shadow: none;
+      color: var(--texte-clair);
+    }
+  
+    a .menu:hover,
+    a .menu:active,
+    p .menu:hover,
+    p .menu:active {
+      transform: scale(1.1);
+    }
+    */
+  
+    section {
       border-right: 2px dotted var(--fonce);
-      background-color: aqua;
+    }
+
+    section:first-of-type {
+    
     }
 
     section:last-of-type {
       border-right: none;
+      
     }
   
     img.custom-logo {
       box-shadow: initial;
-      width: 90%;
     }
   }
 
