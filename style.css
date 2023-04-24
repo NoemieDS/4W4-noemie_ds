@@ -366,7 +366,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(0.9rem, -0.1875rem + 2.2vw, 1.5rem);
+  font-size: clamp(1rem, -0.1875rem + 2.2vw, 1.5rem);
 }
 
 h5 {
@@ -546,65 +546,124 @@ a:hover, a:focus, a:active {
   height: 100%;
   margin-top: 2.6rem;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   background-color: var(--couleur2);
-  padding-bottom: 3vh;
+  padding-bottom: 1vh;
 }
-.site__footer h1, .site__footer h2, .site__footer h3, .site__footer h4, .site__footer h5, .site__footer h6, .site__footer p, .site__footer li, .site__footer ul {
+.site__footer > * {
+  padding: 0 6%;
+}
+@media screen and (min-width: 992px) {
+  .site__footer > * {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .site__footer {
+    flex-direction: column;
+  }
+}
+.site__footer h1, .site__footer h2, .site__footer h3, .site__footer h4, .site__footer h5, .site__footer h6, .site__footer p, .site__footer li, .site__footer ul, .site__footer a, .site__footer blockquote {
   margin: 0;
-  padding: 0.8rem 0 0 0;
+  padding: 0;
+}
+.site__footer a, .site__footer p, .site__footer li, .site__footer .sidebar {
+  font-size: clamp(1rem, 0.6rem + 1vw, 1rem);
 }
 .site__footer .footer_ligne1 {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  margin: 1rem 0 2rem 0;
-  /*
-  a:hover,
-  a:active,
-  p:hover,
-  p:active {
-    text-shadow: none;
-    color: var(--texte-clair);
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .site__footer .footer_ligne1 {
+    align-items: center;
+    flex-wrap: nowrap;
   }
-
-  a .menu:hover,
-  a .menu:active,
-  p .menu:hover,
-  p .menu:active {
-    transform: scale(1.1);
-  }
-  */
+}
+.site__footer .footer_ligne1 a {
+  color: var(--texte-clair);
+}
+.site__footer .footer_ligne1 a:hover,
+.site__footer .footer_ligne1 a:active,
+.site__footer .footer_ligne1 p:hover,
+.site__footer .footer_ligne1 p:active {
+  color: hsl(var(--hFonce), var(--sFonce), 30%);
 }
 .site__footer .footer_ligne1 section {
-  border-right: 2px dotted var(--fonce);
-}
-.site__footer .footer_ligne1 section:last-of-type {
-  border-right: none;
-}
-.site__footer .footer_ligne1 img.custom-logo {
-  box-shadow: initial;
-}
-.site__footer .footer-ligne2 {
   width: 100%;
-  font-family: var(--police-sans);
-  font-size: clamp(0.6rem, 0.6rem + 1vw, 0.8rem);
-  margin: 0;
-  padding: 0;
+  flex: 1 1 33%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
 }
-.site__footer .footer-ligne2 p {
-  margin: 0;
-  padding: 0;
+@media screen and (min-width: 992px) {
+  .site__footer .footer_ligne1 section {
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+.site__footer .footer_ligne1 section img.custom-logo {
+  box-shadow: initial;
+  width: 70%;
+  height: auto;
+}
+@media screen and (min-width: 992px) {
+  .site__footer .footer_ligne1 section img.custom-logo {
+    width: 90%;
+  }
+}
+.site__footer .footer_ligne1 section:first-of-type {
+  flex: 0 1 100%;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .site__footer .footer_ligne1 section:first-of-type {
+    flex: 1 1 33%;
+    padding-bottom: 0;
+  }
+}
+.site__footer .footer_ligne1 section:last-of-type {
+  padding-top: 5rem;
+  border-right: none;
+}
+.site__footer .footer_ligne1 section:last-of-type ul {
+  padding-right: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .site__footer .footer_ligne1 section:last-of-type {
+    padding-top: 0;
+  }
+}
+.site__footer .footer-ligne2 {
+  max-width: 100%;
+  height: 10vh;
+  font-family: var(--police-sans);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 2rem;
 }
 .site__footer .footer-ligne2 a {
   color: hsl(var(--hFonce), var(--sFonce), 30%);
+}
+@media screen and (min-width: 992px) {
+  .site__footer .footer-ligne2 {
+    justify-content: center;
+  }
 }
 
 /************************** Ent^te de la page ************/
