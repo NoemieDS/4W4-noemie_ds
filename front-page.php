@@ -7,6 +7,14 @@
 ?>
 <?php get_header(); ?>
 <main class="site__main no-aside">
+  <section class="blocflex">
+<?php wp_nav_menu(array(
+  'menu' => 'evenement',
+  'container' => 'nav'
+));
+ ?>
+
+  </section>
   <h2>Les Timiens créent avec des ordinateurs</h2>
   <?php
   if (have_posts()) :

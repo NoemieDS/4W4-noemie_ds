@@ -9,6 +9,7 @@
   align-items: center;
   background-color: var(--couleur2);
   padding-bottom: 1vh;
+  text-align: center;
 
   & >* {
   padding: 0 6%;
@@ -31,6 +32,7 @@
   }
 
   .footer_ligne1 {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -38,8 +40,11 @@
      
 
     @media screen and (min-width: $largeur__bureau) {
+      align-content: flex-start;
       align-items: center;
       flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding-top: 1rem;
     }
     
     a {
@@ -65,7 +70,6 @@
        padding: 1rem;
 
    @media screen and (min-width: $largeur__bureau) {
-        justify-content: center;
         align-items: center;
         margin-top: 2rem;
       }
@@ -87,6 +91,7 @@
       @media screen and (min-width: $largeur__bureau) {
         flex: 1 1 33%;
         padding-bottom: 0;
+        margin: 0;
       }
     }
 
@@ -99,6 +104,7 @@
       }
       @media screen and (min-width: $largeur__bureau) {
         padding-top: 0;
+        margin-top: 0;
       }
     }
   
@@ -106,14 +112,13 @@
 
   .footer-ligne2 {
     max-width: 100%;
-    height: 10vh;
+    height: 12vh;
     font-family: var(--police-sans);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    text-align: center;
    margin: 1rem 0;
    padding: 2rem;
 
