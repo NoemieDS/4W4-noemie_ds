@@ -12,9 +12,6 @@ Text Domain: 2023-4w4-NoemieDS
 */
 
 @import "variables/dimension";
-
-
-
 @import "normalize/normalize";
 // @import "normalize/box-sizing";
 
@@ -36,5 +33,6 @@ Text Domain: 2023-4w4-NoemieDS
 @import "composant/bloc_flex";
 @import "composant/single";
 @import "composant/aside_cours";
+@import "composant/menu_evenement";
 /* --------------------------------------------- layout */
 @import "layout/aside-contenu";
