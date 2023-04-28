@@ -497,7 +497,7 @@ i {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   margin-top: 0.4rem;
   -webkit-border-top-left-radius: 10px;
@@ -1090,11 +1090,15 @@ a:hover, a:focus, a:active {
   list-style-type: none;
 }
 .menu-evenement-container .menu .menu-item {
-  height: 50px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #aaa;
+  margin: 0.8rem;
+}
+.menu-evenement-container .menu .menu-item a {
+  font-size: 2rem;
 }
 
 /* --------------------------------------------- layout */

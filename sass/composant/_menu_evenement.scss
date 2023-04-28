@@ -8,11 +8,15 @@
 
     .menu-item {
       //li
-      height: 50px;
+      height: 100px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       border: 1px solid #aaa;
+      margin: 0.8rem;
+      a {
+        font-size: 2rem;
+      }
     }
   }
 }
