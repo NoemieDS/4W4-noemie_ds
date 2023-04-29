@@ -964,7 +964,7 @@ a:hover, a:focus, a:active {
      z-index: 100;
    }*/
 }
-.blocflex__galerieimg {
+.blocflex__galerie img {
   box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
 }
 @media screen and (min-width: 992px) {
