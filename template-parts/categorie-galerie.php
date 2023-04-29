@@ -6,7 +6,15 @@
 $titre = get_the_title();
 ?>
 
+<?php 
+if(!is_front_page()) { ?>
+<section class="blocflex__galerie blocflex__galerie_categorie"> 
+<?php } 
+else { ?>
 <section class="blocflex__galerie"> 
+<?php }
+ ?>
+
 
 <?php 
 

@@ -45,7 +45,7 @@
   h5,
   h6 {
     text-shadow: var(--titre-ombre);
-    margin: 0;
+    margin: 1rem 0 0.6rem 0;
   }
 
   h4 {
@@ -55,7 +55,7 @@
 
   p {
     text-shadow: var(--texte-ombre);
-    margin: 0.8rem 0;
+    margin: 0;
   }
 
   span {
@@ -72,17 +72,30 @@
 }
 
 .blocflex__galerie {
-  margin: 1rem 1.6rem 1.4rem 1rem;
+  margin: 1rem 1.6rem 2rem 1rem;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
 
- & img {
-    box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
-   // transition: all 800ms;
+  & p {
+    color: var(--texte-clair);
+    //  text-shadow: var(--texte-ombre);
   }
- /* img:hover,
+
+  h3,
+  a {
+    margin: 0 auto;
+    margin-bottom: 0.8rem;
+    font-size: clamp(1.1rem, 2.6vw, 1.6rem);
+    text-align: center;
+  }
+
+  & img {
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
+    // transition: all 800ms;
+  }
+  /* img:hover,
   img:active {
     transform: scale(1.1);
     z-index: 100;
@@ -100,18 +113,31 @@
     border: 2px solid var(--couleur2);
     box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
 
+    h3,
+    a {
+      margin-top: 1.4rem;
+    }
+
     img {
       padding: 0.6rem;
     }
 
+    p {
+      color: var(--texte-fonce);
+      text-shadow: var(--texte-ombre);
+    }
   }
 
-  @media screen and (min-width:$largeur__bureau_large) {
-
+  @media screen and (min-width: $largeur__bureau_large) {
     figure {
       padding: 1%;
     }
- 
   }
+}
 
+/*Quand ce n'est pas sur front-page.php */
+.blocflex__galerie_categorie {
+  @media screen and (min-width: $largeur__bureau) {
+    max-height: 700px;
+  }
 }

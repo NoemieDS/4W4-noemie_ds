@@ -353,16 +353,16 @@ template {
 CSS Clam font-size generator : https://clamp.font-size.app/
 */
 h1 {
-  font-size: clamp(1rem, -0.0385rem + 3vw, 2rem);
+  font-size: clamp(1.3rem, -0.0385rem + 3vw, 2rem);
 }
 
 h2 {
-  font-size: clamp(1rem, -0.3125rem + 2.8vw, 2.2rem);
+  font-size: clamp(1.2rem, -0.3125rem + 2.8vw, 2.2rem);
   color: var(--texte-clair);
 }
 
 h3 {
-  font-size: clamp(1rem, -0.25rem + 2.6vw, 1.6rem);
+  font-size: clamp(1.1rem, 2.6vw, 1.6rem);
 }
 
 h4 {
@@ -370,7 +370,7 @@ h4 {
 }
 
 h5 {
-  font-size: clamp(0.7rem, -0.0313rem + 1.7vw, 1.5625rem);
+  font-size: clamp(0.8rem, -0.0313rem + 1.7vw, 1.5625rem);
 }
 
 h5.modele_php {
@@ -380,14 +380,14 @@ h5.modele_php {
 }
 
 h6 {
-  font-size: clamp(0.6rem, 0.125rem + 1.2vw, 1.25rem);
+  font-size: clamp(0.7rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
 p,
 ul,
 li {
   /* font-size: clamp(0.8rem, 0.125rem + 1.3vw, 1.1rem); */
-  font-size: clamp(0.8rem, 0.6rem + 1.16vw, 1.1rem);
+  font-size: clamp(0.8rem, 0.6rem + 1.16vw, 1rem);
   font-family: var(--police-sans);
   color: var(--texte-fonce);
   line-height: 150%;
@@ -929,7 +929,7 @@ a:hover, a:focus, a:active {
 .bloc__article h5,
 .bloc__article h6 {
   text-shadow: var(--titre-ombre);
-  margin: 0;
+  margin: 1rem 0 0.6rem 0;
 }
 .bloc__article h4 {
   margin: 0.4rem 0;
@@ -937,7 +937,7 @@ a:hover, a:focus, a:active {
 }
 .bloc__article p {
   text-shadow: var(--texte-ombre);
-  margin: 0.8rem 0;
+  margin: 0;
 }
 .bloc__article span {
   color: var(--fonce-1);
@@ -953,16 +953,26 @@ a:hover, a:focus, a:active {
 }
 
 .blocflex__galerie {
-  margin: 1rem 1.6rem 1.4rem 1rem;
+  margin: 1rem 1.6rem 2rem 1rem;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
   /* img:hover,
-   img:active {
-     transform: scale(1.1);
-     z-index: 100;
-   }*/
+  img:active {
+    transform: scale(1.1);
+    z-index: 100;
+  }*/
+}
+.blocflex__galerie p {
+  color: var(--texte-clair);
+}
+.blocflex__galerie h3,
+.blocflex__galerie a {
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.1rem, 2.6vw, 1.6rem);
+  text-align: center;
 }
 .blocflex__galerie img {
   box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
@@ -980,13 +990,28 @@ a:hover, a:focus, a:active {
     border: 2px solid var(--couleur2);
     box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
   }
+  .blocflex__galerie h3,
+  .blocflex__galerie a {
+    margin-top: 1.4rem;
+  }
   .blocflex__galerie img {
     padding: 0.6rem;
+  }
+  .blocflex__galerie p {
+    color: var(--texte-fonce);
+    text-shadow: var(--texte-ombre);
   }
 }
 @media screen and (min-width: 1800px) {
   .blocflex__galerie figure {
     padding: 1%;
+  }
+}
+
+/*Quand ce n'est pas sur front-page.php */
+@media screen and (min-width: 992px) {
+  .blocflex__galerie_categorie {
+    max-height: 700px;
   }
 }
 
@@ -1092,7 +1117,7 @@ a:hover, a:focus, a:active {
   margin: 0.8rem;
 }
 .menu-evenement-container .menu .menu-item a {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 /* --------------------------------------------- layout */
