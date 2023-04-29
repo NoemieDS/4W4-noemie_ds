@@ -78,15 +78,15 @@
   flex-wrap: wrap;
   align-items: flex-start;
 
-  img {
+ &img {
     box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
-    transition: all 800ms;
+   // transition: all 800ms;
   }
-  img:hover,
+ /* img:hover,
   img:active {
     transform: scale(1.1);
     z-index: 100;
-  }
+  }*/
 
   @media screen and (min-width: $largeur__bureau) {
     background-color: var(--blanc);
@@ -111,9 +111,7 @@
     figure {
       padding: 1%;
     }
-  /*    img {
-      padding: 2rem;
-    } */
+ 
   }
 
 }

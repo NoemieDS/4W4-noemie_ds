@@ -958,15 +958,14 @@ a:hover, a:focus, a:active {
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
+  /* img:hover,
+   img:active {
+     transform: scale(1.1);
+     z-index: 100;
+   }*/
 }
-.blocflex__galerie img {
+.blocflex__galerieimg {
   box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
-  transition: all 800ms;
-}
-.blocflex__galerie img:hover,
-.blocflex__galerie img:active {
-  transform: scale(1.1);
-  z-index: 100;
 }
 @media screen and (min-width: 992px) {
   .blocflex__galerie {
@@ -986,11 +985,6 @@ a:hover, a:focus, a:active {
   }
 }
 @media screen and (min-width: 1800px) {
-  .blocflex__galerie {
-    /*    img {
-        padding: 2rem;
-      } */
-  }
   .blocflex__galerie figure {
     padding: 1%;
   }
