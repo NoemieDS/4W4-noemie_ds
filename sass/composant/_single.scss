@@ -19,6 +19,18 @@
     padding: 4%;
   }
 
+  & li::before {
+    content: "";
+    display: inline-block;
+      -webkit-border-radius: 0.375rem;
+      border-radius: 0.375rem;
+      height: 0.4rem;
+      width: 0.4rem;
+      margin-right: 0.5rem;
+      transform: translateY(-0.1rem);
+      background-color: var(--fonce);
+  }
+
     
   .section_fiche_contenu {
     margin: 0 auto;

@@ -64,17 +64,7 @@ padding-bottom: 1rem;
 padding-inline-start: 1rem;
 }
 
-main li::before {
-  content: "";
-  display: inline-block;
-    -webkit-border-radius: 0.375rem;
-    border-radius: 0.375rem;
-    height: 0.4rem;
-    width: 0.4rem;
-    margin-right: 0.5rem;
-    transform: translateY(-0.1rem);
-    background-color: var(--fonce);
-}
+
  
 li>p {
   display: inline;
