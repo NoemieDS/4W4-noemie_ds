@@ -1118,6 +1118,11 @@ a:hover, a:focus, a:active {
 .menu-evenement-container .menu .menu-item a {
   font-size: 1.4rem;
 }
+.menu-evenement-container .menu .menu-item a span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--texte-clair);
+}
 
 /* --------------------------------------------- layout */
 /**
