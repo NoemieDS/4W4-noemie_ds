@@ -159,6 +159,11 @@ function wpdocs_theme_name_scripts() {
         array(),
         '1.0.0',
         true );
+
+        wp_enqueue_style( 'google-fonts',
+	'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap',
+	false );
+
 }
 add_action(  'wp_enqueue_scripts',
              'wpdocs_theme_name_scripts' );
@@ -178,6 +183,17 @@ wp_enqueue_style(
 
 ---
 
+### Pour enfiler la police noto-emoji
+
+```
+function enqueue_noto_emoji() {
+    wp_enqueue_style( 'noto-emoji', 'https://fonts.googleapis.com/css?family=Noto+Emoji' );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_noto_emoji' );
+```
+
+---
+
 ### Comment enregistrer les menus
 
 - register_nav_menus() // dans functions.php
@@ -189,7 +205,9 @@ wp_enqueue_style(
 ### comment intégrer un menu
 
 - wp_nav_menu()
-- Après avoir enregistré les emplacements de menu, vous pouvez les utiliser dans votre thème en utilisant la fonction wp_nav_menu() pour afficher le menu dans le code HTML. La fonction wp_nav_menu() prend en charge le nom de l'emplacement de menu enregistré pour l'afficher.
+- Après avoir enregistré les emplacements de menu, vous pouvez les utiliser dans votre thème en utilisant la fonction **wp_nav_menu()** pour afficher le menu dans le code HTML. La fonction **wp_nav_menu()** prend en charge le nom de l'emplacement de menu enregistré pour l'afficher.
+- https://developer.wordpress.org/themes/functionality/navigation-menus/
+- https://developer.wordpress.org/reference/functions/wp_nav_menu/
 
 ---
 

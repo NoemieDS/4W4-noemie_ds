@@ -15,7 +15,6 @@
  ?>
 
   </section>
-  <h2>Les Timiens créent avec des ordinateurs</h2>
   <?php
   if (have_posts()) :
     while (have_posts()) : the_post();

@@ -11,6 +11,7 @@ if(!is_front_page()) { ?>
 <section class="blocflex__galerie blocflex__galerie_categorie"> 
 <?php } 
 else { ?>
+<h2><a href="<?php the_permalink(); ?>"> <?= $titre ?></a></h2> 
 <section class="blocflex__galerie"> 
 <?php }
  ?>

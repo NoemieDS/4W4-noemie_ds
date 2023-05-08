@@ -17,12 +17,15 @@
   // grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
   gap: 2rem;
   margin: 1rem;
-  
   min-height: 100vh;
 }
 
 .blocflex_evenement {
-  background-color: rgba(255, 255, 255, 0.1);
+ background-color: hsla(235, 221, 20%, 0.2);
+   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
 }
 
 .bloc__article {
@@ -75,7 +78,7 @@
 .blocflex__galerie {
   margin: 1rem 1.6rem 2rem 1rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
 
@@ -94,26 +97,14 @@
 
   & img {
     box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
-    // transition: all 800ms;
+    cursor: pointer;
   }
-  /* img:hover,
-  img:active {
-    transform: scale(1.1);
-    z-index: 100;
-  }*/
 
-  @media screen and (min-width: $largeur__bureau) {
+  @media screen and (min-width: $largeur__tablette) {
     background-color: var(--blanc);
-    padding: 0rem 1.4rem 1rem 1.4rem;
-    margin: 0 auto;
+    padding: 2rem 1rem;
     margin-top: 0.5rem;
-    -webkit-border-top-left-radius: 10px;
-    -khtml-border-radius-topleft: 10px;
-    -moz-border-radius-topleft: 10px;
-    border-top-left-radius: 10px;
-    border: 2px solid var(--couleur2);
-    box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
-
+  
     h3,
     a {
       margin-top: 1.4rem;
@@ -131,7 +122,7 @@
 
   @media screen and (min-width: $largeur__bureau_large) {
     figure {
-      padding: 1%;
+     // padding: 1%;
     }
   }
 }
