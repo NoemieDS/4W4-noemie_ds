@@ -11,37 +11,48 @@
 <?php wp_nav_menu(array(
   'menu' => 'evenement',
   'container' => 'nav'
+)); ?>
+</section>
+
+<section>
+<?php
+wp_nav_menu(array(
+  'menu' => 'bloc-archive',
+  'container' => 'nav'
 ));
  ?>
-
   </section>
+
   <?php
-  if (have_posts()) :
+/*
+ if (have_posts()) :
     while (have_posts()) : the_post();
-    $ma_categorie = "4w4";
     if (in_category('galerie')) {
         $ma_categorie = "galerie";
         get_template_part('template-parts/categorie', $ma_categorie);
       }
     endwhile;
-  endif;
+  endif; */
   ?>
+
+<section class="sidebar-galerie">
+      <?php dynamic_sidebar('front_1'); ?>
+    </section>
+
+
   <section class="blocflex">
     <?php
     if (have_posts()) :
       while (have_posts()) : the_post();
-        /* 
-        $la_categorie ='4w4';
         if (in_category('galerie')) {
           $la_categorie ='galerie';
-         get_template_part('template-parts/categorie', $la_categorie); 
+        } if (in_category('cours')) {
+          $la_categorie ='cours';
         }
         else {
-          get_template_part('template-parts/categorie', $la_categorie); 
-        } */
-        if (in_category('4w4')) {
-          get_template_part('template-parts/categorie', '4w4');
-        }
+          $la_categorie ='4w4';
+        } 
+        get_template_part('template-parts/categorie', $la_categorie); 
       endwhile;
     endif;
     ?>

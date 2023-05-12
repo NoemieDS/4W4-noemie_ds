@@ -12,6 +12,15 @@
 
 
 <article class="bloc__article">
+<?php  if(has_post_thumbnail()) {
+    the_post_thumbnail('thumbnail');
+ // echo get_the_ID();
+  } 
+else {
+
+    echo get_the_post_thumbnail(141,'thumbnail' );
+  }
+?>
   <h3><a href="<?php the_permalink(); ?>"> <?= $sigle ?></a></h3>
   <h4> <?= $titre_long; ?> </h4>
     <?php $lien = get_permalink(); ?>

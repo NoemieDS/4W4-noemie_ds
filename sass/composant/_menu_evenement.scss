@@ -54,4 +54,39 @@
   }
 }
 
+.menu-bloc-archive-container {
+  border: 2px solid pink;
 
+  //ul
+  & ul {
+    border: 2px solid orange;
+  }
+
+  & li {
+    margin-bottom: 1rem;
+
+    & a{
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  .image {
+
+  }
+}
+
+.bloc__cours a {
+background-image: url("https://s2.svgbox.net/materialui.svg?ic=account_balance");
+
+}
+
+.bloc__4w4 a {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=animation");
+
+}
+
+.bloc__galerie a {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=add_a_photo");
+  background-repeat: no-repeat;
+}

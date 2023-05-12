@@ -1134,6 +1134,31 @@ a:hover, a:focus, a:active {
   color: var(--texte-clair);
 }
 
+.menu-bloc-archive-container {
+  border: 2px solid pink;
+}
+.menu-bloc-archive-container ul {
+  border: 2px solid orange;
+}
+.menu-bloc-archive-container li {
+  margin-bottom: 1rem;
+}
+.menu-bloc-archive-container li a {
+  background-repeat: no-repeat;
+}
+.bloc__cours a {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=account_balance");
+}
+
+.bloc__4w4 a {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=animation");
+}
+
+.bloc__galerie a {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=add_a_photo");
+  background-repeat: no-repeat;
+}
+
 /* --------------------------------------------- layout */
 /**
 *  Mise en page général avec display:grid

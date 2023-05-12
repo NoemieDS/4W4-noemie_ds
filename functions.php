@@ -79,13 +79,13 @@ add_filter('nav_menu_item_title', 'personnaliser_menu_item_titre', 10, 3);
 * 
 */
 function add_menu_description_and_thumbnail( $item_output, $item, $depth, $args ) {
-    if ( 'evenement' == $args->menu) {
+    if ( 'evenement' == $args->menu || 'bloc-archive' == $args->menu) {
         $post_thumbnail_id = get_post_thumbnail_id( $item->object_id );
         if ( $post_thumbnail_id ) {
             $post_thumbnail_url = wp_get_attachment_image_src( $post_thumbnail_id, 'medium' );
             $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . '</span><span class="description">' . $item->description . '</span><img src="' . esc_url( $post_thumbnail_url[0] ) . '" class="menu-thumbnail" />', $item_output );
         } else {
-            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . '</span><span class="description">' . $item->description . '</span>', $item_output );
+            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . '</span><span class="description">' . $item->description . '</span>' . '</span><span class="image">', $item_output );
         }
     }
     return $item_output;
@@ -101,12 +101,14 @@ add_filter( 'walker_nav_menu_start_el', 'add_menu_description_and_thumbnail', 10
  */
 function cidweb_modifie_requete_principal($query) //s'exécute à chaque page
 {
+   // $sticky = get_option('sticky_posts');
+
     if (
         $query->is_home()
         && $query->is_main_query() //ce n'est pas une requête secondaire
         && !is_admin() // c'est pas le tableau de bord (car il y a là aussi une requête principale)
     ) {
-        $query->set('category_name', '4w4'); //On affiche 4W4 sur la page principale
+        $query->set('category_name', 'accueil'); //On affiche accueil sur la page principale
         $query->set('orderby', 'title');
         $query->set('order', 'ASC');
     }
@@ -116,8 +118,22 @@ function cidweb_modifie_requete_principal($query) //s'exécute à chaque page
 //principale avant qu'elle soit exécuté
 add_action('pre_get_posts', 'cidweb_modifie_requete_principal'); 
 
+
 // Enregistrer le sidebar
 function enregistrer_sidebar() {
+
+    register_sidebar( array(
+        'name' => __( 'Front 1', '4w4-noemie_ds' ),
+        'id' => 'front_1',
+        'description' => __( 'Une zone pour afficher une galerie sur la page accueil.', '4w4-noemie_ds' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+
+
     register_sidebar( array(
         'name' => __( 'Footer 1', '4w4-noemie_ds' ),
         'id' => 'footer_1',
@@ -147,5 +163,8 @@ function enregistrer_sidebar() {
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ) );
+
 }
 add_action( 'widgets_init', 'enregistrer_sidebar' );
+
+
