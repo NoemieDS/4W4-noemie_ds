@@ -1,31 +1,65 @@
 /************************** Ent^te de la page ************/
 .site__header {
+ background-color: var(--noir);
   display: flex;
-  justify-content: space-between;
-  background-color: var(--fond);
-  padding: 1rem 1rem 0rem 0.4rem;
+  height: 6.8vh;
+  position: fixed;
+  width: 100%;
 
-  @media screen and (min-width: $largeur__bureau) {
-    padding: 0.8rem;
-  }
+    .site__header__barre {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-  .site__header__logo {
-    img {
+    img.custom-logo {
       border-top-left-radius: initial;
       box-shadow: initial;
-      width: 90%;
-      margin-right: 0;
-      padding-right: 0;
+      object-fit: contain;
+      padding-left: 1rem;
+      width: 30%;
+    }
+    
+.burger {
+  margin-top: 1.4rem;
+  padding-right: 4%;
+}
 
-      @media screen and (min-width: $largeur__bureau) {
-        width: 100%;
-        padding-right: 1rem;
-      }
+    .burger>span {
+      transition: all 500ms;
+    }
+    
+    /* Icone menu burger */
+    .material-symbols-outlined {
+      color: var(--blanc);
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+      transform: scale(1.2, 1.64);
+
     }
   }
+
+/********************** Menu visible lorsque la case à cocher est coché**********/
+.site__menu {
+  background-color: yellow;
+  left: 0;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  transform: translateX(120%);
+  transition: transform 500ms;
+  width: 100vw;
+
+  .site__header__recherche {
+
+  }
+  
     .site__header__titre {
       align-self: center;
       flex: 1 1 30%;
+      //opacity: 0;
 
       h1,
       a {
@@ -37,30 +71,10 @@
         margin-top: -1em;
         font-family: var(--police-sans);
       }
-      @media screen and (min-width: $largeur__tablette) {
-        width: 100%;
-      }
-    }
-  
-  .site__header_nav_recherche {
 
-    /* Icone menu burger */
-    .material-symbols-outlined {
-      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-      transform: scale(1.2, 1.6);
-      color: var(--fonce-2);
-    }
-    .burger>span {
-      position: absolute;  
-      right: 4vw;
-      padding: 1rem 0;
-      transition: all 500ms;
     }
 
-    @media screen and (min-width: $largeur__tablette) {
-      padding-top: 3rem;
-    }
-  }
+
 
   /*-----------------------------------------------------------------menu-entête */
   /* ********************** Balise nav *******************/
@@ -72,18 +86,9 @@
   }
 
   ul#menu-entete.menu {
-    transform: translateX(170px);
-    transition: transform 500ms;
-
-    @media screen and (min-width: $largeur__tablette) {
-      transform: translateX(0);
-      position: relative;
-      right: 0;
-    }
-    @media screen and (min-width: $largeur__bureau)  {
-      padding-top: 2rem;
-    }
+ 
   }
+
 
   .menu {
      display: flex;
@@ -143,16 +148,26 @@
     }
   }
 }
+}
 
+   
+/*************************************************** Case à cocher */
 #chkMenu {
-  display: none;
+display: none;
 }
 
-#chkMenu:checked+label+nav>ul#menu-entete.menu {
-  transform: translateX(-50px);
+#chkMenu:checked~.site__header__barre .burger~.site__menu {
+  transform: translateX(0);
 }
+
+ 
 
 #chkMenu:checked+label>span {
   transform: /* translateX(-120px) */ scale(1.6, 1.2) rotate(90deg);
   color: var(--couleur3);
+}
+
+
+#chkMenu:checked+label>.site__header__titre {
+  opacity: 1;
 }

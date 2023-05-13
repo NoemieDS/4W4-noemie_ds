@@ -10,18 +10,12 @@
     "aside"
     "main"
     "footer";
-  // row-gap: 50px;
-  @media screen and (min-width: $largeur__bureau) {
-    max-width: 95vw;
-    margin: 0 auto;
-  }
-  @media screen and (min-width: $largeur__bureau_large) {
-    max-width: 90vw;
-    margin: 0 auto;
-  }
 
   main {
+    grid-area: main;
     min-height: 40vmax;
+
+
     h2 {
       margin: 1.4rem 0;
       padding: 0.8rem 0 0 1rem;
@@ -54,6 +48,7 @@
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+
   @media screen and (min-width: $largeur__bureau) {
     max-width: 90%;
     margin: 0 auto;
@@ -80,7 +75,8 @@
   border-top-left-radius: 10px;
   box-shadow: 0.2rem 0.2rem 0.5rem hsl(var(--hFonce), var(--sFonce), 10%);
   padding: 0;
-  margin: 1.5rem 0;
+  margin: 3.5rem 0;
+  position: fixed;
 
   @media screen and (min-width: $largeur__bureau) {
     max-width: 360px;

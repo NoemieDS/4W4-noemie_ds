@@ -337,6 +337,9 @@ template {
   --fond: var(--fonce);
   --texte-fonce: hsl(var(--hFonce), var(--sFonce), 14%);
   --texte-clair: var(--blanc);
+  --noir:#080808;
+  --claire-1: #FAF5F0;
+  --claire-2:#EDEDE8;
   /* **************************************************************** Polices *** */
   --police-sans:"Source Sans 3", sans-serif;
   --police-serif:"Source Serif Pro", serif;
@@ -389,7 +392,7 @@ li {
   /* font-size: clamp(0.8rem, 0.125rem + 1.3vw, 1.1rem); */
   font-size: clamp(0.8rem, 0.6rem + 1.16vw, 1rem);
   font-family: var(--police-sans);
-  color: var(--texte-fonce);
+  color: var(--noir);
   line-height: 150%;
 }
 
@@ -510,7 +513,7 @@ hr {
 }
 
 body {
-  background-color: var(--fond);
+  background-color: var(--blanc);
   font-family: var(--police-sans);
   /* .custom-background {
      background-color: var(--fond);
@@ -530,17 +533,17 @@ a:hover, a:focus, a:active {
 
 /* --------------------------------------------- composant */
 .site__footer {
-  width: 100%;
-  height: 100%;
-  margin-top: 2.6rem;
+  align-items: center;
+  background-color: var(--couleur2);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
-  background-color: var(--couleur2);
+  margin-top: 2.6rem;
   padding-bottom: 1vh;
   text-align: center;
+  width: 100%;
 }
 .site__footer > * {
   padding: 0 6%;
@@ -661,92 +664,75 @@ a:hover, a:focus, a:active {
 
 /************************** Ent^te de la page ************/
 .site__header {
+  background-color: var(--noir);
+  display: flex;
+  height: 6.8vh;
+  position: fixed;
+  width: 100%;
+  /********************** Menu visible lorsque la case à cocher est coché**********/
+}
+.site__header .site__header__barre {
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
-  background-color: var(--fond);
-  padding: 1rem 1rem 0rem 0.4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Icone menu burger */
+}
+.site__header .site__header__barre img.custom-logo {
+  border-top-left-radius: initial;
+  box-shadow: initial;
+  object-fit: contain;
+  padding-left: 1rem;
+  width: 30%;
+}
+.site__header .site__header__barre .burger {
+  margin-top: 1.4rem;
+  padding-right: 4%;
+}
+.site__header .site__header__barre .burger > span {
+  transition: all 500ms;
+}
+.site__header .site__header__barre .material-symbols-outlined {
+  color: var(--blanc);
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  transform: scale(1.2, 1.64);
+}
+.site__header .site__menu {
+  background-color: yellow;
+  left: 0;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  transform: translateX(120%);
+  transition: transform 500ms;
+  width: 100vw;
   /*-----------------------------------------------------------------menu-entête */
   /* ********************** Balise nav *******************/
 }
-@media screen and (min-width: 992px) {
-  .site__header {
-    padding: 0.8rem;
-  }
-}
-.site__header .site__header__logo img {
-  border-top-left-radius: initial;
-  box-shadow: initial;
-  width: 90%;
-  margin-right: 0;
-  padding-right: 0;
-}
-@media screen and (min-width: 992px) {
-  .site__header .site__header__logo img {
-    width: 100%;
-    padding-right: 1rem;
-  }
-}
-.site__header .site__header__titre {
+.site__header .site__menu .site__header__titre {
   align-self: center;
   flex: 1 1 30%;
 }
-.site__header .site__header__titre h1,
-.site__header .site__header__titre a {
+.site__header .site__menu .site__header__titre h1,
+.site__header .site__menu .site__header__titre a {
   font-size: clamp(0.5625rem, 0.5rem + 1.8vw, 2.1875rem);
 }
-.site__header .site__header__titre h2 {
+.site__header .site__menu .site__header__titre h2 {
   font-size: clamp(0.7rem, -0.1875rem + 1.6vw, 1.2rem);
   color: var(--couleur2);
   margin-top: -1em;
   font-family: var(--police-sans);
 }
-@media screen and (min-width: 800px) {
-  .site__header .site__header__titre {
-    width: 100%;
-  }
-}
-.site__header .site__header_nav_recherche {
-  /* Icone menu burger */
-}
-.site__header .site__header_nav_recherche .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-  transform: scale(1.2, 1.6);
-  color: var(--fonce-2);
-}
-.site__header .site__header_nav_recherche .burger > span {
-  position: absolute;
-  right: 4vw;
-  padding: 1rem 0;
-  transition: all 500ms;
-}
-@media screen and (min-width: 800px) {
-  .site__header .site__header_nav_recherche {
-    padding-top: 3rem;
-  }
-}
-.site__header ul#menu-entete.menu {
+.site__header .site__menu ul#menu-entete.menu {
   margin: 0;
   padding: 0;
   position: fixed;
   right: 4vw;
 }
-.site__header ul#menu-entete.menu {
-  transform: translateX(170px);
-  transition: transform 500ms;
-}
-@media screen and (min-width: 800px) {
-  .site__header ul#menu-entete.menu {
-    transform: translateX(0);
-    position: relative;
-    right: 0;
-  }
-}
-@media screen and (min-width: 992px) {
-  .site__header ul#menu-entete.menu {
-    padding-top: 2rem;
-  }
-}
-.site__header .menu {
+.site__header .site__menu .menu {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -754,7 +740,7 @@ a:hover, a:focus, a:active {
   align-items: flex-end;
 }
 @media screen and (min-width: 800px) {
-  .site__header .menu {
+  .site__header .site__menu .menu {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -765,7 +751,7 @@ a:hover, a:focus, a:active {
     padding-top: 2rem;
   }
 }
-.site__header .menu .menu-item {
+.site__header .site__menu .menu .menu-item {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -773,7 +759,7 @@ a:hover, a:focus, a:active {
   transition: transform 400ms ease-in;
   margin-top: 1rem;
 }
-.site__header .menu .menu-item a {
+.site__header .site__menu .menu .menu-item a {
   font-size: clamp(0.8rem, 0.125rem + 2vw, 1.3rem);
   line-height: 120%;
   align-self: flex-end;
@@ -787,31 +773,36 @@ a:hover, a:focus, a:active {
   transition: text-shadow 400ms;
   /* padding: 0 0.5rem 0 0; */
 }
-.site__header .menu .menu-item a:hover {
+.site__header .site__menu .menu .menu-item a:hover {
   text-shadow: none;
   color: var(--texte-clair);
   transition: color 600ms;
 }
-.site__header .menu .menu-item a:active {
+.site__header .site__menu .menu .menu-item a:active {
   text-shadow: none;
   color: var(--couleur3);
 }
-.site__header .menu .menu-item:hover,
-.site__header .menu .menu-item:active {
+.site__header .site__menu .menu .menu-item:hover,
+.site__header .site__menu .menu .menu-item:active {
   transform: scale(1.1);
 }
 
+/*************************************************** Case à cocher */
 #chkMenu {
   display: none;
 }
 
-#chkMenu:checked + label + nav > ul#menu-entete.menu {
-  transform: translateX(-50px);
+#chkMenu:checked ~ .site__header__barre .burger ~ .site__menu {
+  transform: translateX(0);
 }
 
 #chkMenu:checked + label > span {
   transform: scale(1.6, 1.2) rotate(90deg);
   color: var(--couleur3);
+}
+
+#chkMenu:checked + label > .site__header__titre {
+  opacity: 1;
 }
 
 /***********************************Bouton burger ***************/
@@ -893,7 +884,7 @@ a:hover, a:focus, a:active {
 }
 
 .blocflex_evenement {
-  background-color: hsla(235, 100%, 20%, 0.2);
+  background-color: var(--blanc);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1088,6 +1079,9 @@ a:hover, a:focus, a:active {
       margin-left: 10px; */
   }
 }
+.site__aside .menu-cours-container .menu {
+  flex-direction: row;
+}
 
 .menu-evenement-container .menu {
   align-items: flex-start;
@@ -1168,19 +1162,8 @@ a:hover, a:focus, a:active {
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
 }
-@media screen and (min-width: 992px) {
-  .site {
-    max-width: 95vw;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .site {
-    max-width: 90vw;
-    margin: 0 auto;
-  }
-}
 .site main {
+  grid-area: main;
   min-height: 40vmax;
 }
 .site main h2 {
@@ -1243,7 +1226,8 @@ a:hover, a:focus, a:active {
   border-top-left-radius: 10px;
   box-shadow: 0.2rem 0.2rem 0.5rem hsl(var(--hFonce), var(--sFonce), 10%);
   padding: 0;
-  margin: 1.5rem 0;
+  margin: 3.5rem 0;
+  position: fixed;
 }
 @media screen and (min-width: 992px) {
   .site__aside {

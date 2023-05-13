@@ -18,33 +18,31 @@ if (is_front_page()) {
 
 <body class="custom-background" >
 <div class="site <?= $nouvelle_classe ?>">
-  <header class="site__header">
-    <section class="site__header__logo">
-      <?php the_custom_logo() ?>
-    </section>
-    <section class="site__header__titre">
+<header class="site__header">
+  <section class="site__header__barre">
+    <?php the_custom_logo() ?>
+    <input type="checkbox" id="chkMenu" value="">
+    <label class="burger" for="chkMenu">
+      <span class="material-symbols-outlined">menu</span>
+    </label>
+  </section>
+
+  <section class="site__menu">
+    <div class="site__header__recherche">
+      <?php get_search_form(); ?>
+    </div>
+
+    <?php wp_nav_menu(array(
+      "menu" => "entete",
+      "container" => "nav"
+    )) ?>
+
+    <div class="site__header__titre">
       <h1><a href="<?= bloginfo('url') ?>"><?= bloginfo('name') ?></a></h1>
       <h2><?= bloginfo('description') ?></h2>
-    </section>
-
-    <div class="site__header_nav_recherche">
-    <section class="site__header__recherche">
-        <?php
-        get_search_form();
-        ?>
-      </section>
-      <input type="checkbox" id="chkMenu" value="">
-      <label class="burger" for="chkMenu"><span class="material-symbols-outlined">
-          menu
-        </span></label>
-        
-      <?php wp_nav_menu(array(
-        "menu" => "entete",
-        "container" => "nav"
-      )) ?>
-  
     </div>
-  </header>
+  </section>
+    </header>
   <?php
   if (!is_front_page()) {
     get_template_part("template-parts/aside");

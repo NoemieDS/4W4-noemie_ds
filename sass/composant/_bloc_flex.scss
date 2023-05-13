@@ -21,7 +21,7 @@
 }
 
 .blocflex_evenement {
- background-color: hsla(235, 221, 20%, 0.2);
+ background-color: var(--blanc);
    display: flex;
   justify-content: space-between;
   align-items: flex-start;
