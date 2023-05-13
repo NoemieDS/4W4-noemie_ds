@@ -6,33 +6,23 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-areas:
-    "header"
-    "aside"
-    "main"
-    "footer";
+  "header"
+  "aside"
+  "main"
+  "footer";
 
   main {
     grid-area: main;
     min-height: 40vmax;
-
-
-    h2 {
-      margin: 1.4rem 0;
-      padding: 0.8rem 0 0 1rem;
-      @media screen and (min-width: $largeur__bureau) {
-        padding: 1rem;
-        margin-left: 5rem;
-      }
-      @media screen and (min-width: $largeur__bureau_large) {
-       text-align: center;
-      }
-    }
+    z-index: 1;
   }
 
   @media screen and (min-width: $largeur__bureau) {
+    width: 93vw; //la largeur du header (dans _site_entete.scss  .site__header__barre)
+    left: 0;
     grid-template-columns: 20% auto;
     grid-template-areas:
-      "header header"
+  //    "header header"
       "aside main"
       /*le point est un espace vide*/
       ". main"
@@ -42,11 +32,33 @@
 
 .site__header {
   grid-area: header;
-  /*  padding: 1rem clamp(1rem, 3vw, 20rem); */
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
+
+  .site__header__barre {
+    height: 7vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100vw;
+    width: 100%;
+    z-index: 1000;
+    
+    @media screen and (min-width: $largeur__bureau) {
+      /* disposition flex dans _site_entete.scss */
+      height: 100vh;
+      left: 92vw;
+      width: 7vw;
+    }
+  }
+
+
 }
 
 .site__main {
-  grid-area: main;
+ 
+  // grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 
   @media screen and (min-width: $largeur__bureau) {
@@ -64,19 +76,16 @@
 }
 
 .site__aside {
+  background-color: var(--noir);
   grid-area: aside;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  -webkit-border-top-left-radius: 10px;
-  -khtml-border-radius-topleft: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
   box-shadow: 0.2rem 0.2rem 0.5rem hsl(var(--hFonce), var(--sFonce), 10%);
   padding: 0;
-  margin: 3.5rem 0;
-  position: fixed;
+  margin-top: 7vh; //la hauteur du header (dans _site_entete.scss  .site__header__barre)
+  z-index: 10;
 
   @media screen and (min-width: $largeur__bureau) {
     max-width: 360px;
@@ -86,6 +95,11 @@
     margin-top: 4rem;
     margin-left: 5%;
     margin-right: 5%;
+
+    -webkit-border-top-left-radius: 10px;
+    -khtml-border-radius-topleft: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
   }
 
   & > nav > ul {
@@ -95,7 +109,6 @@
     align-items: center;
     margin: 0;
     padding: 1rem;
-    
 
     @media screen and (min-width: $largeur__bureau) {
       flex-direction: column;
@@ -113,11 +126,11 @@
       margin-inline-end: 0px;
       padding-inline-start: 0px;
       transition: transform 400ms ease-in-out;
-      padding-bottom: 0.6rem;    
+      padding-bottom: 0.6rem;
       @media screen and (min-width: $largeur__bureau) {
         padding-top: 1rem;
       }
-     
+
       a,
       p {
         font-size: clamp(0.6rem, 0.4rem + 1.2vw, 1rem);
@@ -157,16 +170,20 @@
   }
 }
 
+main.no-aside {
+  margin-top: 7vh; //la hauteur du header (dans _site_entete.scss  .site__header__barre)
+}
+
 .no-aside {
   grid-template-areas:
-    "header"
+  //  "header"
     "main"
     "footer";
 
   @media screen and (min-width: $largeur__bureau) {
     grid-template-columns: auto;
     grid-template-areas:
-      "header"
+    //  "header"
       "aside"
       "main"
       "footer";

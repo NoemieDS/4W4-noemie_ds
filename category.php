@@ -17,7 +17,13 @@
          'order' => 'ASC'
       );
       $query = new WP_Query($args); //2e requête
+     
+      ?>
+<h2 class="categorie_titre"><?php echo $category->name ?>  </h2>
+<?php
+
       if ($query->have_posts()) :
+         
          while ($query->have_posts()) : $query->the_post(); ?>
             <?php  /* $category -> slug peut avoir une de ces 3 valeurs : cours, galerie, 4w4 */
             get_template_part('template-parts/categorie', $category->slug); ?>

@@ -1,31 +1,26 @@
-/* .blocflex {
-    display : flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    article {
-        flex: 1 0 200px;
-        border : 1px solid #aaa;
-        padding : 10px;
-    }
-} */
-
 .blocflex {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+ // display: grid;
+ // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   // Cette déclaration sera meilleur quand min() sera mieux supporté
   // grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-  gap: 2rem;
-  margin: 1rem;
-  min-height: 100vh;
+// gap: 2rem;
+  //margin: 1rem;
+ // padding: 1.4rem 1rem 2.8rem 1rem;
+  margin: 1rem clamp(1rem, 3vw, 24rem); 
+
+  & h2.categorie_titre {
+    font-size: clamp(2rem, -0.3125rem + 2.8vw, 2.6rem);
+    padding-top: 1rem;
+    text-align: center;
+  }
+  
 }
 
 .blocflex_evenement {
- background-color: var(--blanc);
-   display: flex;
+  background-color: var(--blanc);
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
 }
 
 .bloc__article {
@@ -35,16 +30,16 @@
   align-items: flex-start;
   position: relative;
   background-color: var(--blanc);
-  margin: 0 0.2rem;
+  margin: 1rem 0.2rem;
   padding: 1.8rem;
-  transform: translateX(-0.4rem);
+  transform: translateX(-0.1rem);
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
   border: 2px solid var(--couleur2);
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
-
+  
   h3,
   h5,
   h6 {
@@ -120,11 +115,6 @@
     }
   }
 
-  @media screen and (min-width: $largeur__bureau_large) {
-    figure {
-     // padding: 1%;
-    }
-  }
 }
 
 /*Quand ce n'est pas sur front-page.php */

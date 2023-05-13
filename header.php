@@ -11,7 +11,7 @@
 
 <?php
 $nouvelle_classe = "";
-if (is_front_page()) {
+if (is_front_page() || is_search()) {
   $nouvelle_classe = 'no-aside';
 }
 ?>
@@ -19,15 +19,17 @@ if (is_front_page()) {
 <body class="custom-background" >
 <div class="site <?= $nouvelle_classe ?>">
 <header class="site__header">
+  <input type="checkbox" id="chkMenu" value="">
   <section class="site__header__barre">
     <?php the_custom_logo() ?>
-    <input type="checkbox" id="chkMenu" value="">
     <label class="burger" for="chkMenu">
       <span class="material-symbols-outlined">menu</span>
     </label>
   </section>
 
   <section class="site__menu">
+    <div class="site__menu_wrapper">
+   
     <div class="site__header__recherche">
       <?php get_search_form(); ?>
     </div>
@@ -41,11 +43,13 @@ if (is_front_page()) {
       <h1><a href="<?= bloginfo('url') ?>"><?= bloginfo('name') ?></a></h1>
       <h2><?= bloginfo('description') ?></h2>
     </div>
+    
+    </div>
   </section>
     </header>
   <?php
-  if (!is_front_page()) {
-    get_template_part("template-parts/aside");
-  }
-  ?>
+ if (!is_front_page() && !is_search()) {
+  get_template_part("template-parts/aside");
+}
+?>
  

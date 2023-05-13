@@ -6,7 +6,6 @@
 ?>
 <?php get_header(); ?>
 <main class="site__main">
-<!-- <h5 class="modele_php">single.php</h5> -->
 <section class="section_fiche">
 <article class="section_fiche_contenu">
 <?php

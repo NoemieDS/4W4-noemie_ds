@@ -47,9 +47,14 @@
       color: var(--couleur1);
     }
 
+    h2, h3 {
+      text-align: center;
+    }
+
     @media screen and (min-width: $largeur__bureau) {
       padding: 4%;
     }
   }
 
 }
+

@@ -1,65 +1,92 @@
 /************************** Ent^te de la page ************/
 .site__header {
- background-color: var(--noir);
   display: flex;
-  height: 6.8vh;
-  position: fixed;
-  width: 100%;
 
-    .site__header__barre {
-    align-items: flex-start;
+
+  /* Barre fixe */
+  .site__header__barre {
+    align-items: center;
+    background-color: var(--noir);
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+
+    @media screen and (min-width: $largeur__bureau) {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+    }
 
     img.custom-logo {
       border-top-left-radius: initial;
       box-shadow: initial;
       object-fit: contain;
-      padding-left: 1rem;
-      width: 30%;
-    }
     
-.burger {
-  margin-top: 1.4rem;
-  padding-right: 4%;
-}
+      padding-left: 1rem;
+      width: 34%;
+      @media screen and (min-width: $largeur__bureau) {
+        padding-left: 0;
+        width: 60%;
+      }
+    }
 
-    .burger>span {
+    a.custom-logo-link {
+      text-align: left;
+      @media screen and (min-width: $largeur__bureau) {
+        text-align: center;
+      }
+    }
+
+    /*  Icone du menu burger */
+    .burger {
+      cursor: pointer;
+      margin-top: 0.7rem;
+      padding-right: 4%;
+    }
+
+    .burger > span {
       transition: all 500ms;
     }
-    
+
     /* Icone menu burger */
     .material-symbols-outlined {
       color: var(--blanc);
       font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-      transform: scale(1.2, 1.64);
-
+     transform: scale(1.2, 1.64);
+     font-size: clamp(1.8rem, -0.0385rem + 3vw, 3rem);
     }
   }
 
-/********************** Menu visible lorsque la case à cocher est coché**********/
-.site__menu {
-  background-color: yellow;
-  left: 0;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  transform: translateX(120%);
-  transition: transform 500ms;
-  width: 100vw;
+  /********************** Menu visible lorsque la case à cocher est coché**********/
+  .site__menu {
+    background-color: var(--noir);
+    left: 0;
+    height: 93vh; // Moins la hauteur de  .site__header__barre dans _aside-contenu.scss
+    position: fixed;
+    max-width: 100vw;
+    top: 7vh; // Moins la hauteur de  .site__header__barre  dans _aside-contenu.scss
+    transform: translateX(120%);
+    transition: transform 500ms;
+    width: 100%;
 
-  .site__header__recherche {
+    @media screen and (min-width: $largeur__bureau) { 
+      height: 100vh;
+      top: 0;
+      width: 93vw;
+    }
 
-  }
-  
+    .site__menu_wrapper {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    .site__header__recherche {
+      padding-top: 2rem;
+    }
+
     .site__header__titre {
       align-self: center;
       flex: 1 1 30%;
-      //opacity: 0;
 
       h1,
       a {
@@ -71,103 +98,87 @@
         margin-top: -1em;
         font-family: var(--police-sans);
       }
-
     }
 
-
-
-  /*-----------------------------------------------------------------menu-entête */
-  /* ********************** Balise nav *******************/
-  ul#menu-entete.menu {
-    margin: 0;
-    padding: 0;
-    position: fixed;  
-    right: 4vw;
-  }
-
-  ul#menu-entete.menu {
- 
-  }
-
-
-  .menu {
-     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    @media screen and (min-width: $largeur__tablette) {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      justify-content: flex-start;
-      flex-wrap: nowrap;
-      transform: translateX(0);
-      gap: 1rem clamp(1rem, 3vw, 20rem);
-      padding-top: 2rem;
+    /*-----------------------------------------------------------------menu-entête */
+    /* ********************** Balise nav *******************/
+    ul#menu-entete.menu {
+      margin: 0;
+      padding: 0;
     }
 
-    .menu-item {
+    ul#menu-entete.menu {
+    }
+
+    .menu {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
-      justify-content: space-evenly;
-      list-style-type: none;
-      transition: transform 400ms ease-in;
-      margin-top: 1rem;
+      justify-content: flex-end;
+      align-items: flex-end;
+      /*
+      @media screen and (min-width: $largeur__tablette) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        transform: translateX(0);
+        gap: 1rem clamp(1rem, 3vw, 20rem);
+        padding-top: 2rem;
+      } */
 
-      a {
-        font-size: clamp(0.8rem, 0.125rem + 2vw, 1.3rem);
-        line-height: 120%;
-        align-self: flex-end;
-        text-align: center;
-        color: var(--fonce-2);
-        font-family: var(--police-mono);
-        text-transform: uppercase;
-        letter-spacing: -0.02rem;
-        word-spacing: -0.1rem;
-        text-shadow: var(--accent-ombre);
-        transition: text-shadow 400ms;
-        /* padding: 0 0.5rem 0 0; */
-      }
+      .menu-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style-type: none;
+        transition: transform 400ms ease-in;
+        margin-top: 1rem;
 
-      a:hover {
-        text-shadow: none;
-        color: var(--texte-clair);
-        transition: color 600ms;
-      }
+        a {
+          font-size: clamp(0.8rem, 0.125rem + 2vw, 1.3rem);
+          line-height: 120%;
+          align-self: flex-end;
+          text-align: center;
+          color: var(--fonce-2);
+          font-family: var(--police-mono);
+          text-transform: uppercase;
+          letter-spacing: -0.02rem;
+          word-spacing: -0.1rem;
+          text-shadow: var(--accent-ombre);
+          transition: text-shadow 400ms;
+        }
 
-      a:active {
-        text-shadow: none;
-        color: var(--couleur3);
+        a:hover {
+          text-shadow: none;
+          color: var(--texte-clair);
+          transition: color 600ms;
+        }
+
+        a:active {
+          text-shadow: none;
+          color: var(--couleur3);
+        }
       }
-    }
-    .menu-item:hover,
-    .menu-item:active {
-      transform: scale(1.1);
+      .menu-item:hover,
+      .menu-item:active {
+        transform: scale(1.1);
+      }
     }
   }
 }
-}
 
-   
 /*************************************************** Case à cocher */
 #chkMenu {
-display: none;
+  display: none;
 }
 
-#chkMenu:checked~.site__header__barre .burger~.site__menu {
-  transform: translateX(0);
-}
-
- 
-
-#chkMenu:checked+label>span {
+#chkMenu:checked + .site__header__barre > label > span {
   transform: /* translateX(-120px) */ scale(1.6, 1.2) rotate(90deg);
-  color: var(--couleur3);
+  color: var(--couleur1);
 }
 
-
-#chkMenu:checked+label>.site__header__titre {
-  opacity: 1;
+#chkMenu:checked ~ .site__menu {
+  transform: translateX(0);
 }
