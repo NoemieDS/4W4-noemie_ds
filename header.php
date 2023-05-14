@@ -16,40 +16,38 @@ if (is_front_page() || is_search()) {
 }
 ?>
 
-<body class="custom-background" >
-<div class="site <?= $nouvelle_classe ?>">
-<header class="site__header">
-  <input type="checkbox" id="chkMenu" value="">
-  <section class="site__header__barre">
-    <?php the_custom_logo() ?>
-    <label class="burger" for="chkMenu">
-      <span class="material-symbols-outlined">menu</span>
-    </label>
-  </section>
+<body class="custom-background">
+  <div class="site <?= $nouvelle_classe ?>">
+    <header class="site__header">
+      <input type="checkbox" id="chkMenu" value="">
+      <section class="site__header__barre">
+        <?php the_custom_logo() ?>
+        <label class="burger" for="chkMenu">
+          <span class="material-symbols-outlined">menu</span>
+        </label>
+      </section>
 
-  <section class="site__menu">
-    <div class="site__menu_wrapper">
-   
-    <div class="site__header__recherche">
-      <?php get_search_form(); ?>
-    </div>
+      <section class="site__menu">
 
-    <?php wp_nav_menu(array(
-      "menu" => "entete",
-      "container" => "nav"
-    )) ?>
+        <div class="site__header__recherche">
+          <?php get_search_form(); ?>
+        </div>
+                
+         <div class="site__header__titre">
+        <?php the_custom_logo() ?>
+          <h1><a href="<?= bloginfo('url') ?>"><?= bloginfo('name') ?></a></h1>
+          <h2><?= bloginfo('description') ?></h2>
+        </div>
 
-    <div class="site__header__titre">
-      <h1><a href="<?= bloginfo('url') ?>"><?= bloginfo('name') ?></a></h1>
-      <h2><?= bloginfo('description') ?></h2>
-    </div>
-    
-    </div>
-  </section>
+        <?php wp_nav_menu(array(
+          "menu" => "entete",
+          "container" => "nav"
+        )) ?>
+      </section>
+
     </header>
-  <?php
- if (!is_front_page() && !is_search()) {
-  get_template_part("template-parts/aside");
-}
-?>
- 
+    <?php
+    if (!is_front_page() && !is_search()) {
+      get_template_part("template-parts/aside");
+    }
+    ?>
