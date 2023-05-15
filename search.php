@@ -6,7 +6,7 @@
  */
 ?>
 <?php get_header(); ?>
-<main class="site__main no_aside">
+<main class="site__main no_aside no-aside-logo">
 <!--   <h5 class="modele_php">search.php</h5>  -->
   <h2 class="categorie_titre">Résultats de la recherche</h2>
   <section class="section_fiche">

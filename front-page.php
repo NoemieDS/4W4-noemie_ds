@@ -6,7 +6,7 @@
  */
 ?>
 <?php get_header(); ?>
-<main class="site__main no-aside">
+<main class="site__main no-aside no-aside-front">
   <section class="blocflex blocflex_evenement">
 <?php wp_nav_menu(array(
   'menu' => 'evenement',

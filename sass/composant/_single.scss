@@ -21,11 +21,13 @@
   border-top-left-radius: 10px;
   border: 2px solid var(--couleur2);
   box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
+  height: 100%;
   padding: 0rem 1rem 2.8rem 1rem;
   margin: 1rem clamp(1rem, 3vw, 24rem);
- 
+   
   @media screen and (min-width: $largeur__bureau) {
-    padding: 4%;
+   // padding: 4%;
+    padding: 3rem 1rem 2.8rem 1rem;
   }
 
   & img {

@@ -3,7 +3,7 @@
 * template name: Evenement
 */
  get_header(); ?>
-<main class="site__main">
+<main class="site__main no_aside no-aside-logo">
 <section class="section_evenement">
 <article class="section_evenement_contenu">
 <h1 class="evenement_titre"><?= get_the_title(); ?></h1>
@@ -20,9 +20,9 @@ if ( have_posts() ) : the_post(); ?>
  ?>
 
 <?php the_content();?>
-<p>L'adresse de l'evénement : <?php the_field('adresse'); ?></p>
-<p>La date et l'heure de l'événement : <?php the_field('date_et_heure'); ?></p> 
-<iframe class="evenement_carte" src="<?php the_field('google_map'); ?>"></iframe>  
+<p class="evenement-adresse">L'adresse de l'evénement : <?php the_field('adresse'); ?></p>
+<p class="evenement-date">La date et l'heure de l'événement : <?php the_field('date_et_heure'); ?></p> 
+<iframe class="google-maps" width="400" height="300" style="border:0;"  allowfullscreen="" loading="lazy" src="<?php the_field('google_map'); ?>"></iframe>  
 <?php endif;?>
 </article>
 </section>

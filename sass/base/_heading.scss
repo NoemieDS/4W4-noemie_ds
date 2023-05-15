@@ -35,7 +35,6 @@ p,
 ul,
 li
  {
-  /* font-size: clamp(0.8rem, 0.125rem + 1.3vw, 1.1rem); */
   font-size: clamp(0.8rem, 0.6rem + 1.16vw, 1rem);
   font-family: var(--police-sans);
   color: var(--noir);
@@ -114,10 +113,6 @@ pre {
   }
 }
 
-/* blockquote {
-  padding: 0.6rem 1rem 1rem 1rem;
-}
- */
 blockquote>p {
   font-family: var(--police-serif);
 }
