@@ -1,4 +1,4 @@
-.single_titre {
+.evenement_titre {
   color: var(--texte-fonce);
   font-size: clamp(1.8rem, -0.0385rem + 3vw, 2rem);
   margin-left: 5%;
@@ -13,7 +13,7 @@
   }
 }
 
-.section_fiche {
+.section_evenement {
   background-color: var(--blanc);
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
@@ -25,7 +25,10 @@
   margin: 1rem clamp(1rem, 3vw, 24rem);
  
   @media screen and (min-width: $largeur__bureau) {
+    max-width: 70vw;
+    min-width: 45vw;
     padding: 4%;
+     }
   }
 
   & img {
@@ -44,14 +47,10 @@
     width: 0.4rem;
   }
 
-  .section_fiche_contenu {
+  .section_evenement_contenu {
     margin: 0 auto;
     min-height: fit-content(200em);
     padding: 1rem clamp(1.5rem, 3vw, 16rem);
-
-    @media screen and (min-width: $largeur__bureau) {
-      max-width: 50vw;
-    }
 
     p,
     ul,
@@ -76,4 +75,8 @@
       padding: 4%;
     }
   }
+
+
+iframe.evenement-carte {
+  border: 4px solid pink !important;
 }

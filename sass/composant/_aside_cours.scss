@@ -1,10 +1,10 @@
 .site__aside .menu-cours-container {
-
   
   ul {
     @media screen and (min-width: $largeur__bureau) {
-      text-indent: -42px;
-      margin-left: 42px;
+      text-indent: -24px;
+      margin-left: 24px;
+
     }
   }
 
@@ -44,8 +44,7 @@
     padding-left: 0.3rem;
     @media screen and (min-width: $largeur__bureau) {
       display: inline;
-   text-indent: -15px;
-      margin-left: 15px; 
+      padding-left: 0;
     }
   }
 

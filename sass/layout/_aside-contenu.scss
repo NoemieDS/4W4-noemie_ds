@@ -1,5 +1,7 @@
 /**
-*  Mise en page général avec display:grid
+*  Mise en page général avec display:grid lorsqu'il y a un aside
+*  Display flex sans aside. 
+*  Entête et footer en position fixe et relative dans leurs fichiers scss
 */
 
 .site {
@@ -52,11 +54,11 @@
 
 .site__aside {
   background-color: var(--noir);
-  grid-area: aside;
   box-shadow: 0.1rem 0.1rem 0.4rem hsl(var(--hFonce), var(--sFonce), 10%);
-  padding: 0;
-  margin-top: 5vh; //la hauteur du header + 1vh (dans _site_entete.scss  .site__header__barre)
+  grid-area: aside;
   margin-bottom: 2.4rem;
+  margin-top: 5vh; //la hauteur du header + 1vh (dans _site_entete.scss  .site__header__barre)
+  padding: 0;
   width: 100%;
 
   @media screen and (min-width: $largeur__bureau) {
@@ -64,7 +66,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-width: 220px;
+    min-width: 240px;
     max-width: 260px;
     min-height: 120px;
     margin-top: 10rem;
@@ -77,16 +79,21 @@
 
   & > nav > ul {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 1rem;
     width: 100%;
+    height: 200px;
+    overflow-y: scroll;
    
     @media screen and (min-width: $largeur__bureau) {
       flex-direction: column;
-      text-indent: -60px;
-      margin-left: 50px;
+      height: 100%;
+     text-indent: -20px;
+    margin-left: 20px;
+      overflow-y: hidden;
     }
 
     li {
@@ -142,23 +149,35 @@
   }
 }
 
-
+/* Display flex sans aside */
 main.no-aside {
-  margin-top: 6.5vh; //la hauteur du header (dans _site_entete.scss  .site__header__barre)
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
 .no-aside {
-  grid-template-areas:
-  //  "header"
-    "main"
+  margin-top: 1rem;
+  position: relative;
+  top: 6.5vh;  //la hauteur du header (dans _site_entete.scss  .site__header__barre)
+
+  @media screen and (min-width: $largeur__bureau) {
+    top: 0;
+  }
+  
+ /* grid-template-areas:
+    "header"
+   "main"
     "footer";
 
   @media screen and (min-width: $largeur__bureau) {
     grid-template-columns: auto;
     grid-template-areas:
     //  "header"
-      "aside"
+    //  "aside"
       "main"
-      "footer";
-  }
+      "footer footer";
+  }*/
 }

@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 <main class="site__main no_aside">
 <!--   <h5 class="modele_php">search.php</h5>  -->
-  <h2>Résultats de la recherche</h2>
+  <h2 class="categorie_titre">Résultats de la recherche</h2>
   <section class="section_fiche">
     <article class="section_fiche_contenu">
       <?php
