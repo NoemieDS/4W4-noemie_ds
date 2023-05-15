@@ -553,7 +553,7 @@ a:hover, a:focus, a:active {
   }
 }
 .site__footer .footer_titre {
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 @media screen and (min-width: 992px) {
   .site__footer .footer_titre {
@@ -1059,7 +1059,7 @@ h2.categorie_titre {
   font-size: clamp(1.8rem, -0.0385rem + 3vw, 2rem);
   margin-left: 5%;
   margin-right: 5%;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1072,18 +1072,18 @@ h2.categorie_titre {
 
 .section_fiche {
   background-color: var(--blanc);
-  -webkit-border-top-left-radius: 10px;
-  -khtml-border-radius-topleft: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  border: 2px solid var(--couleur2);
-  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
   height: 100%;
   padding: 0rem 1rem 2.8rem 1rem;
   margin: 1rem clamp(1rem, 3vw, 24rem);
 }
 @media screen and (min-width: 992px) {
   .section_fiche {
+    -webkit-border-top-left-radius: 10px;
+    -khtml-border-radius-topleft: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    border: 2px solid var(--couleur2);
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
     padding: 3rem 1rem 2.8rem 1rem;
   }
 }
@@ -1197,17 +1197,17 @@ h2.categorie_titre {
 
 .section_evenement {
   background-color: var(--blanc);
-  -webkit-border-top-left-radius: 10px;
-  -khtml-border-radius-topleft: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  border: 2px solid var(--couleur2);
-  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
   padding: 0rem 1rem 2.8rem 1rem;
   margin: 1rem clamp(1rem, 3vw, 24rem);
 }
 @media screen and (min-width: 992px) {
   .section_evenement {
+    -webkit-border-top-left-radius: 10px;
+    -khtml-border-radius-topleft: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    border: 2px solid var(--couleur2);
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
     max-width: 70vw;
     min-width: 45vw;
     padding: 4%;
@@ -1249,6 +1249,12 @@ h2.categorie_titre {
 .google-maps {
   margin: 0 auto;
   padding-top: 1rem;
+  width: 90%;
+}
+@media screen and (min-width: 992px) {
+  .google-maps {
+    width: 100%;
+  }
 }
 
 .menu-bloc-archive-container {

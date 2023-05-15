@@ -15,25 +15,25 @@
 
 .section_evenement {
   background-color: var(--blanc);
-  -webkit-border-top-left-radius: 10px;
-  -khtml-border-radius-topleft: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  border: 2px solid var(--couleur2);
-  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
   padding: 0rem 1rem 2.8rem 1rem;
   margin: 1rem clamp(1rem, 3vw, 24rem);
- 
+
   @media screen and (min-width: $largeur__bureau) {
+    -webkit-border-top-left-radius: 10px;
+    -khtml-border-radius-topleft: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    border: 2px solid var(--couleur2);
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
     max-width: 70vw;
     min-width: 45vw;
     padding: 4%;
-     }
-     
-     & img {
-       margin-bottom: 2rem;
-     }
- 
+  }
+
+  & img {
+    margin-bottom: 2rem;
+  }
+
   .section_evenement_contenu {
     display: flex;
     flex-direction: column;
@@ -51,13 +51,12 @@
       padding-bottom: 2rem;
     }
 
-     @media screen and (min-width: $largeur__bureau) {
+    @media screen and (min-width: $largeur__bureau) {
       padding: 4%;
     }
   }
   .evenement-adresse,
-  .evenement-date
-   {
+  .evenement-date {
     font-weight: bold;
   }
 
@@ -66,10 +65,13 @@
     font-size: clamp(0.8rem, 0.6rem + 1.16vw, 1rem);
     padding-bottom: 0.6rem;
   }
-  
 }
 
 .google-maps {
-margin: 0 auto;
-padding-top: 1rem;
-} 
+  margin: 0 auto;
+  padding-top: 1rem;
+  width: 90%;
+  @media screen and (min-width: $largeur__bureau) {
+    width: 100%;
+  }
+}
