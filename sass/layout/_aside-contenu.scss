@@ -152,6 +152,11 @@
 
 
 /* Display flex sans aside */
+
+main.no-aside {
+  margin-bottom: 6rem;
+}
+
 .no-aside {
   display: flex;
   flex-direction: column;

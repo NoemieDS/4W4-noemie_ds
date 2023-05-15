@@ -7,13 +7,22 @@
 ?>
 <?php get_header(); ?>
 <main class="site__main no-aside no-aside-front">
+<section class="sidebar-galerie">
+      <?php dynamic_sidebar('front_1'); ?>
+    </section>
   <section class="blocflex_evenement">
 <?php wp_nav_menu(array(
   'menu' => 'evenement',
   'container' => 'nav'
 )); ?>
 </section>
-
+<section class="sidebar-galerie">
+      <?php dynamic_sidebar('front_2'); ?>
+    </section>
+<section>
+<section class="sidebar-galerie">
+      <?php dynamic_sidebar('front_3'); ?>
+    </section>
 <section>
 <?php
 wp_nav_menu(array(
@@ -34,10 +43,6 @@ wp_nav_menu(array(
     endwhile;
   endif; */
   ?>
-
-<section class="sidebar-galerie">
-      <?php dynamic_sidebar('front_1'); ?>
-    </section>
 
   <section class="blocflex">
     <?php

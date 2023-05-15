@@ -955,7 +955,7 @@ h2.categorie_titre {
   gap: 2rem;
   padding: 3rem 1rem 2.8rem 1rem;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 800px) {
   .blocflex {
     margin-left: 2rem;
   }
@@ -1441,6 +1441,10 @@ h2.categorie_titre {
 }
 
 /* Display flex sans aside */
+main.no-aside {
+  margin-bottom: 6rem;
+}
+
 .no-aside {
   display: flex;
   flex-direction: column;

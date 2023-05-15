@@ -18,7 +18,7 @@ h2.categorie_titre {
   gap: 2rem;
   padding: 3rem 1rem 2.8rem 1rem;
 
-  @media screen and (min-width: $largeur__bureau) {
+  @media screen and (min-width: $largeur__tablette) {
     margin-left: 2rem;
   }
 }
