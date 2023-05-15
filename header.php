@@ -11,7 +11,7 @@
 
 <?php
 $nouvelle_classe = "";
-if (is_front_page() || is_search()) {
+if (is_front_page() || is_search() || is_page()) {
   $nouvelle_classe = 'no-aside';
 }
 ?>
@@ -59,7 +59,7 @@ if (is_front_page() || is_search()) {
 
     </header>
     <?php
-    if (!is_front_page() && !is_search()) {
+    if (!is_front_page() && !is_search() && !is_page()) {
       get_template_part("template-parts/aside");
     }
     ?>
