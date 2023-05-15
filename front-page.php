@@ -39,7 +39,6 @@ wp_nav_menu(array(
       <?php dynamic_sidebar('front_1'); ?>
     </section>
 
-
   <section class="blocflex">
     <?php
     if (have_posts()) :

@@ -1,5 +1,6 @@
 .site__aside .menu-cours-container {
 
+  
   ul {
     @media screen and (min-width: $largeur__bureau) {
       text-indent: -42px;
@@ -13,6 +14,7 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       padding-top: 0.6rem;
+
     }
   }
 
@@ -42,12 +44,10 @@
     padding-left: 0.3rem;
     @media screen and (min-width: $largeur__bureau) {
       display: inline;
-    /*   text-indent: -10px;
-      margin-left: 10px; */
+   text-indent: -15px;
+      margin-left: 15px; 
     }
   }
 
-  .menu {
-flex-direction: row;
-  }
+ 
 }

@@ -7,8 +7,7 @@
 ?>
 <?php get_header(); ?>
 <main class="site__main">
-   <section class="blocflex">
-      <?php
+        <?php
       $category = get_queried_object();
       //requête SQL de WP
       $args = array(
@@ -20,6 +19,7 @@
      
       ?>
 <h2 class="categorie_titre"><?php echo $category->name ?>  </h2>
+<section class="blocflex">
 <?php
 
       if ($query->have_posts()) :

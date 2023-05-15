@@ -61,14 +61,20 @@ function personnaliser_menu_item_titre($title, $item, $args)
     }
     
     /*-------------------------------------------------Modifications des choix du menu 4w4 */
-    if ($args->menu == '4w4') {
+    if ($args->menu == '4w4' || $args->menu == 'galerie') {
         // Modifier la longueur du titre en fonction de vos besoins
 
+              // Modifier la longueur du titre en fonction des besoins
+                  
         if (substr($title, 0, 1) == '0') {
             $title = substr($title, 1);
         }
+        if (14 <= strlen($title) ) {
+        $title = substr($title, 0, 16).'...';
     }
+}
 
+ 
     return $title;
 }
 add_filter('nav_menu_item_title', 'personnaliser_menu_item_titre', 10, 3);

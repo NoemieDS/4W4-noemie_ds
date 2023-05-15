@@ -1,12 +1,21 @@
 .single_titre {
   color: var(--texte-fonce);
   text-align: center;
-  padding-bottom: 1rem;
+  padding: 1rem 2rem;
+  margin-left: 5%; 
+  margin-right: 5%;
+  font-size: clamp(1.8rem, -0.0385rem + 3vw, 2rem);
+  text-transform: uppercase;
+  
+  @media screen and (min-width: $largeur__bureau) {
+       padding: 0rem 2rem 1rem 0rem;
+       font-family: var(--police-sans);
+  }
 }
 
 .section_fiche {
   background-color:  var(--blanc);
-  padding: 1.4rem 1rem 2.8rem 1rem;
+  padding: 0rem 1rem 2.8rem 1rem;
   margin: 1rem clamp(1rem, 3vw, 24rem); 
   -webkit-border-top-left-radius: 10px;
   -khtml-border-radius-topleft: 10px;
@@ -17,6 +26,10 @@
 
   @media screen and (min-width: $largeur__bureau) {
     padding: 4%;
+  }
+
+  & img {
+    margin-bottom: 2rem;
   }
 
   & li::before {
@@ -34,13 +47,22 @@
     
   .section_fiche_contenu {
     margin: 0 auto;
-    padding: 1rem clamp(1rem, 3vw, 24rem); 
+  padding: 1rem clamp(1.5rem, 3vw, 16rem); 
     min-height: fit-content(200em);
- 
+
+    @media screen and (min-width: $largeur__bureau) {
+      max-width: 50vw;
+    }
+   
+
     p,
     ul,
     li {
       line-height: 180%;
+    }
+
+    p {
+      padding-bottom: 2rem;
     }
 
     h2 {

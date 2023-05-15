@@ -19,6 +19,18 @@ if (is_front_page() || is_search()) {
 <body class="custom-background">
   <div class="site <?= $nouvelle_classe ?>">
     <header class="site__header">
+
+      <?php
+      if (!is_front_page()) {
+      ?>
+        <div class="site_titre_ordi">
+
+          <h1><a href="<?= bloginfo('url') ?>"><?= bloginfo('name') ?></a></h1>
+          <h2><?= bloginfo('description') ?></h2>
+        </div>
+      <?php   }
+      ?>
+
       <input type="checkbox" id="chkMenu" value="">
       <section class="site__header__barre">
         <?php the_custom_logo() ?>
@@ -32,9 +44,9 @@ if (is_front_page() || is_search()) {
         <div class="site__header__recherche">
           <?php get_search_form(); ?>
         </div>
-                
-         <div class="site__header__titre">
-        <?php the_custom_logo() ?>
+
+        <div class="site__header__titre">
+          <?php the_custom_logo() ?>
           <h1><a href="<?= bloginfo('url') ?>"><?= bloginfo('name') ?></a></h1>
           <h2><?= bloginfo('description') ?></h2>
         </div>

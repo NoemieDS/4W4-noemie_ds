@@ -1,19 +1,21 @@
-.blocflex {
- // display: grid;
- // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  // Cette déclaration sera meilleur quand min() sera mieux supporté
-  // grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-// gap: 2rem;
-  //margin: 1rem;
- // padding: 1.4rem 1rem 2.8rem 1rem;
-  margin: 1rem clamp(1rem, 3vw, 24rem); 
+h2.categorie_titre {
+  font-size: clamp(2.8rem, 5vw, 6rem);
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
 
-  & h2.categorie_titre {
-    font-size: clamp(2rem, -0.3125rem + 2.8vw, 2.6rem);
-    padding-top: 1rem;
-    text-align: center;
+.blocflex {
+   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  // Cette déclaration sera meilleur quand min() sera mieux supporté
+  grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+  gap: 2rem;
+  padding: 3rem 1rem 2.8rem 1rem;
+
+  @media screen and (min-width: $largeur__bureau) {
+    margin-left: 2rem;
   }
-  
 }
 
 .blocflex_evenement {
@@ -25,20 +27,24 @@
 
 .bloc__article {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
   background-color: var(--blanc);
-  margin: 1rem 0.2rem;
-  padding: 1.8rem;
+  padding: 1.5rem 1rem;
   transform: translateX(-0.1rem);
-  -webkit-border-top-left-radius: 10px;
-  -khtml-border-radius-topleft: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  border: 2px solid var(--couleur2);
-  box-shadow: 0.2rem 0.2rem 0.5rem var(--couleur2);
+  border-top: 1px solid var(--fonce-1);
+  gap: 0.5rem 2rem;
+  
+  @media screen and (min-width: $largeur__tablette) {
+    box-shadow: 0.06rem 0.06rem 0.2rem hsl(var(--hFonce), var(--sFonce), 10%);
+  }
+
+  & img {
+  margin: 1rem 2rem 2rem 0;
+  }
   
   h3,
   h5,
@@ -46,6 +52,8 @@
     text-shadow: var(--titre-ombre);
     margin: 1rem 0 0.6rem 0;
   }
+
+  h6 {}
 
   h4 {
     margin: 0.4rem 0;
@@ -65,7 +73,7 @@
     white-space: nowrap;
   }
 
-  @media screen and (min-width: $largeur__bureau) {
+  @media screen and (min-width: $largeur__tablette) {
     margin: 1rem;
   }
 }
@@ -73,20 +81,19 @@
 .blocflex__galerie {
   margin: 1rem 1.6rem 2rem 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
 
   & p {
-    color: var(--texte-clair);
-    //  text-shadow: var(--texte-ombre);
+    color: var(--texte-fonce);
   }
 
   h3,
   a {
     margin: 0 auto;
-    margin-bottom: 0.8rem;
-    font-size: clamp(1.1rem, 2.6vw, 1.6rem);
+    margin: 0.8rem;
+    font-size: clamp(1.4rem, 2.6vw, 1.6rem);
     text-align: center;
   }
 
@@ -99,6 +106,7 @@
     background-color: var(--blanc);
     padding: 2rem 1rem;
     margin-top: 0.5rem;
+    box-shadow: 0.06rem 0.06rem 0.2rem hsl(var(--hFonce), var(--sFonce), 10%);
   
     h3,
     a {
@@ -106,7 +114,7 @@
     }
 
     img {
-      padding: 0.6rem;
+ //     min-width: 120px;
     }
 
     p {
@@ -115,11 +123,4 @@
     }
   }
 
-}
-
-/*Quand ce n'est pas sur front-page.php */
-.blocflex__galerie_categorie {
-  @media screen and (min-width: $largeur__bureau) {
-    max-height: 700px;
-  }
 }

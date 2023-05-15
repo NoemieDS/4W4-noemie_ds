@@ -137,11 +137,11 @@ img {
   max-width: 100%;
   height: auto;
   margin-top: 0.4rem;
-  -webkit-border-top-left-radius: 10px;
-  -khtml-border-radius-topleft: 10px;
-  -moz-border-radius-topleft: 10px;
+-webkit-border-top-left-radius: 10px;
+-khtml-border-radius-topleft: 10px;
+-moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
-  box-shadow: 0.3rem 0.3rem 0.5rem rgba(80, 80, 80, 0.7);
+  box-shadow: 0.1rem 0.1rem 0.3rem hsl(var(--hFonce), var(--sFonce), 10%);
 }
 
 figcaption {
