@@ -961,11 +961,25 @@ h2.categorie_titre {
   }
 }
 
+/*** Front-page menu évènement **/
 .blocflex_evenement {
   background-color: var(--blanc);
+  margin-bottom: 1rem;
+}
+
+#menu-evenement li,
+#menu-evenement a {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  padding: 1rem;
+}
+#menu-evenement li img.menu-thumbnail,
+#menu-evenement a img.menu-thumbnail {
+  padding-top: 1rem;
+  width: 100%;
 }
 
 .bloc__article {
@@ -1072,7 +1086,6 @@ h2.categorie_titre {
 
 .section_fiche {
   background-color: var(--blanc);
-  height: 100%;
   padding: 0rem 1rem 2.8rem 1rem;
   margin: 1rem clamp(1rem, 3vw, 24rem);
 }
@@ -1133,7 +1146,7 @@ h2.categorie_titre {
 }
 
 .menu-evenement-container .menu {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1154,6 +1167,7 @@ h2.categorie_titre {
   .menu-evenement-container .menu .menu-item a {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
   }
 }
@@ -1161,7 +1175,8 @@ h2.categorie_titre {
   font-size: clamp(1.6rem, 0.6rem + 1.16vw, 1.6rem);
   margin-bottom: 0.8rem;
   text-align: center;
-  color: var(--couleur3);
+  color: var(--fonce);
+  text-transform: uppercase;
 }
 .menu-evenement-container .menu .menu-item a .description {
   font-size: clamp(1rem, 0.6rem + 1.16vw, 1.2rem);
@@ -1215,6 +1230,7 @@ h2.categorie_titre {
 }
 .section_evenement img {
   margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .section_evenement .section_evenement_contenu {
   display: flex;
@@ -1227,7 +1243,7 @@ h2.categorie_titre {
   align-self: center;
 }
 .section_evenement .section_evenement_contenu p {
-  font-size: clamp(1.2rem, 0.125rem + 1.3vw, 1.6rem);
+  font-size: clamp(1.2rem, 0.125rem + 1.6vw, 2rem);
   line-height: 180%;
   padding-bottom: 2rem;
 }
@@ -1242,7 +1258,7 @@ h2.categorie_titre {
 }
 .section_evenement p.evenement-adresse,
 .section_evenement p.evenement-date {
-  font-size: clamp(0.8rem, 0.6rem + 1.16vw, 1rem);
+  font-size: clamp(1rem, 0.6rem + 1.16vw, 1.2rem);
   padding-bottom: 0.6rem;
 }
 

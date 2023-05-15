@@ -3,7 +3,7 @@
  
   .menu {
     //ul
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -17,10 +17,8 @@
    }
  
     .menu-item {
-      //li
-    //  margin: 0.8rem;
      padding: 2rem 0;
-      flex: 1 0 0%;
+    flex: 1 0 0%;
 
     
       a {
@@ -28,6 +26,7 @@
         @media screen and (min-width: $largeur__tablette) {
           display: flex;
           flex-direction: column;
+          align-items: center;
           width: 100%;
         }
         
@@ -35,7 +34,8 @@
         font-size: clamp(1.6rem, 0.6rem + 1.16vw, 1.6rem);
           margin-bottom: 0.8rem;
           text-align: center;
-          color: var(--couleur3);
+          color: var(--fonce);
+          text-transform: uppercase;
         }
         .description {
           font-size: clamp(1rem, 0.6rem + 1.16vw, 1.2rem);
