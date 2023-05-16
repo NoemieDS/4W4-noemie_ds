@@ -338,8 +338,6 @@ template {
   --texte-fonce: hsl(var(--hFonce), var(--sFonce), 14%);
   --texte-clair: var(--blanc);
   --noir:#080808;
-  --claire-1: #FAF5F0;
-  --claire-2:#EDEDE8;
   /* **************************************************************** Polices *** */
   --police-sans:"Source Sans 3", sans-serif;
   --police-serif:"Source Serif Pro", serif;
@@ -1409,6 +1407,82 @@ h2.blocflex-titre {
   padding-bottom: 0.6rem;
 }
 
+.accueil_titre_section {
+  width: 100%;
+  height: 40vh;
+  background-color: var(--noir);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.accueil_titre_section h2 {
+  color: var(--fonce-2);
+  text-align: center;
+  margin: 0.5rem 20%;
+  font-size: clamp(1rem, -0.3125rem + 2.8vw, 1.4rem);
+}
+.accueil_titre_section .accueil-titre {
+  margin: 0;
+  font-size: clamp(3.2rem, -0.0385rem + 3vw, 6rem);
+  font-weight: 700;
+}
+.accueil_titre_section .accueil-titre .accueil-titre span {
+  display: inline-block;
+}
+@keyframes accueil-titre-anim {
+  from {
+    transform: rotateY(90deg);
+    color: var(--fonce-1);
+  }
+  50% {
+    transform: rotateY(0deg);
+    color: var(--couleur1);
+  }
+  to {
+    transform: rotateY(0deg);
+    color: var(--fonce-1);
+  }
+}
+.accueil_titre_section .accueil-titre span:nth-child(1) {
+  animation: accueil-titre-anim 5s ease-out infinite;
+}
+.accueil_titre_section .accueil-titre span:nth-child(2) {
+  animation: accueil-titre-anim 5s 300ms ease-out infinite;
+}
+.accueil_titre_section .accueil-titre span:nth-child(3) {
+  animation: accueil-titre-anim 5s 600ms ease-out infinite;
+}
+.accueil_titre_section .accueil-titre span:nth-child(4) {
+  animation: accueil-titre-anim 5s 900ms ease-out infinite;
+}
+.accueil_titre_section .accueil-titre span:nth-child(5) {
+  animation: accueil-titre-anim 5s 1.2s ease-out infinite;
+}
+.accueil_titre_section .accueil-titre span:nth-child(6) {
+  animation: accueil-titre-anim 5s 1.5s ease-out infinite;
+}
+.accueil_titre_section .accueil-titre span:nth-child(7) {
+  animation: accueil-titre-anim 5s 1.8s ease-out infinite;
+}
+.accueil_titre_section .accueil-titre span:nth-child(8) {
+  animation: accueil-titre-anim 5s 2.1s ease-out infinite;
+}
+.accueil_titre_section .accueil-titre span:nth-child(9) {
+  animation: accueil-titre-anim 5s 2.4s ease-out infinite;
+}
+.accueil_titre_section .accueil-titre span:nth-child(10) {
+  animation: accueil-titre-anim 5s 2.7s ease-out infinite;
+}
+
+@media screen and (min-width: 992px) {
+  .accueil_titre_section {
+    height: 50vh;
+  }
+  .accueil_titre_section .accueil-titre {
+    font-size: clamp(6rem, -0.0385rem + 3vw, 10rem);
+  }
+}
 /* --------------------------------------------- layout */
 /**
 *  Mise en page général avec display:grid lorsqu'il y a un aside
@@ -1564,20 +1638,7 @@ main.no-aside {
   position: relative;
   margin-top: 1rem;
   position: relative;
-  top: 6.5vh;
-  /* grid-template-areas:
-     "header"
-    "main"
-     "footer";
-
-   @media screen and (min-width: $largeur__bureau) {
-     grid-template-columns: auto;
-     grid-template-areas:
-     //  "header"
-     //  "aside"
-       "main"
-       "footer footer";
-   }*/
+  top: 0;
 }
 @media screen and (min-width: 992px) {
   .no-aside {

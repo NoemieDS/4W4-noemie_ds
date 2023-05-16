@@ -8,25 +8,22 @@
 }
 
 .sidebar_articles {
-padding: 1rem;
-
-& li {
-  border-top: 1px solid var(--fonce-1);
   padding: 1rem;
 
+  & li {
+    border-top: 1px solid var(--fonce-1);
+    padding: 1rem;
 
-  @media screen and (min-width: 600px) {
-    border-top: 0;
-    border-right: 1px solid var(--fonce-1);
-    border-bottom: 1px solid var(--fonce-1);
+    @media screen and (min-width: 600px) {
+      border-top: 0;
+      border-right: 1px solid var(--fonce-1);
+      border-bottom: 1px solid var(--fonce-1);
+    }
+    & a {
+      text-align: center;
+    }
+    & div {
+      padding-bottom: 0.6rem;
+    }
   }
-& a {
-  text-align: center;
-}
-& div {
-  padding-bottom: 0.6rem;
-}
-
-
-}
 }

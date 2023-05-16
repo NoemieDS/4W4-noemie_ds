@@ -87,8 +87,7 @@
     padding: 1rem;
     width: 100%;
     height: 200px;
-    //overflow-y: scroll;
-   
+      
     @media screen and (min-width: $largeur__bureau) {
       flex-direction: column;
       height: 100%;
@@ -165,26 +164,13 @@ main.no-aside {
   position: relative;
   margin-top: 1rem;
   position: relative;
-  top: 6.5vh;  //la hauteur du header (dans _site_entete.scss  .site__header__barre)
+  top: 0; 
 
 
   @media screen and (min-width: $largeur__bureau) {
     top: 0;
   }
-  
- /* grid-template-areas:
-    "header"
-   "main"
-    "footer";
 
-  @media screen and (min-width: $largeur__bureau) {
-    grid-template-columns: auto;
-    grid-template-areas:
-    //  "header"
-    //  "aside"
-      "main"
-      "footer footer";
-  }*/
 }
 
 .no-aside-logo {
@@ -193,3 +179,4 @@ main.no-aside {
     margin-right: 6rem;
   }
 }
+

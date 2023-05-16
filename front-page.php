@@ -7,6 +7,21 @@
 ?>
 <?php get_header(); ?>
 <main class="site__main no-aside no-aside-front">
+
+  <section class="accueil_titre_section">
+  <div class="accueil-titre">
+      <span>4</span>
+      <span>W</span>
+      <span>4</span>
+      <span>&nbsp;</span>
+      <span>T</span>
+      <span>I</span>
+      <span>M</span>
+      <span>!</span>
+    </div>
+    <h2>Bienvenue sur le site de mon premier thème&nbsp;Wordpress</h2>
+  </section>
+
 <section class="sidebar-galerie">
       <?php dynamic_sidebar('front_1'); ?>
     </section>
@@ -31,18 +46,6 @@ wp_nav_menu(array(
 ));
  ?>
   </section>
-
-  <?php
-/*
- if (have_posts()) :
-    while (have_posts()) : the_post();
-    if (in_category('galerie')) {
-        $ma_categorie = "galerie";
-        get_template_part('template-parts/categorie', $ma_categorie);
-      }
-    endwhile;
-  endif; */
-  ?>
 
   <section class="blocflex articles-accueil">
   <h2 class="blocflex-titre">Articles les<br> plus lus</h2>

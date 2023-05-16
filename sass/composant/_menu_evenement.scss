@@ -1,7 +1,7 @@
 .menu-evenement-container {
   //nav
   padding: 0 1rem;
- 
+
   .menu {
     //ul
     align-items: flex-end;
@@ -12,24 +12,21 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
-  
-    .menu-item {
-    padding: 2rem 0;
-    flex: 1 0 0%;
 
-    
+    .menu-item {
+      padding: 2rem 0;
+      flex: 1 0 0%;
+
       a {
-       
         @media screen and (min-width: $largeur__tablette) {
           display: flex;
           flex-direction: column;
           align-items: center;
           width: 100%;
         }
-        
+
         .title {
-        font-size: clamp(1.6rem, 0.6rem + 1.16vw, 1.6rem);
+          font-size: clamp(1.6rem, 0.6rem + 1.16vw, 1.6rem);
           margin-bottom: 0.8rem;
           text-align: center;
           color: var(--fonce);
@@ -59,4 +56,3 @@
     }
   }
 }
-
