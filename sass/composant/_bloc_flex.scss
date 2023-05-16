@@ -10,6 +10,13 @@ h2.categorie_titre {
   }
 }
 
+h2.blocflex-titre {
+  text-align: center;
+  font-size: clamp(2.6rem, 5vw, 6rem);
+  padding: 2rem;
+}
+
+
 .blocflex {
    display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -27,7 +34,11 @@ h2.categorie_titre {
 
 .blocflex_evenement {
   background-color: var(--blanc);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--couleur2);
+  border-top: 2px solid var(--couleur2);
 }
 
 #menu-evenement li, 
@@ -38,6 +49,8 @@ h2.categorie_titre {
   align-items: center;
   align-content: center;
   padding: 1rem;
+  text-align: center;
+  line-height: 130%;
 
   img.menu-thumbnail {
     padding-top: 1rem;
@@ -139,4 +152,10 @@ h2.categorie_titre {
     }
   }
 
+}
+/* Articles sélectionnées - catégories menu Accueil */
+.articles-accueil {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 2rem;
 }

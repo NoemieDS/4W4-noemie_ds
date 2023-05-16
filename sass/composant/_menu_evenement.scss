@@ -1,28 +1,26 @@
 .menu-evenement-container {
   //nav
+  padding: 0 1rem;
  
   .menu {
     //ul
-    align-items: center;
+    align-items: flex-end;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-evenly;
     list-style-type: none;
     margin: 0;
     padding: 0;
     
   
-    @media screen and (min-width: $largeur__tablette) {
-    flex-direction: row;
-   }
- 
     .menu-item {
-     padding: 2rem 0;
+    padding: 2rem 0;
     flex: 1 0 0%;
 
     
       a {
-
+       
         @media screen and (min-width: $largeur__tablette) {
           display: flex;
           flex-direction: column;
@@ -36,17 +34,21 @@
           text-align: center;
           color: var(--fonce);
           text-transform: uppercase;
+          line-height: 120%;
         }
         .description {
           font-size: clamp(1rem, 0.6rem + 1.16vw, 1.2rem);
-          padding: 1rem;
-          height: 100px;
+          padding: 0.2rem;
+          height: 150px;
           color: var(--noire);
+
+          @media screen and (min-width: $largeur__tablette) {
+            padding: 1rem;
+          }
         }
         .menu-thumbnail {
           border-radius: 0%;
           box-shadow: none;
-          //width: 150px;
         }
         span {
           display: block;

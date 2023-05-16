@@ -11,6 +11,7 @@
       <?php dynamic_sidebar('front_1'); ?>
     </section>
   <section class="blocflex_evenement">
+    <h2 class="blocflex-titre">Nos prochains évènements</h2>
 <?php wp_nav_menu(array(
   'menu' => 'evenement',
   'container' => 'nav'
@@ -20,10 +21,9 @@
       <?php dynamic_sidebar('front_2'); ?>
     </section>
 <section>
-<section class="sidebar-galerie">
-      <?php dynamic_sidebar('front_3'); ?>
-    </section>
+
 <section>
+<h2 class="blocflex-titre">Vers nos archives</h2>
 <?php
 wp_nav_menu(array(
   'menu' => 'bloc-archive',
@@ -44,7 +44,8 @@ wp_nav_menu(array(
   endif; */
   ?>
 
-  <section class="blocflex">
+  <section class="blocflex articles-accueil">
+  <h2 class="blocflex-titre">Articles les<br> plus lus</h2>
     <?php
     if (have_posts()) :
       while (have_posts()) : the_post();

@@ -948,6 +948,12 @@ h2.categorie_titre {
   }
 }
 
+h2.blocflex-titre {
+  text-align: center;
+  font-size: clamp(2.6rem, 5vw, 6rem);
+  padding: 2rem;
+}
+
 .blocflex {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -964,7 +970,11 @@ h2.categorie_titre {
 /*** Front-page menu évènement **/
 .blocflex_evenement {
   background-color: var(--blanc);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--couleur2);
+  border-top: 2px solid var(--couleur2);
 }
 
 #menu-evenement li,
@@ -975,6 +985,8 @@ h2.categorie_titre {
   align-items: center;
   align-content: center;
   padding: 1rem;
+  text-align: center;
+  line-height: 130%;
 }
 #menu-evenement li img.menu-thumbnail,
 #menu-evenement a img.menu-thumbnail {
@@ -1068,6 +1080,13 @@ h2.categorie_titre {
   }
 }
 
+/* Articles sélectionnées - catégories menu Accueil */
+.articles-accueil {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 2rem;
+}
+
 .single_titre {
   color: var(--texte-fonce);
   font-size: clamp(1.8rem, -0.0385rem + 3vw, 2rem);
@@ -1145,19 +1164,18 @@ h2.categorie_titre {
   }
 }
 
+.menu-evenement-container {
+  padding: 0 1rem;
+}
 .menu-evenement-container .menu {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-evenly;
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-@media screen and (min-width: 800px) {
-  .menu-evenement-container .menu {
-    flex-direction: row;
-  }
 }
 .menu-evenement-container .menu .menu-item {
   padding: 2rem 0;
@@ -1177,12 +1195,18 @@ h2.categorie_titre {
   text-align: center;
   color: var(--fonce);
   text-transform: uppercase;
+  line-height: 120%;
 }
 .menu-evenement-container .menu .menu-item a .description {
   font-size: clamp(1rem, 0.6rem + 1.16vw, 1.2rem);
-  padding: 1rem;
-  height: 100px;
+  padding: 0.2rem;
+  height: 150px;
   color: var(--noire);
+}
+@media screen and (min-width: 800px) {
+  .menu-evenement-container .menu .menu-item a .description {
+    padding: 1rem;
+  }
 }
 .menu-evenement-container .menu .menu-item a .menu-thumbnail {
   border-radius: 0%;
@@ -1273,29 +1297,99 @@ h2.categorie_titre {
   }
 }
 
-.menu-bloc-archive-container {
-  border: 2px solid pink;
-}
 .menu-bloc-archive-container ul {
-  border: 2px solid orange;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .menu-bloc-archive-container li {
-  margin-bottom: 1rem;
+  margin: 1rem auto;
+  border: 1px solid var(--couleur2);
+  flex: 1 1 0%;
+  padding: 1rem;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 800px) {
+  .menu-bloc-archive-container li {
+    padding: 2rem;
+    margin: 2rem;
+    width: 200px;
+    height: 300px;
+  }
 }
 .menu-bloc-archive-container li a {
   background-repeat: no-repeat;
+  position: relative;
+  font-size: clamp(0.9rem, 2vw, 1.4rem);
 }
-.bloc__cours a {
+
+.bloc__cours a::before {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=account_balance");
+  position: absolute;
+  content: "";
+  top: -1.6rem;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  transform: scale(1.4);
 }
 
-.bloc__4w4 a {
+.bloc__4w4 a::before {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=animation");
+  position: absolute;
+  content: "";
+  top: -1.6rem;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  transform: scale(1.4);
 }
 
-.bloc__galerie a {
+.bloc__galerie a::before {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=add_a_photo");
   background-repeat: no-repeat;
+  position: absolute;
+  content: "";
+  top: -1.6rem;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  transform: scale(1.4);
+}
+
+.sidebar_h2 {
+  padding: 2rem;
+}
+
+.sidebar-galerie {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 2rem;
+}
+
+.sidebar_articles {
+  padding: 1rem;
+}
+.sidebar_articles li {
+  border-top: 1px solid var(--fonce-1);
+  padding: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .sidebar_articles li {
+    border-top: 0;
+    border-right: 1px solid var(--fonce-1);
+    border-bottom: 1px solid var(--fonce-1);
+  }
+}
+.sidebar_articles li a {
+  text-align: center;
+}
+.sidebar_articles li div {
+  padding-bottom: 0.6rem;
 }
 
 /* --------------------------------------------- layout */

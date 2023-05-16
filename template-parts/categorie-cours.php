@@ -28,5 +28,6 @@ else {
    <p> <?= wp_trim_words(get_the_excerpt(), 20, $lire) ?> </p>
    <h4> <?= $duree; ?> </h4>
    <p>Professeur : <?php the_field('enseignant'); ?>
-   <br/>Catégorie : <?php the_field('domaine'); ?></br>
+   <br/>Catégorie : <?php the_field('domaine'); ?>
+   <br/> <?= the_category(', ');  ?> </p>
 </article>

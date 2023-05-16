@@ -26,5 +26,5 @@ if(!is_front_page()) { ?>
  <p><?php the_field('description'); ?>
   <br/>Par <?php the_field('auteur'); ?>,
    <?php the_field('date'); ?></br>
-
+   <p><?= the_category(', ');?> </p>
 </section>
