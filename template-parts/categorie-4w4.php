@@ -22,5 +22,8 @@ else {
     <?php $lien = get_permalink(); ?>
     <?php $lire = "<span><a href='" . $lien . "'>... &#187;</a></span>" ?>
    <p> <?= wp_trim_words(get_the_excerpt(), 20, $lire) ?> </p>
-   <p> <?= the_category(', ');  ?> </p>
+   <?php 
+if(is_front_page()) { ?>
+ <p><?= the_category(', ');?> </p>
+<?php } ?>
 </article>

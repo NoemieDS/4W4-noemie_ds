@@ -14,6 +14,7 @@
 if (in_category('galerie')) {
       $ma_categorie = "galerie";
     } 
+  
    wp_nav_menu(array(
         "menu" => $ma_categorie,
         "container" => "nav"  

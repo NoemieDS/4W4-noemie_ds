@@ -29,5 +29,8 @@ else {
    <h4> <?= $duree; ?> </h4>
    <p>Professeur : <?php the_field('enseignant'); ?>
    <br/>Catégorie : <?php the_field('domaine'); ?>
-   <br/> <?= the_category(', ');  ?> </p>
+    </p>  <?php 
+if(is_front_page()) { ?>
+ <p><?= the_category(', ');?> </p>
+<?php } ?>
 </article>

@@ -977,26 +977,38 @@ h2.blocflex-titre {
   border-top: 2px solid var(--couleur2);
 }
 
-#menu-evenement li,
-#menu-evenement a {
+#menu-evenement li {
+  background-color: var(--fonce-2);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  margin: 1rem;
+}
+
+#menu-evenement li,
+#menu-evenement a {
+  color: var(--fonce);
   padding: 1rem;
   text-align: center;
   line-height: 130%;
 }
-#menu-evenement li img.menu-thumbnail,
-#menu-evenement a img.menu-thumbnail {
-  padding-top: 1rem;
-  width: 100%;
+#menu-evenement li :hover,
+#menu-evenement a :hover {
+  color: var(--couleur2);
+}
+@media screen and (min-width: 800px) {
+  #menu-evenement li img.menu-thumbnail,
+  #menu-evenement a img.menu-thumbnail {
+    padding-top: 1rem;
+    width: 50%;
+  }
 }
 
 .bloc__article {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1011,9 +1023,6 @@ h2.blocflex-titre {
   .bloc__article {
     box-shadow: 0.06rem 0.06rem 0.2rem hsl(var(--hFonce), var(--sFonce), 10%);
   }
-}
-.bloc__article img {
-  margin: 1rem 2rem 2rem 0;
 }
 .bloc__article h3,
 .bloc__article h5,
@@ -1082,9 +1091,11 @@ h2.blocflex-titre {
 
 /* Articles sélectionnées - catégories menu Accueil */
 .articles-accueil {
+  margin: 0 auto;
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   padding: 2rem;
+  background-color: var(--fonce-1);
 }
 
 .single_titre {
@@ -1299,39 +1310,45 @@ h2.blocflex-titre {
 
 .menu-bloc-archive-container ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 800px) {
+  .menu-bloc-archive-container ul {
+    flex-direction: row;
+  }
 }
 .menu-bloc-archive-container li {
   margin: 1rem auto;
   border: 1px solid var(--couleur2);
   flex: 1 1 0%;
-  padding: 1rem;
-  height: 260px;
+  width: 300px;
+  height: 200px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 @media screen and (min-width: 800px) {
   .menu-bloc-archive-container li {
-    padding: 2rem;
-    margin: 2rem;
-    width: 200px;
-    height: 300px;
+    margin: 1rem;
+    width: 240px;
+    height: 260px;
   }
 }
 .menu-bloc-archive-container li a {
   background-repeat: no-repeat;
   position: relative;
   font-size: clamp(0.9rem, 2vw, 1.4rem);
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .bloc__cours a::before {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=account_balance");
   position: absolute;
   content: "";
-  top: -1.6rem;
+  top: -1.4rem;
   left: 0;
   height: 1rem;
   width: 1rem;
@@ -1342,7 +1359,7 @@ h2.blocflex-titre {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=animation");
   position: absolute;
   content: "";
-  top: -1.6rem;
+  top: -1.4rem;
   left: 0;
   height: 1rem;
   width: 1rem;
@@ -1354,7 +1371,7 @@ h2.blocflex-titre {
   background-repeat: no-repeat;
   position: absolute;
   content: "";
-  top: -1.6rem;
+  top: -1.4rem;
   left: 0;
   height: 1rem;
   width: 1rem;

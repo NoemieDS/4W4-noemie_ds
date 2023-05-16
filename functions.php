@@ -191,4 +191,29 @@ function enregistrer_sidebar() {
 }
 add_action( 'widgets_init', 'enregistrer_sidebar' );
 
+// Masquer le nom de la catégorie, lorsque la catégorie est Accueil (ID 8)
+add_filter('get_the_terms', 'hide_categories_terms', 10, 3);
+function hide_categories_terms($terms, $post_id, $taxonomy){
 
+    // La catégorie dont on veut masquer le nom
+    $excludeIDs = array(8);
+
+    // Chercher tous les noms
+    $exclude = array();
+    foreach ($excludeIDs as $id) {
+        $exclude[] = get_term_by('id', $id, 'category');
+    }
+
+    // Filtrer les catégories
+    if (!is_admin()) {
+        foreach($terms as $key => $term){
+            if($term->taxonomy == "category"){
+                foreach ($exclude as $exKey => $exTerm) {
+                    if($term->term_id == $exTerm->term_id) unset($terms[$key]);
+                }
+            }
+        }
+    }
+
+    return $terms;
+}
