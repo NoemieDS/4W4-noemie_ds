@@ -29,17 +29,17 @@ font-size: clamp(1rem, -0.3125rem + 2.8vw, 1.4rem);
 @keyframes accueil-titre-anim {
   from {
     transform: rotateY(90deg);
-    color: var(--fonce-1);
+    color: var(--fonce);
   }
 
   50% {
     transform: rotateY(0deg);
-    color: var(--couleur1);
+    color: hsl(204, 98%, 49%);
   }
 
   to {
     transform: rotateY(0deg);
-    color: var(--fonce-1);
+    color: var(--fonce);
   }
 }
 

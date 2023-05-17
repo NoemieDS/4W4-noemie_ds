@@ -14,11 +14,11 @@
 <article class="bloc__article">
 <?php  if(has_post_thumbnail()) {
     the_post_thumbnail('thumbnail');
- // echo get_the_ID();
+ //echo get_the_ID();
   } 
 else {
 
-    echo get_the_post_thumbnail(141,'thumbnail' );
+    echo get_the_post_thumbnail(126,'thumbnail' );
   }
 ?>
   <h3><a href="<?php the_permalink(); ?>"> <?= $sigle ?></a></h3>
@@ -27,8 +27,8 @@ else {
     <?php $lire = "<span><a href='" . $lien . "'>... &#187;</a></span>" ?>
    <p> <?= wp_trim_words(get_the_excerpt(), 20, $lire) ?> </p>
    <h4> <?= $duree; ?> </h4>
-   <p>Professeur : <?php the_field('enseignant'); ?>
-   <br/>Catégorie : <?php the_field('domaine'); ?>
+   <p>Professeur: <?php the_field('enseignant'); ?>
+   <br/>Catégorie: <?php the_field('domaine'); ?>
     </p>  <?php 
 if(is_front_page()) { ?>
  <p><?= the_category(', ');?> </p>

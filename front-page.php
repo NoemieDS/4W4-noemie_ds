@@ -19,7 +19,7 @@
       <span>M</span>
       <span>!</span>
     </div>
-    <h2>Bienvenue sur le site de mon premier thème&nbsp;Wordpress</h2>
+    <h2>Bienvenue sur le site Mon premier thème&nbsp;Wordpress</h2>
   </section>
 
 <section class="sidebar-galerie">

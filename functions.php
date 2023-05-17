@@ -192,8 +192,9 @@ function enregistrer_sidebar() {
 add_action( 'widgets_init', 'enregistrer_sidebar' );
 
 // Masquer le nom de la catégorie, lorsque la catégorie est Accueil (ID 8)
-add_filter('get_the_terms', 'hide_categories_terms', 10, 3);
-function hide_categories_terms($terms, $post_id, $taxonomy){
+add_filter('get_the_terms', 'masquer_categories_terms', 10, 3);
+
+function masquer_categories_terms($terms, $post_id, $taxonomy){
 
     // La catégorie dont on veut masquer le nom
     $excludeIDs = array(8);

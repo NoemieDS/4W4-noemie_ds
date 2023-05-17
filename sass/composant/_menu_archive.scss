@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     @media screen and (min-width: $largeur__tablette) {
       flex-direction: row;
@@ -21,20 +22,37 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @media screen and (min-width: $largeur__tablette) {
        margin: 1rem;
       width: 240px;
-      height: 260px;
+      height: 340px;
     }
 
     & a {
       background-repeat: no-repeat;
       position: relative;
-      font-size: clamp(0.9rem, 2vw, 1.4rem);
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
       padding: 1rem 1rem 1rem 1rem;
+      background-color: hsla(235deg, 21%, 20%, 0.9);
+      color: var(--fonce-2);
     }
   }
+}
+
+.bloc__4w4 {
+  background-image: url("http://cidweb2.sg-host.com/wp-content/uploads/2023/05/DALL·E-2023-05-12-21.33.23-mona-lisa-coding-art-on-a-computer-japanese-ink.png");
+}
+
+.bloc__cours {
+  background-image: url("http://cidweb2.sg-host.com/wp-content/uploads/2023/05/DALL·E-2023-05-12-21.06.25-joyfull-young-adults-coding-japanese-color-inks-drawing-limit-to-3-colors.png");
+}
+
+
+.bloc__galerie {
+  background-image: url("http://cidweb2.sg-host.com/wp-content/uploads/2023/05/DALL·E-2023-05-12-21.04.35-young-adults-coding-japanese-ink-drawing.png");
 }
 
 .bloc__cours a::before {
@@ -47,6 +65,7 @@
   width: 1rem;
   transform: scale(1.4);
 }
+
 
 .bloc__4w4 a::before {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=animation");
@@ -70,3 +89,4 @@
   width: 1rem;
   transform: scale(1.4);
 }
+

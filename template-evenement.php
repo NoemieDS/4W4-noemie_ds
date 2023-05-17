@@ -15,7 +15,7 @@ if ( have_posts() ) : the_post(); ?>
   } 
   else {
 
-    echo get_the_post_thumbnail(259,'thumbnail' );
+    echo get_the_post_thumbnail(667,'thumbnail' );
   }
  ?>
 

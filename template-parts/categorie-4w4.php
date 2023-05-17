@@ -11,11 +11,11 @@
 <article class="bloc__article">
   <?php  if(has_post_thumbnail()) {
     the_post_thumbnail('thumbnail');
- //  echo get_the_ID();
+ // echo get_the_ID();
   } 
 else {
 
-    echo get_the_post_thumbnail(89,'thumbnail' );
+    echo get_the_post_thumbnail(95,'thumbnail' );
   }
 ?>
   <h3><a href="<?php the_permalink(); ?>"> <?= $titre ?></a></h3>

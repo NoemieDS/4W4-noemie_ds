@@ -370,7 +370,7 @@ h4 {
 }
 
 h5 {
-  font-size: clamp(0.8rem, -0.0313rem + 1.7vw, 1.5625rem);
+  font-size: clamp(0.9rem, 1.7vw, 1.4rem);
 }
 
 h5.modele_php {
@@ -380,7 +380,7 @@ h5.modele_php {
 }
 
 h6 {
-  font-size: clamp(0.7rem, 0.125rem + 1.2vw, 1.25rem);
+  font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.2rem);
 }
 
 p,
@@ -523,7 +523,7 @@ a {
   text-decoration: none;
 }
 a:visited {
-  color: var(--couleur1);
+  color: var(--couleur2);
 }
 a:hover, a:focus, a:active {
   color: var(--fonce-1);
@@ -1050,32 +1050,38 @@ h2.blocflex-titre {
 }
 
 .blocflex__galerie {
-  margin: 1rem 1.6rem 2rem 1rem;
+  margin: 0.5rem 1.6rem 2rem 1rem;
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
+  align-content: flex-start;
 }
 .blocflex__galerie p {
   color: var(--texte-fonce);
 }
 .blocflex__galerie h3,
 .blocflex__galerie a {
+  color: var(--fonce-1);
   margin: 0 auto;
   margin: 0.8rem;
   font-size: clamp(1.4rem, 2.6vw, 1.6rem);
   text-align: center;
 }
+.blocflex__galerie a:hover {
+  color: var(--fonce-2);
+}
 .blocflex__galerie img {
   box-shadow: 0.3rem 0.3rem 0.5rem rgba(18, 18, 18, 0.8);
   cursor: pointer;
+  margin-bottom: 0.4rem;
 }
 @media screen and (min-width: 800px) {
   .blocflex__galerie {
     background-color: var(--blanc);
     padding: 2rem 1rem;
-    margin-top: 0.5rem;
-    box-shadow: 0.06rem 0.06rem 0.2rem hsl(var(--hFonce), var(--sFonce), 10%);
+    margin-top: 0rem;
   }
   .blocflex__galerie h3,
   .blocflex__galerie a {
@@ -1094,6 +1100,36 @@ h2.blocflex-titre {
   margin-top: 1.5rem;
   padding: 2rem;
   background-color: var(--fonce-1);
+}
+
+h3.acf a {
+  font-family: var(--police-sans);
+  padding: 0 1rem;
+}
+
+h5.acf {
+  padding: 0 0.5rem;
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  align-self: flex-start;
+}
+
+p.acf {
+  margin-top: 1rem;
+}
+
+.bloc_info_texte {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0.1rem 0.1rem 0.3rem hsl(var(--hFonce), var(--sFonce), 10%);
+  padding: 0.4rem 0.2rem 0.6rem 0.4rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+.bloc_info_texte p.acf {
+  align-self: flex-start;
+  padding-left: 0.3rem;
 }
 
 .single_titre {
@@ -1200,6 +1236,7 @@ h2.blocflex-titre {
 }
 .menu-evenement-container .menu .menu-item a .title {
   font-size: clamp(1.6rem, 0.6rem + 1.16vw, 1.6rem);
+  font-weight: bold;
   margin-bottom: 0.8rem;
   text-align: center;
   color: var(--fonce);
@@ -1311,6 +1348,7 @@ h2.blocflex-titre {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 @media screen and (min-width: 800px) {
   .menu-bloc-archive-container ul {
@@ -1327,19 +1365,35 @@ h2.blocflex-titre {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media screen and (min-width: 800px) {
   .menu-bloc-archive-container li {
     margin: 1rem;
     width: 240px;
-    height: 260px;
+    height: 340px;
   }
 }
 .menu-bloc-archive-container li a {
   background-repeat: no-repeat;
   position: relative;
-  font-size: clamp(0.9rem, 2vw, 1.4rem);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   padding: 1rem 1rem 1rem 1rem;
+  background-color: hsla(235, 21%, 20%, 0.9);
+  color: var(--fonce-2);
+}
+
+.bloc__4w4 {
+  background-image: url("http://cidweb2.sg-host.com/wp-content/uploads/2023/05/DALL·E-2023-05-12-21.33.23-mona-lisa-coding-art-on-a-computer-japanese-ink.png");
+}
+
+.bloc__cours {
+  background-image: url("http://cidweb2.sg-host.com/wp-content/uploads/2023/05/DALL·E-2023-05-12-21.06.25-joyfull-young-adults-coding-japanese-color-inks-drawing-limit-to-3-colors.png");
+}
+
+.bloc__galerie {
+  background-image: url("http://cidweb2.sg-host.com/wp-content/uploads/2023/05/DALL·E-2023-05-12-21.04.35-young-adults-coding-japanese-ink-drawing.png");
 }
 
 .bloc__cours a::before {
@@ -1433,15 +1487,15 @@ h2.blocflex-titre {
 @keyframes accueil-titre-anim {
   from {
     transform: rotateY(90deg);
-    color: var(--fonce-1);
+    color: var(--fonce);
   }
   50% {
     transform: rotateY(0deg);
-    color: var(--couleur1);
+    color: hsl(204, 98%, 49%);
   }
   to {
     transform: rotateY(0deg);
-    color: var(--fonce-1);
+    color: var(--fonce);
   }
 }
 .accueil_titre_section .accueil-titre span:nth-child(1) {
@@ -1536,6 +1590,7 @@ h2.blocflex-titre {
   margin-top: 5vh;
   padding: 0;
   width: 100%;
+  overflow-x: scroll;
 }
 @media screen and (min-width: 992px) {
   .site__aside {
@@ -1552,6 +1607,7 @@ h2.blocflex-titre {
     -khtml-border-radius-topleft: 10px;
     -moz-border-radius-topleft: 10px;
     border-top-left-radius: 10px;
+    overflow-x: hidden;
   }
 }
 .site__aside > nav > ul {
