@@ -89,9 +89,13 @@ function add_menu_description_and_thumbnail( $item_output, $item, $depth, $args 
         $post_thumbnail_id = get_post_thumbnail_id( $item->object_id );
         if ( $post_thumbnail_id ) {
             $post_thumbnail_url = wp_get_attachment_image_src( $post_thumbnail_id, 'medium' );
-            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . "<br><br>" . '</span><span class="description">' . $item->description . '</span><img src="' . esc_url( $post_thumbnail_url[0] ) .  '" class="menu-thumbnail" />', $item_output );
-        } else {
-            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . "<br><br>" . '</span><span class="description">' . $item->description . '</span>' . '</span><span class="image">', $item_output );
+            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before .
+             '<span class="title">' . $item->title . "<br><br>" . '</span><span class="description">' . $item->description . 
+             '</span><img src="' . esc_url( $post_thumbnail_url[0] ) .  '" class="menu-thumbnail" />', $item_output );
+        } 
+        else {
+            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . 
+            "<br><br>" . '</span><span class="description">' . $item->description . '</span>' . '</span><span class="image">', $item_output );
         }
     }
     return $item_output;
@@ -141,7 +145,7 @@ function enregistrer_sidebar() {
     register_sidebar( array(
         'name' => __( 'Front 2', '4w4-noemie_ds' ),
         'id' => 'front_2',
-        'description' => __( 'Une zone pour afficher.', '4w4-noemie_ds' ),
+        'description' => __( 'Une zone pour afficher les dernières nouvelles sur la page accueil', '4w4-noemie_ds' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="widget-title">',
@@ -149,7 +153,7 @@ function enregistrer_sidebar() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Front 3', '4w4-noemie_ds' ),
+        'name' => __( 'Une zone pour afficher quelque chose au choix sur la page accueil', '4w4-noemie_ds' ),
         'id' => 'front_3',
         'description' => __( 'Une zone pour afficher.', '4w4-noemie_ds' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -199,13 +203,13 @@ function masquer_categories_terms($terms, $post_id, $taxonomy){
     // La catégorie dont on veut masquer le nom
     $excludeIDs = array(8);
 
-    // Chercher tous les noms
+    // Chercher tous les noms de catégories
     $exclude = array();
     foreach ($excludeIDs as $id) {
         $exclude[] = get_term_by('id', $id, 'category');
     }
 
-    // Filtrer les catégories
+    // Filtrer les catégories si ce n'est pas la page admin
     if (!is_admin()) {
         foreach($terms as $key => $term){
             if($term->taxonomy == "category"){

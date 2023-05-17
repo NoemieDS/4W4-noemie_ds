@@ -12,13 +12,14 @@
     }
   }
 
+
   & li {
     margin: 1rem auto;
     border: 1px solid var(--couleur2);
     flex: 1 1 0%;
     width: 300px;
-    height: 200px;
-    min-height: 200px;
+    height: 320px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -26,12 +27,13 @@
     background-repeat: no-repeat;
 
     @media screen and (min-width: $largeur__tablette) {
-       margin: 1rem;
+       margin: 0.5rem 0 1rem 0;
       width: 240px;
       height: 340px;
     }
 
     & a {
+  
       background-repeat: no-repeat;
       position: relative;
       font-size: clamp(0.9rem, 2vw, 1.1rem);
@@ -39,8 +41,38 @@
       background-color: hsla(235deg, 21%, 20%, 0.9);
       color: var(--fonce-2);
     }
+
+    & span.title,
+    .blocflex__galerie .title {
+      font-size: clamp(1.4rem, 3vw, 1.5rem);
+      text-transform: uppercase;
+      display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+
+   @media screen and (min-width: $largeur__tablette) {
+    font-size: clamp(1.3rem, 3vw, 1.4rem);
+  }
+    }
+
+  }
+  
+
+  span.description {
+     display: none;
+     margin-top: 2rem;
+   // background-color: hsla(235deg, 21%, 20%, 0.9);
+  }
+
+  a:hover {
+    span.description {
+      display: flex;
+    }
   }
 }
+
+
 
 .bloc__4w4 {
   background-image: url("http://cidweb2.sg-host.com/wp-content/uploads/2023/05/DALL·E-2023-05-12-21.33.23-mona-lisa-coding-art-on-a-computer-japanese-ink.png");

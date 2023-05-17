@@ -23,7 +23,7 @@ $titre = get_the_title();
       <h3 class="acf"><a href="<?php the_permalink(); ?>"> <?= $titre ?></a></h3>
    <div class="bloc_info_texte">
       <h5 class="acf"><?php the_field('description'); ?></h5>
-      <p class="acf">Par: <?php the_field('auteur'); ?>,
+      <p class="acf">par: <?php the_field('auteur'); ?>,
          &nbsp;<?php the_field('date'); ?>
       <p>
 

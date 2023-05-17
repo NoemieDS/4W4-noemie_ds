@@ -1360,8 +1360,8 @@ p.acf {
   border: 1px solid var(--couleur2);
   flex: 1 1 0%;
   width: 300px;
-  height: 200px;
-  min-height: 200px;
+  height: 320px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1370,7 +1370,7 @@ p.acf {
 }
 @media screen and (min-width: 800px) {
   .menu-bloc-archive-container li {
-    margin: 1rem;
+    margin: 0.5rem 0 1rem 0;
     width: 240px;
     height: 340px;
   }
@@ -1382,6 +1382,28 @@ p.acf {
   padding: 1rem 1rem 1rem 1rem;
   background-color: hsla(235, 21%, 20%, 0.9);
   color: var(--fonce-2);
+}
+.menu-bloc-archive-container li span.title,
+.menu-bloc-archive-container li .blocflex__galerie .title {
+  font-size: clamp(1.4rem, 3vw, 1.5rem);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .menu-bloc-archive-container li span.title,
+  .menu-bloc-archive-container li .blocflex__galerie .title {
+    font-size: clamp(1.3rem, 3vw, 1.4rem);
+  }
+}
+.menu-bloc-archive-container span.description {
+  display: none;
+  margin-top: 2rem;
+}
+.menu-bloc-archive-container a:hover span.description {
+  display: flex;
 }
 
 .bloc__4w4 {

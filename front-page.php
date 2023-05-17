@@ -48,7 +48,7 @@ wp_nav_menu(array(
   </section>
 
   <section class="blocflex articles-accueil">
-  <h2 class="blocflex-titre">Articles les<br> plus lus</h2>
+  <h2 class="blocflex-titre">Sélections de la rédaction  </h2>
     <?php
     if (have_posts()) :
       while (have_posts()) : the_post();
