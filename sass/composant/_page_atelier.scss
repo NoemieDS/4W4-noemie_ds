@@ -43,6 +43,7 @@
     justify-content: flex-start;
     min-height: fit-content(200em);
     padding: 1rem clamp(1.5rem, 3vw, 16rem);
+    position: relative;
 
     img {
       align-self: center;
@@ -80,5 +81,11 @@
     background-color: var(--fonce-2);
   }
 
+}
+
+.aside_atelier {
+width: 75px;
+height: 100px;
+background-color: aqua;
 }
 

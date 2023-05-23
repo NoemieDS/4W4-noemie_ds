@@ -3,7 +3,7 @@
 * template name: Atelier
 */
  get_header(); ?>
-<main class="site__main no-aside-logo">
+<main class="site__main">
 <section class="section_atelier">
 <article class="section_atelier_contenu">
 <h1 class="atelier_titre"><?= get_the_title(); ?></h1>

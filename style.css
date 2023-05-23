@@ -1387,6 +1387,7 @@ p.acf {
   justify-content: flex-start;
   min-height: fit-content(200em);
   padding: 1rem clamp(1.5rem, 3vw, 16rem);
+  position: relative;
 }
 .section_atelier .section_atelier_contenu img {
   align-self: center;
@@ -1417,6 +1418,12 @@ p.acf {
 }
 .section_atelier tr:nth-child(even) {
   background-color: var(--fonce-2);
+}
+
+.aside_atelier {
+  width: 75px;
+  height: 100px;
+  background-color: aqua;
 }
 
 .menu-bloc-archive-container ul {
