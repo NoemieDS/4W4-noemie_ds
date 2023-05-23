@@ -1421,9 +1421,10 @@ p.acf {
 }
 
 .aside_atelier {
-  width: 75px;
-  height: 100px;
-  background-color: aqua;
+  height: 100%;
+}
+.aside_atelier h2 {
+  color: var(--texte-clair);
 }
 
 .menu-bloc-archive-container ul {
