@@ -11,7 +11,7 @@
 
 <?php
 $nouvelle_classe = "";
-if (is_front_page() || is_search() || is_page()) {
+if (is_front_page() || is_search() || is_page() ) {
   $nouvelle_classe = 'no-aside';
 }
 if (is_page_template('template-atelier.php')) {
@@ -65,9 +65,4 @@ if (is_page_template('template-atelier.php')) {
     if (!is_front_page() && !is_search() && !is_page()) {
       get_template_part("template-parts/aside");
     }
-
-    if (is_page() && is_page_template('atelier')) {
-      get_template_part("template-parts/aside-atelier");
-    }
-
     ?>

@@ -24,7 +24,7 @@ function enregistrement_nav_menu()
     register_nav_menus(array(
         'principal' => 'Menu principal',
         'footer'  => 'Menu pied de page',
-        'aside'  => 'Menu secondaire'
+        'aside'  => 'Menu secondaire',
     ));
 }
 add_action('after_setup_theme', 'enregistrement_nav_menu', 0);

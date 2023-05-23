@@ -2,7 +2,12 @@
 /** 
 * template name: Atelier
 */
- get_header(); ?>
+ get_header(); 
+
+  get_template_part("template-parts/aside-atelier");
+ 
+ ?>
+
 <main class="site__main">
 <section class="section_atelier">
 <article class="section_atelier_contenu">
