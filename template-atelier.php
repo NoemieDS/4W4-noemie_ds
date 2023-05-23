@@ -3,7 +3,7 @@
 * template name: Atelier
 */
  get_header(); ?>
-<main class="site__main site__aside">
+<main class="site__main no-aside-logo">
 <section class="section_atelier">
 <article class="section_atelier_contenu">
 <h1 class="atelier_titre"><?= get_the_title(); ?></h1>
@@ -20,15 +20,13 @@ if ( have_posts() ) : the_post(); ?>
  ?>
 
 <?php the_content();?>
-<table>
-  <tr>
-<td class="atelier-date">Date <?php the_field('date'); ?></td> 
-<td class="atelier-date">Heure <?php the_field('heure'); ?></td> 
-<td class="atelier-date">Durée <?php the_field('duree'); ?> Heures</td>
-<td class="atelier-date">Local <?php the_field('local'); ?></td>
-<td class="atelier-date">Formateur <?php the_field('formateur'); ?></td>
+<table class="atelier-table">
+  <tr><td class="atelier-date">Date</td> <td> <?php the_field('date'); ?></td> </tr>
+  <tr><td class="atelier-date">Heure</td> <td> <?php the_field('heure'); ?></td> </tr>
+  <tr><td class="atelier-date">Durée</td> <td> <?php the_field('duree'); ?> Heures</td></tr>
+  <tr><td class="atelier-date">Local</td> <td> <?php the_field('local'); ?></td></tr>
+  <tr><td class="atelier-date">Formateur</td> <td> <?php the_field('formateur'); ?></td></tr>
 <?php endif;?>
-</tr>
 </table>
 </article>
 </section>

@@ -1392,7 +1392,7 @@ p.acf {
   align-self: center;
 }
 .section_atelier .section_atelier_contenu p {
-  font-size: clamp(1.2rem, 0.125rem + 1.6vw, 2rem);
+  font-size: clamp(1rem, 0.125rem + 1.6vw, 1.4rem);
   line-height: 180%;
   padding-bottom: 2rem;
 }
@@ -1405,6 +1405,18 @@ p.acf {
   font-size: clamp(1rem, 0.6rem + 1.16vw, 1.2rem);
   font-weight: bold;
   padding-bottom: 0.6rem;
+}
+.section_atelier table, .section_atelier th, .section_atelier td {
+  border: 1px solid var(--fonce);
+  border-collapse: collapse;
+  width: 50%;
+}
+.section_atelier td, .section_atelier th {
+  text-align: left;
+  padding: 0.6rem;
+}
+.section_atelier tr:nth-child(even) {
+  background-color: var(--fonce-2);
 }
 
 .menu-bloc-archive-container ul {
