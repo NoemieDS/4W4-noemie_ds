@@ -22,6 +22,15 @@
     <h2>Bienvenue sur le site Mon premier thème&nbsp;Wordpress</h2>
   </section>
 
+  <section class="blocflex_evenement">
+    <h2 class="blocflex-titre">Nos prochains ateliers</h2>
+    <?php 
+    wp_nav_menu(array(
+       "menu" => "atelier",
+       "container" => "nav"  
+   )); ?>
+</section>
+
 <section class="sidebar-galerie">
       <?php dynamic_sidebar('front_1'); ?>
     </section>

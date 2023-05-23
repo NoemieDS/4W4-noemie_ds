@@ -9,7 +9,7 @@
     <?php 
   
    wp_nav_menu(array(
-        "menu" => "atelier",
+        "menu" => "aside-atelier",
         "container" => "nav"  
     )); ?>
 </aside>
