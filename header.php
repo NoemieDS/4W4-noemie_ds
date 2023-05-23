@@ -26,6 +26,7 @@ if (is_page_template('template-atelier.php')) {
       <?php
       if (!is_front_page()) {
       ?>
+      
         <div class="site_titre_ordi">
 
           <h1><a href="<?= bloginfo('url') ?>"><?= bloginfo('name') ?></a></h1>

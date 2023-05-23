@@ -4,7 +4,7 @@
  */
  ?>
 
-<aside class="site__aside aside_atelier">
+<aside class="site__aside aside_atelier ">
 <h2 class="">Nos ateliers en 2023</h2>
     <?php 
   

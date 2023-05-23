@@ -11,12 +11,12 @@
 <main class="site__main">
 <section class="section_atelier">
 <article class="section_atelier_contenu">
-<h1 class="atelier_titre"><?= get_the_title(); ?></h1>
-<?php
+  <?php
 if ( have_posts() ) : the_post(); ?>
   <?php  if(has_post_thumbnail()) {
-    the_post_thumbnail('full');
- // echo get_the_ID();
+    the_post_thumbnail('thumbnail'); ?>
+
+    <h1 class="atelier_titre"><?= get_the_title(); ?></h1>  <?php 
   } 
   else {
 

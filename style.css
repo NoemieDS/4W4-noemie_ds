@@ -1389,9 +1389,6 @@ p.acf {
   padding: 1rem clamp(1.5rem, 3vw, 16rem);
   position: relative;
 }
-.section_atelier .section_atelier_contenu img {
-  align-self: center;
-}
 .section_atelier .section_atelier_contenu p {
   font-size: clamp(1rem, 0.125rem + 1.6vw, 1.4rem);
   line-height: 180%;
@@ -1424,6 +1421,64 @@ p.acf {
   height: 100%;
 }
 .aside_atelier h2 {
+  color: var(--texte-clair);
+}
+
+.menu-atelier-container {
+  padding: 0 1rem;
+}
+.menu-atelier-container .menu {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-atelier-container .menu .menu-atelier {
+  padding: 2rem 0;
+  flex: 1 0 0%;
+}
+@media screen and (min-width: 800px) {
+  .menu-atelier-container .menu .menu-atelier a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+.menu-atelier-container .menu .menu-atelier a a:hover {
+  transform: scale(1.2);
+}
+.menu-atelier-container .menu .menu-atelier a .title {
+  font-size: clamp(1.6rem, 0.6rem + 1.16vw, 1.6rem);
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  color: var(--fonce);
+  text-transform: uppercase;
+  line-height: 120%;
+}
+.menu-atelier-container .menu .menu-atelier a .description {
+  font-size: clamp(1rem, 0.6rem + 1.16vw, 1.2rem);
+  padding: 0.2rem;
+  height: 150px;
+  color: var(--noire);
+}
+@media screen and (min-width: 800px) {
+  .menu-atelier-container .menu .menu-atelier a .description {
+    padding: 1rem;
+  }
+}
+.menu-atelier-container .menu .menu-atelier a .menu-thumbnail {
+  border-radius: 0%;
+  box-shadow: none;
+}
+.menu-atelier-container .menu .menu-atelier a span {
+  display: block;
+  font-size: 0.9rem;
   color: var(--texte-clair);
 }
 
