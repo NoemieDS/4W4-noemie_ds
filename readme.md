@@ -14,7 +14,7 @@
 - Une mise en forme CSS produit à partir de plusieurs fichier Sass (.scss)
 
 ### Le site est déployé sur le serveur distant Siteground
-- https://cidweb2.sg-host.com/
+- https://4w4.ndasilva.ca/
 
 #### Référence
 - https://sass-lang.com/documentation/
